@@ -208,6 +208,37 @@ with tab_player:
                 display_cols = ["position_group", "inns", "runs", "balls", "avg", "sr", "fours", "sixes"]
                 st.dataframe(pos_summary[display_cols], use_container_width=True)
 
+        # Batting tournament-wise performance analysis
+        st.markdown("#### Tournament-wise Batting Performance")
+        bat_tourn = bat_f[bat_f["tournamentkey"].notna()].copy()
+        
+        if not bat_tourn.empty:
+            bat_tourn_summary = bat_tourn.groupby("tournament", as_index=False).agg(
+                inns=("runs", "count"),
+                runs=("runs", "sum"),
+                balls=("balls", "sum"),
+                fours=("fours", "sum"),
+                sixes=("sixes", "sum"),
+            )
+            
+            # Calculate average separately
+            bat_tourn_dismissals = bat_tourn.copy()
+            bat_tourn_dismissals["dismissal"] = (bat_tourn_dismissals["howout"].fillna("").str.lower() != "not out").astype(int)
+            bat_tourn_dismissal_counts = bat_tourn_dismissals.groupby("tournament")["dismissal"].sum()
+            
+            bat_tourn_summary["avg"] = bat_tourn_summary.apply(
+                lambda row: (row["runs"] / bat_tourn_dismissal_counts.get(row["tournament"], 0)) 
+                if bat_tourn_dismissal_counts.get(row["tournament"], 0) > 0 else None,
+                axis=1
+            ).round(2)
+            bat_tourn_summary["sr"] = (bat_tourn_summary["runs"] * 100 / bat_tourn_summary["balls"]).round(2)
+            
+            bat_tourn_summary = bat_tourn_summary.sort_values("runs", ascending=False)
+            display_cols = ["tournament", "inns", "runs", "balls", "avg", "sr", "fours", "sixes"]
+            st.dataframe(bat_tourn_summary[display_cols], use_container_width=True)
+        else:
+            st.info("No tournament data available for batting performance.")
+
     # Bowling summary (below)
     st.markdown("### Bowling summary")
     if bowl_f.empty:
@@ -238,6 +269,30 @@ with tab_player:
 
         cols = ["tournament", "opponent", "inningsno", "bowlingteam", "overs", "runsconceded", "wickets", "econ"]
         st.dataframe(bowl_detail[cols], use_container_width=True)
+
+        # Bowling tournament-wise performance analysis
+        st.markdown("#### Tournament-wise Bowling Performance")
+        bowl_tourn = bowl_f[bowl_f["tournamentkey"].notna()].copy()
+        
+        if not bowl_tourn.empty:
+            bowl_tourn_summary = bowl_tourn.groupby("tournament", as_index=False).agg(
+                spells=("runsconceded", "count"),
+                runs=("runsconceded", "sum"),
+                balls=("balls_bowled", "sum"),
+                wickets=("wickets", "sum"),
+            )
+            
+            # Calculate metrics
+            bowl_tourn_summary["overs"] = (bowl_tourn_summary["balls"] / 6).round(1)
+            bowl_tourn_summary["econ"] = (bowl_tourn_summary["runs"] / (bowl_tourn_summary["balls"] / 6)).round(2)
+            bowl_tourn_summary["avg"] = (bowl_tourn_summary["runs"] / bowl_tourn_summary["wickets"]).round(2)
+            bowl_tourn_summary["sr"] = (bowl_tourn_summary["balls"] / bowl_tourn_summary["wickets"]).round(1)
+            
+            bowl_tourn_summary = bowl_tourn_summary.sort_values("wickets", ascending=False)
+            display_cols = ["tournament", "spells", "runs", "overs", "wickets", "avg", "econ", "sr"]
+            st.dataframe(bowl_tourn_summary[display_cols], use_container_width=True)
+        else:
+            st.info("No tournament data available for bowling performance.")
 
 # -------------------------
 # Tab 2: Player-wise overall comparison
