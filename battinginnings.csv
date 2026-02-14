@@ -1,204 +1,270 @@
-inningsno,battingteam,playername,playerkey,runs,balls,fours,sixes,sr,howout,tournamentkey,matchid,source
-1,JNS SUPREMOS (MT20CB 3.0),Pratik .,pratik ,41,38,3,0,107.89,c Hitesh K b Aditya S,zootermt20cb3,3879,playwright
-1,JNS SUPREMOS (MT20CB 3.0),Nitin H,nitin h,36,21,3,3,171.43,St Rajesh U b Mangesh D,zootermt20cb3,3879,playwright
-1,JNS SUPREMOS (MT20CB 3.0),Lavesh .,lavesh ,62,36,7,2,172.22,lbw b Sunil L,zootermt20cb3,3879,playwright
-1,JNS SUPREMOS (MT20CB 3.0),Kanav .,kanav ,14,12,2,0,116.67,c Ashok Y b Sunil L,zootermt20cb3,3879,playwright
-1,JNS SUPREMOS (MT20CB 3.0),Urvish .,urvish ,11,6,0,1,183.33,not out,zootermt20cb3,3879,playwright
-1,JNS SUPREMOS (MT20CB 3.0),Rahul Agarwal,rahul agarwal,1,4,0,0,25,c Ashok Y b Sunil L,zootermt20cb3,3879,playwright
-1,JNS SUPREMOS (MT20CB 3.0),Shakti .,shakti ,0,2,0,0,0,b Sunil L,zootermt20cb3,3879,playwright
-1,JNS SUPREMOS (MT20CB 3.0),Varun .,varun ,1,1,0,0,100,run out ( Aditya S ),zootermt20cb3,3879,playwright
-2,JNS SUPREMOS (MT20CB 3.0),Pratik .,pratik ,11,9,1,1,122.22,b Manish S,zootermt20cb3,3985,playwright
-2,JNS SUPREMOS (MT20CB 3.0),Varun .,varun ,7,6,1,0,116.67,lbw b Manish S,zootermt20cb3,3985,playwright
-2,JNS SUPREMOS (MT20CB 3.0),Abhishek Pingley,abhishek pingley,4,9,0,0,44.44,b Manish S,zootermt20cb3,3985,playwright
-2,JNS SUPREMOS (MT20CB 3.0),Rajan Singh,rajan singh,0,1,0,0,0,b Manish S,zootermt20cb3,3985,playwright
-2,JNS SUPREMOS (MT20CB 3.0),Jay Kedia,jay kedia,58,48,5,0,120.83,c Shiv N b Vinay B,zootermt20cb3,3985,playwright
-2,JNS SUPREMOS (MT20CB 3.0),Rahul Agarwal,rahul agarwal,0,1,0,0,0,lbw b Manish S,zootermt20cb3,3985,playwright
-2,JNS SUPREMOS (MT20CB 3.0),Nihir .,nihir ,14,22,0,0,63.64,c Mehyul G b Hitesh B,zootermt20cb3,3985,playwright
-2,JNS SUPREMOS (MT20CB 3.0),Urvish .,urvish ,12,12,1,0,100,b Mehyul G,zootermt20cb3,3985,playwright
-2,JNS SUPREMOS (MT20CB 3.0),Tanmay Godiwala,tanmay godiwala,8,5,1,0,160,not out,zootermt20cb3,3985,playwright
-2,JNS SUPREMOS (MT20CB 3.0),Pritesh .,pritesh ,3,5,0,0,60,c Vinay B b Yash D,zootermt20cb3,3985,playwright
-2,JNS SUPREMOS (MT20CB 3.0),Aditya .,aditya ,8,2,2,0,400,not out,zootermt20cb3,3985,playwright
-2,JNS SUPREMOS (ISDT 8.0),Varun Sood,varun sood,5,7,0,0,71.43,b Suchit S,zooterisdt8,3816,playwright
-2,JNS SUPREMOS (ISDT 8.0),Pratik Chitalia,pratik chitalia,25,23,3,0,108.7,c Ankit S b Himanshu R,zooterisdt8,3816,playwright
-2,JNS SUPREMOS (ISDT 8.0),Manaan Gandhi,manaan gandhi,9,10,1,0,90,c Ankit S b Rishabh S,zooterisdt8,3816,playwright
-2,JNS SUPREMOS (ISDT 8.0),Rahul Agarwal,rahul agarwal,27,25,1,0,108,run out ( Amit M ),zooterisdt8,3816,playwright
-2,JNS SUPREMOS (ISDT 8.0),Abhishek Pingley,abhishek pingley,28,21,2,1,133.33,b Rajiv H,zooterisdt8,3816,playwright
-2,JNS SUPREMOS (ISDT 8.0),Kanav Hingorani,kanav hingorani,25,21,3,0,119.05,c Himanshu R b Shamit D,zooterisdt8,3816,playwright
-2,JNS SUPREMOS (ISDT 8.0),Navratan Bengani,navratan bengani,22,16,1,0,137.5,not out,zooterisdt8,3816,playwright
-1,JNS SUPREMOS (ISDT 8.0),Rahul Agarwal,rahul agarwal,24,26,3,0,92.31,c Ashwin P b Mahesh B,zooterisdt8,3822,playwright
-1,JNS SUPREMOS (ISDT 8.0),Jay Kedia,jay kedia,22,25,0,1,88,c † Amit M b Akshay B,zooterisdt8,3822,playwright
-1,JNS SUPREMOS (ISDT 8.0),Lavesh Kalsekar,lavesh kalsekar,18,15,1,0,120,c Prathmesh P b Mahesh B,zooterisdt8,3822,playwright
-1,JNS SUPREMOS (ISDT 8.0),Navratan Bengani,navratan bengani,33,21,4,0,157.14,b Balakrishna S,zooterisdt8,3822,playwright
-1,JNS SUPREMOS (ISDT 8.0),Sheel Vora,sheel vora,12,13,1,0,92.31,b Nishant P,zooterisdt8,3822,playwright
-1,JNS SUPREMOS (ISDT 8.0),Abhishek Pingley,abhishek pingley,14,10,2,0,140,not out,zooterisdt8,3822,playwright
-1,JNS SUPREMOS (ISDT 8.0),Varun Sood,varun sood,7,8,0,0,87.5,St Amit M b Balakrishna S,zooterisdt8,3822,playwright
-1,JNS SUPREMOS (ISDT 8.0),Vishal Merwana,vishal merwana,1,2,0,0,50,b Balakrishna S,zooterisdt8,3822,playwright
-1,JNS SUPREMOS (ISDT 8.0),Pratik Chitalia,pratik chitalia,0,1,0,0,0,c † Vinit A b Jay P,zooterisdt8,3831,playwright
-1,JNS SUPREMOS (ISDT 8.0),Rahul Agarwal,rahul agarwal,10,12,2,0,83.33,run out ( Kunal . / Rishi P ),zooterisdt8,3831,playwright
-1,JNS SUPREMOS (ISDT 8.0),Lavesh Kalsekar,lavesh kalsekar,8,9,1,0,88.89,c † Rishi P b Jay P,zooterisdt8,3831,playwright
-1,JNS SUPREMOS (ISDT 8.0),Manaan Gandhi,manaan gandhi,51,43,7,0,118.6,run out ( Amitraj B ),zooterisdt8,3831,playwright
-1,JNS SUPREMOS (ISDT 8.0),Navratan Bengani,navratan bengani,23,17,2,0,135.29,c&b Vinod L,zooterisdt8,3831,playwright
-1,JNS SUPREMOS (ISDT 8.0),Abhishek Pingley,abhishek pingley,1,2,0,0,50,c † Rishi P b Shivanand N,zooterisdt8,3831,playwright
-1,JNS SUPREMOS (ISDT 8.0),Kanav Hingorani,kanav hingorani,53,29,5,1,182.76,not out,zooterisdt8,3831,playwright
-1,JNS SUPREMOS (ISDT 8.0),Varun Sood,varun sood,10,8,1,0,125,run out ( Amitraj B / Gautam M ),zooterisdt8,3831,playwright
-1,JNS SUPREMOS (ISDT 8.0),Pratik Chitalia,pratik chitalia,21,19,2,0,110.53,c Ashish L b Sadiq L,zooterisdt8,3933,playwright
-1,JNS SUPREMOS (ISDT 8.0),Lavesh Kalsekar,lavesh kalsekar,15,10,2,0,150,St Ribhu D b Vaseem L,zooterisdt8,3933,playwright
-1,JNS SUPREMOS (ISDT 8.0),Jay Kedia,jay kedia,19,17,1,0,111.76,lbw b Vineet K,zooterisdt8,3933,playwright
-1,JNS SUPREMOS (ISDT 8.0),Manaan Gandhi,manaan gandhi,16,19,2,0,84.21,c Rayed M b Muddassar V,zooterisdt8,3933,playwright
-1,JNS SUPREMOS (ISDT 8.0),Rahul Agarwal,rahul agarwal,7,9,1,0,77.78,c † Ribhu D b Muddassar V,zooterisdt8,3933,playwright
-1,JNS SUPREMOS (ISDT 8.0),Abhishek Pingley,abhishek pingley,17,22,0,0,77.27,not out,zooterisdt8,3933,playwright
-1,JNS SUPREMOS (ISDT 8.0),Kanav Hingorani,kanav hingorani,44,24,2,3,183.33,c Fahim A b Rayed M,zooterisdt8,3933,playwright
-2,JNS SUPREMOS,Manaan Gandhi,manaan gandhi,18,17,3,0,105.88,b Mittal J,jfscdpl202526,5418,playwright
-2,JNS SUPREMOS,Pratik Chitalia,pratik chitalia,1,3,0,0,33.33,b Mittal J,jfscdpl202526,5418,playwright
-2,JNS SUPREMOS,Jay Kedia,jay kedia,1,3,0,0,33.33,run out ( Varun S / Mittal J ),jfscdpl202526,5418,playwright
-2,JNS SUPREMOS,Varun Sood,varun sood,22,31,2,0,70.97,Retired Out,jfscdpl202526,5418,playwright
-2,JNS SUPREMOS,Rahul Agarwal,rahul agarwal,29,20,4,0,145,c&b Raj G,jfscdpl202526,5418,playwright
-2,JNS SUPREMOS,Lavesh Kalsekar,lavesh kalsekar,13,10,1,1,130,c Varun S b Prathik S,jfscdpl202526,5418,playwright
-2,JNS SUPREMOS,Kanav Hingorani,kanav hingorani,38,13,2,4,292.31,c&b Amit K,jfscdpl202526,5418,playwright
-2,JNS SUPREMOS,Navratan Bengani,navratan bengani,24,16,3,0,150,St Chirag J b Amit K,jfscdpl202526,5418,playwright
-2,JNS SUPREMOS,Sheel Vora,sheel vora,3,4,0,0,75,run out ( Jigar S / Amit K ),jfscdpl202526,5418,playwright
-2,JNS SUPREMOS,Aditya Jain,aditya jain,4,3,0,0,133.33,not out,jfscdpl202526,5418,playwright
-2,JNS SUPREMOS,Manaan Gandhi,manaan gandhi,10,12,1,0,83.33,b Seemab K,jfscdpl202526,5444,playwright
-2,JNS SUPREMOS,Rahul Agarwal,rahul agarwal,7,7,1,0,100,b Gokul P,jfscdpl202526,5444,playwright
-2,JNS SUPREMOS,Lavesh Kalsekar,lavesh kalsekar,12,14,2,0,85.71,c&b Seemab K,jfscdpl202526,5444,playwright
-2,JNS SUPREMOS,Pratik Chitalia,pratik chitalia,15,19,1,0,78.95,b Vishal M,jfscdpl202526,5444,playwright
-2,JNS SUPREMOS,Varun Sood,varun sood,25,21,2,0,119.05,b Jay P,jfscdpl202526,5444,playwright
-2,JNS SUPREMOS,Abhishek Pingley,abhishek pingley,1,3,0,0,33.33,run out ( Jaymin M / Neel P ),jfscdpl202526,5444,playwright
-2,JNS SUPREMOS,Navratan Bengani,navratan bengani,24,19,3,0,126.32,b Abhishek K,jfscdpl202526,5444,playwright
-2,JNS SUPREMOS,Kanav Hingorani,kanav hingorani,12,8,1,1,150,c Siddhart C b Jay P,jfscdpl202526,5444,playwright
-2,JNS SUPREMOS,Ameya Deshpande,ameya deshpande,1,2,0,0,50,b Jay P,jfscdpl202526,5444,playwright
-2,JNS SUPREMOS,Sheel Vora,sheel vora,1,3,0,0,33.33,run out ( Jaymin M ),jfscdpl202526,5444,playwright
-2,JNS SUPREMOS,Aditya Jain,aditya jain,2,2,0,0,100,not out,jfscdpl202526,5444,playwright
-2,JNS SUPREMOS,Pratik Chitalia,pratik chitalia,22,26,2,0,84.62,b Yusuf P,jfscdpl202526,5474,playwright
-2,JNS SUPREMOS,Lavesh Kalsekar,lavesh kalsekar,36,31,2,2,116.13,run out ( Gaurav A ),jfscdpl202526,5474,playwright
-2,JNS SUPREMOS,Abhishek Pingley,abhishek pingley,17,14,0,2,121.43,b Yusuf P,jfscdpl202526,5474,playwright
-2,JNS SUPREMOS,Manaan Gandhi,manaan gandhi,30,22,5,0,136.36,c Nirav D b Prince D,jfscdpl202526,5474,playwright
-2,JNS SUPREMOS,Kanav Hingorani,kanav hingorani,21,12,2,1,175,c † Ketankumar R b Priyul S,jfscdpl202526,5474,playwright
-2,JNS SUPREMOS,Varun Sood,varun sood,5,5,1,0,100,run out ( Prince D ),jfscdpl202526,5474,playwright
-2,JNS SUPREMOS,Rahul Agarwal,rahul agarwal,13,7,1,0,185.71,not out,jfscdpl202526,5474,playwright
-2,JNS SUPREMOS,Pradeep Tewani,pradeep tewani,1,1,0,0,100,not out,jfscdpl202526,5474,playwright
-2,JNS SUPREMOS,Varun Sood,varun sood,15,10,1,1,150,run out ( Amit M ),jfscdpl202526,5525,playwright
-2,JNS SUPREMOS,Lavesh Kalsekar,lavesh kalsekar,2,8,0,0,25,c Nishant P b Akshay B,jfscdpl202526,5525,playwright
-2,JNS SUPREMOS,Rahul Agarwal,rahul agarwal,10,11,2,0,90.91,b Anish .,jfscdpl202526,5525,playwright
-2,JNS SUPREMOS,Manaan Gandhi,manaan gandhi,11,8,0,1,137.5,c&b Manindra S,jfscdpl202526,5525,playwright
-2,JNS SUPREMOS,Pratik Chitalia,pratik chitalia,2,8,0,0,25,b Arjav P,jfscdpl202526,5525,playwright
-2,JNS SUPREMOS,Pritesh Magodia,pritesh magodia,10,10,2,0,100,c † Amit M b Nishant P,jfscdpl202526,5525,playwright
-2,JNS SUPREMOS,Kanav Hingorani,kanav hingorani,27,17,2,2,158.82,b Manindra S,jfscdpl202526,5525,playwright
-2,JNS SUPREMOS,Navratan Bengani,navratan bengani,14,16,2,0,87.5,not out,jfscdpl202526,5525,playwright
-2,JNS SUPREMOS,Aditya Jain,aditya jain,1,5,0,0,20,b Nishant P,jfscdpl202526,5525,playwright
-2,JNS SUPREMOS,Pradeep Tewani,pradeep tewani,1,6,0,0,16.67,c&b Mahesh B,jfscdpl202526,5525,playwright
-2,JNS SUPREMOS,Vishal .,vishal ,3,6,0,0,50,b Nishant P,jfscdpl202526,5525,playwright
-1,JNS SUPREMOS,Pratik Chitalia,pratik chitalia,58,33,6,2,175.76,c Vishal P b Chetan K,jfscdpl202526,5537,playwright
-1,JNS SUPREMOS,Varun Sood,varun sood,1,4,0,0,25,b Saurabh M,jfscdpl202526,5537,playwright
-1,JNS SUPREMOS,Lavesh Kalsekar,lavesh kalsekar,15,14,1,0,107.14,St Nilay S b Vishal P,jfscdpl202526,5537,playwright
-1,JNS SUPREMOS,Rahul Agarwal,rahul agarwal,9,8,1,0,112.5,b Rishi M,jfscdpl202526,5537,playwright
-1,JNS SUPREMOS,Kanav Hingorani,kanav hingorani,2,5,0,0,40,c Jayesh C b Chetan K,jfscdpl202526,5537,playwright
-1,JNS SUPREMOS,Sheel Vora,sheel vora,26,20,2,1,130,b Kaustubh G,jfscdpl202526,5537,playwright
-1,JNS SUPREMOS,Pritesh Magodia,pritesh magodia,3,7,0,0,42.86,lbw b Chetan K,jfscdpl202526,5537,playwright
-1,JNS SUPREMOS,Abhishek Pingley,abhishek pingley,24,24,3,0,100,not out,jfscdpl202526,5537,playwright
-1,JNS SUPREMOS,Jairaj,jairaj,1,2,0,0,50,c Rishi M b Saurabh M,jfscdpl202526,5537,playwright
-1,JNS SUPREMOS,Aditya Jain,aditya jain,0,2,0,0,0,c&b Saurabh M,jfscdpl202526,5537,playwright
-1,JNS SUPREMOS,Pradeep Tewani,pradeep tewani,1,1,0,0,100,not out,jfscdpl202526,5537,playwright
-1,JNS SUPREMOS,Manaan Gandhi,manaan gandhi,9,10,2,0,90,c Sahil S b Nimit .,jfscdpl202526,5553,playwright
-1,JNS SUPREMOS,Jairaj,jairaj,44,31,3,2,141.94,c Sahil S b Manav G,jfscdpl202526,5553,playwright
-1,JNS SUPREMOS,Jay Kedia,jay kedia,41,42,5,0,97.62,run out ( Sahil S ),jfscdpl202526,5553,playwright
-1,JNS SUPREMOS,Abhishek Pingley,abhishek pingley,8,8,1,0,100,c Sharad K b Manav G,jfscdpl202526,5553,playwright
-1,JNS SUPREMOS,Rahul Agarwal,rahul agarwal,17,13,1,0,130.77,run out ( Sahil S / Manav G ),jfscdpl202526,5553,playwright
-1,JNS SUPREMOS,Navratan Bengani,navratan bengani,11,8,1,0,137.5,not out,jfscdpl202526,5553,playwright
-1,JNS SUPREMOS,Varun Sood,varun sood,1,4,0,0,25,St Vicky S b Sahil S,jfscdpl202526,5553,playwright
-1,JNS SUPREMOS,Aditya Jain,aditya jain,5,4,1,0,125,not out,jfscdpl202526,5553,playwright
-1,JNS SUPREMOS,Manaan Gandhi,manaan gandhi,20,17,3,0,117.65,run out ( Ritesh B / Kamesh S ),jfscdpl202526,5770,playwright
-1,JNS SUPREMOS,Pratik Chitalia,pratik chitalia,12,15,2,0,80,c Sadanand P b Pratik D,jfscdpl202526,5770,playwright
-1,JNS SUPREMOS,Abhishek Pingley,abhishek pingley,31,18,4,2,172.22,b Shreyansh .,jfscdpl202526,5770,playwright
-1,JNS SUPREMOS,Jay Kedia,jay kedia,17,19,0,0,89.47,c Pratik D b Andy .,jfscdpl202526,5770,playwright
-1,JNS SUPREMOS,Rahul Agarwal,rahul agarwal,22,23,1,0,95.65,c Pratik D b Alok M,jfscdpl202526,5770,playwright
-1,JNS SUPREMOS,Tanmay Godiawala,tanmay godiawala,9,5,1,0,180,c Sandeep J b Pratik D,jfscdpl202526,5770,playwright
-1,JNS SUPREMOS,Varun Sood,varun sood,18,10,3,0,180,not out,jfscdpl202526,5770,playwright
-1,JNS SUPREMOS,Aditya Jain,aditya jain,16,11,2,0,145.45,c Ronak M b Pratik D,jfscdpl202526,5770,playwright
-1,JNS SUPREMOS,Jairaj,jairaj,3,2,0,0,150,not out,jfscdpl202526,5770,playwright
-2,JNS SUPREMOS,Pratik Chitalia,pratik chitalia,5,4,1,0,125,c Satish S b Vaseem L,jfscdpl202526,5840,playwright
-2,JNS SUPREMOS,Aditya Jain,aditya jain,0,2,0,0,0,b Rayed M,jfscdpl202526,5840,playwright
-2,JNS SUPREMOS,Abhishek Pingley,abhishek pingley,18,12,3,1,150,c&b Rayed M,jfscdpl202526,5840,playwright
-2,JNS SUPREMOS,Manaan Gandhi,manaan gandhi,37,24,7,1,154.17,b Muddassar V,jfscdpl202526,5840,playwright
-2,JNS SUPREMOS,Lavesh Kalsekar,lavesh kalsekar,36,34,2,1,105.88,lbw b Vineet K,jfscdpl202526,5840,playwright
-2,JNS SUPREMOS,Navratan Bengani,navratan bengani,0,2,0,0,0,St Satish S b Muddassar V,jfscdpl202526,5840,playwright
-2,JNS SUPREMOS,Rahul Agarwal,rahul agarwal,27,23,1,0,117.39,St Satish S b Vineet K,jfscdpl202526,5840,playwright
-2,JNS SUPREMOS,Tanmay Godiawala,tanmay godiawala,4,6,0,0,66.67,b Kartik .,jfscdpl202526,5840,playwright
-2,JNS SUPREMOS,Varun Sood,varun sood,15,12,0,1,125,not out,jfscdpl202526,5840,playwright
-2,JNS SUPREMOS,Pritesh Magodia,pritesh magodia,1,1,0,0,100,not out,jfscdpl202526,5840,playwright
-2,JNS SUPREMOS,Varun Sood,varun sood,0,5,0,0,0,b Hitesh .,jfscdpl202526,5851,playwright
-2,JNS SUPREMOS,Aditya Jain,aditya jain,16,13,2,1,123.08,c Meet S b Rohit S,jfscdpl202526,5851,playwright
-2,JNS SUPREMOS,Abhishek Pingley,abhishek pingley,0,3,0,0,0,b Hitesh .,jfscdpl202526,5851,playwright
-2,JNS SUPREMOS,Pratik Chitalia,pratik chitalia,6,8,1,0,75,c Jekin S b Rohit S,jfscdpl202526,5851,playwright
-2,JNS SUPREMOS,Ameya Deshpande,ameya deshpande,27,33,1,0,81.82,run out ( Jekin S ),jfscdpl202526,5851,playwright
-2,JNS SUPREMOS,Navratan Bengani,navratan bengani,38,37,4,0,102.7,not out,jfscdpl202526,5851,playwright
-2,JNS SUPREMOS,Tanmay Godiawala,tanmay godiawala,11,5,1,1,220,c Viral A b Jekin S,jfscdpl202526,5851,playwright
-2,JNS SUPREMOS,Rahul Agarwal,rahul agarwal,0,2,0,0,0,c † Rishiraj L b Jekin S,jfscdpl202526,5851,playwright
-2,JNS SUPREMOS,Jairaj,jairaj,1,1,0,0,100,not out,jfscdpl202526,5851,playwright
-2,SUPREMOS,Rahul agarwal (RHB),rahul agarwal rhb,19,25,1,0,76,c Ajay Thorat b Sameer,clt20s_pdf,1,txt
-2,SUPREMOS,Varun Sood (RHB),varun sood rhb,15,17,2,0,88.24,c Akshay Borkar b Ajay Thorat,clt20s_pdf,1,txt
-2,SUPREMOS,Navratan (RHB),navratan rhb,6,7,0,0,85.71,b Sameer,clt20s_pdf,1,txt
-2,SUPREMOS,Jay Kedia (RHB),jay kedia rhb,10,8,1,0,125,b Sameer,clt20s_pdf,1,txt
-2,SUPREMOS,Kanav Hingorani (RHB),kanav hingorani rhb,9,11,1,0,81.82,b Mahesh,clt20s_pdf,1,txt
-2,SUPREMOS,Nihir Goradia (RHB),nihir goradia rhb,10,13,0,0,76.92,c Balkrishna Shirke b Mahesh,clt20s_pdf,1,txt
-2,SUPREMOS,Pratik Chitalia (RHB),pratik chitalia rhb,8,9,0,0,88.89,c&b Mahesh,clt20s_pdf,1,txt
-2,SUPREMOS,Rajan Singh (RHB),rajan singh rhb,30,16,2,2,187.5,not out,clt20s_pdf,1,txt
-2,SUPREMOS,VISHAL (LHB),vishal lhb,21,14,3,0,150,not out,clt20s_pdf,1,txt
-1,SUPREMOS,Pratik Chitalia (RHB),pratik chitalia rhb,0,3,0,0,0,c †Amar b Pankaj,clt20s_pdf,2,txt
-1,SUPREMOS,Dr. Manaan Gandhi (RHB),dr manaan gandhi rhb,1,4,0,0,25,run out Anurodh Gusain / † Amar,clt20s_pdf,2,txt
-1,SUPREMOS,Varun Sood (RHB),varun sood rhb,7,8,1,0,87.5,c Ajit b Pankaj,clt20s_pdf,2,txt
-1,SUPREMOS,Ameya Deshpande (RHB),ameya deshpande rhb,5,9,0,0,55.56,c Tarang Shah b Pankaj,clt20s_pdf,2,txt
-1,SUPREMOS,Rahul agarwal (RHB),rahul agarwal rhb,31,33,3,0,93.94,c †Amar b Bunty,clt20s_pdf,2,txt
-1,SUPREMOS,Lavesh (RHB),lavesh rhb,7,13,0,0,53.85,c Tarang Shah b Anurodh Gusain,clt20s_pdf,2,txt
-1,SUPREMOS,Navratan (RHB),navratan rhb,40,26,6,1,153.85,b Anurodh Gusain,clt20s_pdf,2,txt
-1,SUPREMOS,Abhishek P (RHB),abhishek p rhb,55,22,7,4,250,not out,clt20s_pdf,2,txt
-1,SUPREMOS,Sheel (LHB),sheel lhb,1,4,0,0,25,not out,clt20s_pdf,2,txt
-2,SUPREMOS,Varun Sood (RHB),varun sood rhb,12,12,1,1,100,b Smit Desai,clt20s_pdf,3,txt
-2,SUPREMOS,Pratik Chitalia (RHB),pratik chitalia rhb,14,24,2,0,58.33,b Harshil Shah,clt20s_pdf,3,txt
-2,SUPREMOS,Dr. Manaan Gandhi (RHB),dr manaan gandhi rhb,56,36,6,3,155.56,run out Milan Bhai,clt20s_pdf,3,txt
-2,SUPREMOS,Kanav Hingorani (RHB),kanav hingorani rhb,1,2,0,0,50,b Khushal desai,clt20s_pdf,3,txt
-2,SUPREMOS,Rahul agarwal (RHB),rahul agarwal rhb,22,17,1,1,129.41,not out,clt20s_pdf,3,txt
-2,SUPREMOS,Navratan (RHB),navratan rhb,16,12,3,0,133.33,not out,clt20s_pdf,3,txt
-1,SUPREMOS,Dr. Manaan Gandhi (RHB),dr manaan gandhi rhb,1,1,0,0,100,run out Karan / Vivek Ilawat,clt20s_pdf,4,txt
-1,SUPREMOS,Pratik Chitalia (RHB),pratik chitalia rhb,0,1,0,0,0,b Shazad Shroff,clt20s_pdf,4,txt
-1,SUPREMOS,Lavesh (RHB),lavesh rhb,45,39,3,2,115.38,c Akshay Tungare b Adnan,clt20s_pdf,4,txt
-1,SUPREMOS,Sheel (LHB),sheel lhb,13,9,2,0,144.44,b Karan,clt20s_pdf,4,txt
-1,SUPREMOS,Pritesh M (RHB),pritesh m rhb,22,14,5,0,157.14,lbw b Karan,clt20s_pdf,4,txt
-1,SUPREMOS,Navratan (RHB),navratan rhb,12,16,1,0,75,c †Vivek Ilawat b Harry,clt20s_pdf,4,txt
-1,SUPREMOS,Kanav Hingorani (RHB),kanav hingorani rhb,9,11,1,0,81.82,b Harsh Rajeev Chhabria,clt20s_pdf,4,txt
-1,SUPREMOS,Varun Sood (RHB),varun sood rhb,26,18,4,0,144.44,b Sachin M,clt20s_pdf,4,txt
-1,SUPREMOS,Rajan Singh (RHB),rajan singh rhb,4,6,0,0,66.67,b Sachin M,clt20s_pdf,4,txt
-1,SUPREMOS,Nihir Goradia (RHB),nihir goradia rhb,9,5,1,0,180,b Sachin M,clt20s_pdf,4,txt
-1,SUPREMOS,Shivam Tiwari (RHB),shivam tiwari rhb,1,1,0,0,100,not out,clt20s_pdf,4,txt
-1,SUPREMOS,"Extras: (wd 14, b 6, nb 1)",extras wd 14 b 6 nb 1,,,,,,,clt20s_pdf,4,txt
-1,SUPREMOS,"Total: Overs 20.0, Wickets 10",total overs 200 wickets 10,,,,,,,clt20s_pdf,4,txt
-1,SUPREMOS,Nitin Hadale (RHB),nitin hadale rhb,12,11,2,0,109.09,lbw b Milan Gohil,clt20s_pdf,5,txt
-1,SUPREMOS,Pratik Chitalia (RHB),pratik chitalia rhb,85,53,11,2,160.38,b Jeremy James,clt20s_pdf,5,txt
-1,SUPREMOS,Sheel (LHB),sheel lhb,1,5,0,0,20,c Anubhav Agarwal b ELAN,clt20s_pdf,5,txt
-1,SUPREMOS,Abhishek P (RHB),abhishek p rhb,38,13,4,2,292.31,c Anubhav Agarwal b Jeremy James,clt20s_pdf,5,txt
-1,SUPREMOS,Navratan (RHB),navratan rhb,8,7,1,0,114.29,c Rohit Sarvaria b Ashlesh Shah,clt20s_pdf,5,txt
-1,SUPREMOS,Dr. Manaan Gandhi (RHB),dr manaan gandhi rhb,10,9,1,0,111.11,c Aviral b Parhtheshwar Sharma,clt20s_pdf,5,txt
-1,SUPREMOS,Varun Sood (RHB),varun sood rhb,20,15,2,0,133.33,not out,clt20s_pdf,5,txt
-1,SUPREMOS,Rahul agarwal (RHB),rahul agarwal rhb,0,1,0,0,0,lbw b Jeremy James,clt20s_pdf,5,txt
-1,SUPREMOS,Rajan Singh (RHB),rajan singh rhb,16,6,2,1,266.67,not out,clt20s_pdf,5,txt
-1,SUPREMOS,Pratik Chitalia (RHB),pratik chitalia rhb,3,8,0,0,37.5,b Ashwath Nair,clt20s_pdf,6,txt
-1,SUPREMOS,Ameya Deshpande (RHB),ameya deshpande rhb,55,41,7,0,134.15,run out Ashwath Nair / † Arkaprovo Das,clt20s_pdf,6,txt
-1,SUPREMOS,Jay Kedia (RHB),jay kedia rhb,15,11,2,0,136.36,c Shakib Alam b Yash Kasangottuwar,clt20s_pdf,6,txt
-1,SUPREMOS,Abhishek P (RHB),abhishek p rhb,13,11,2,0,118.18,b Suvaaankoor Das,clt20s_pdf,6,txt
-1,SUPREMOS,Lavesh (RHB),lavesh rhb,38,22,3,2,172.73,b Ashwath Nair,clt20s_pdf,6,txt
-1,SUPREMOS,Navratan (RHB),navratan rhb,2,5,0,0,40,b Vijayendra Sharma,clt20s_pdf,6,txt
-1,SUPREMOS,Rahul agarwal (RHB),rahul agarwal rhb,4,4,0,0,100,st †Arkaprovo Das b Suvaaankoor Das,clt20s_pdf,6,txt
-1,SUPREMOS,Rajan Singh (RHB),rajan singh rhb,25,13,2,1,192.31,run out † Arkaprovo Das / † Arkaprovo Das,clt20s_pdf,6,txt
-1,SUPREMOS,Varun Sood (RHB),varun sood rhb,3,4,0,0,75,run out Abhijeet Gomare / † Arkaprovo Das,clt20s_pdf,6,txt
-1,SUPREMOS,Aditya (RHB),aditya rhb,0,1,0,0,0,not out,clt20s_pdf,6,txt
-2,SUPREMOS,Pratik Chitalia (RHB),pratik chitalia rhb,0,3,0,0,0,b Deepak Gaikwad,clt20s_pdf,7,txt
-2,SUPREMOS,Abhishek P (RHB),abhishek p rhb,12,6,3,0,200,run out Deepak Gaikwad,clt20s_pdf,7,txt
-2,SUPREMOS,Dr. Manaan Gandhi (RHB),dr manaan gandhi rhb,10,9,2,0,111.11,run out Krish Pardhi,clt20s_pdf,7,txt
-2,SUPREMOS,Lavesh (RHB),lavesh rhb,4,7,1,0,57.14,lbw b Deepak Gaikwad,clt20s_pdf,7,txt
-2,SUPREMOS,Rahul agarwal (RHB),rahul agarwal rhb,12,24,1,0,50,b Vishal Yadav,clt20s_pdf,7,txt
-2,SUPREMOS,Vivek Singh (RHB),vivek singh rhb,3,6,0,0,50,run out † Shaker khan,clt20s_pdf,7,txt
-2,SUPREMOS,Milan Sen (RHB),milan sen rhb,16,27,0,0,59.26,c Kavaldeep Singh b Krish Pardhi,clt20s_pdf,7,txt
-2,SUPREMOS,Rajan Singh (RHB),rajan singh rhb,16,11,0,1,145.45,not out,clt20s_pdf,7,txt
-2,SUPREMOS,Jairaj (RHB),jairaj rhb,9,7,1,0,128.57,c&b Krish Pardhi,clt20s_pdf,7,txt
-2,SUPREMOS,Shivam Tiwari (RHB),shivam tiwari rhb,5,4,0,0,125,b Kavaldeep Singh,clt20s_pdf,7,txt
-2,SUPREMOS,Pradeep Tewani (RHB),pradeep tewani rhb,0,1,0,0,0,lbw b Kavaldeep Singh,clt20s_pdf,7,txt
+tournamentkey,matchid,source,inningsno,battingteam,opponent,batpos,playername,playerkey,runs,balls,fours,sixes,sr,howout
+zootermt20cb3,3879,playwright,1,JNS SUPREMOS (MT20CB 3.0),SOMAIYA SPORTS ACADEMY (MT20CB 3.0),1,Pratik .,pratik ,41.0,38.0,3.0,0.0,107.89,c Hitesh K b Aditya S
+zootermt20cb3,3879,playwright,1,JNS SUPREMOS (MT20CB 3.0),SOMAIYA SPORTS ACADEMY (MT20CB 3.0),2,Nitin H,nitin h,36.0,21.0,3.0,3.0,171.43,St Rajesh U b Mangesh D
+zootermt20cb3,3879,playwright,1,JNS SUPREMOS (MT20CB 3.0),SOMAIYA SPORTS ACADEMY (MT20CB 3.0),3,Lavesh .,lavesh ,62.0,36.0,7.0,2.0,172.22,lbw b Sunil L
+zootermt20cb3,3879,playwright,1,JNS SUPREMOS (MT20CB 3.0),SOMAIYA SPORTS ACADEMY (MT20CB 3.0),4,Kanav .,kanav ,14.0,12.0,2.0,0.0,116.67,c Ashok Y b Sunil L
+zootermt20cb3,3879,playwright,1,JNS SUPREMOS (MT20CB 3.0),SOMAIYA SPORTS ACADEMY (MT20CB 3.0),5,Urvish .,urvish ,11.0,6.0,0.0,1.0,183.33,not out
+zootermt20cb3,3879,playwright,1,JNS SUPREMOS (MT20CB 3.0),SOMAIYA SPORTS ACADEMY (MT20CB 3.0),6,Rahul Agarwal,rahul agarwal,1.0,4.0,0.0,0.0,25.0,c Ashok Y b Sunil L
+zootermt20cb3,3879,playwright,1,JNS SUPREMOS (MT20CB 3.0),SOMAIYA SPORTS ACADEMY (MT20CB 3.0),7,Shakti .,shakti ,0.0,2.0,0.0,0.0,0.0,b Sunil L
+zootermt20cb3,3879,playwright,1,JNS SUPREMOS (MT20CB 3.0),SOMAIYA SPORTS ACADEMY (MT20CB 3.0),8,Varun .,varun ,1.0,1.0,0.0,0.0,100.0,run out ( Aditya S )
+zootermt20cb3,3985,playwright,2,JNS SUPREMOS (MT20CB 3.0),BOMBAY VIKINGS (MT20CB 3.0),1,Pratik .,pratik ,11.0,9.0,1.0,1.0,122.22,b Manish S
+zootermt20cb3,3985,playwright,2,JNS SUPREMOS (MT20CB 3.0),BOMBAY VIKINGS (MT20CB 3.0),2,Varun .,varun ,7.0,6.0,1.0,0.0,116.67,lbw b Manish S
+zootermt20cb3,3985,playwright,2,JNS SUPREMOS (MT20CB 3.0),BOMBAY VIKINGS (MT20CB 3.0),3,Abhishek Pingley,abhishek pingley,4.0,9.0,0.0,0.0,44.44,b Manish S
+zootermt20cb3,3985,playwright,2,JNS SUPREMOS (MT20CB 3.0),BOMBAY VIKINGS (MT20CB 3.0),4,Rajan Singh,rajan singh,0.0,1.0,0.0,0.0,0.0,b Manish S
+zootermt20cb3,3985,playwright,2,JNS SUPREMOS (MT20CB 3.0),BOMBAY VIKINGS (MT20CB 3.0),5,Jay Kedia,jay kedia,58.0,48.0,5.0,0.0,120.83,c Shiv N b Vinay B
+zootermt20cb3,3985,playwright,2,JNS SUPREMOS (MT20CB 3.0),BOMBAY VIKINGS (MT20CB 3.0),6,Rahul Agarwal,rahul agarwal,0.0,1.0,0.0,0.0,0.0,lbw b Manish S
+zootermt20cb3,3985,playwright,2,JNS SUPREMOS (MT20CB 3.0),BOMBAY VIKINGS (MT20CB 3.0),7,Nihir .,nihir ,14.0,22.0,0.0,0.0,63.64,c Mehyul G b Hitesh B
+zootermt20cb3,3985,playwright,2,JNS SUPREMOS (MT20CB 3.0),BOMBAY VIKINGS (MT20CB 3.0),8,Urvish .,urvish ,12.0,12.0,1.0,0.0,100.0,b Mehyul G
+zootermt20cb3,3985,playwright,2,JNS SUPREMOS (MT20CB 3.0),BOMBAY VIKINGS (MT20CB 3.0),9,Tanmay Godiwala,tanmay godiwala,8.0,5.0,1.0,0.0,160.0,not out
+zootermt20cb3,3985,playwright,2,JNS SUPREMOS (MT20CB 3.0),BOMBAY VIKINGS (MT20CB 3.0),10,Pritesh .,pritesh ,3.0,5.0,0.0,0.0,60.0,c Vinay B b Yash D
+zootermt20cb3,3985,playwright,2,JNS SUPREMOS (MT20CB 3.0),BOMBAY VIKINGS (MT20CB 3.0),11,Aditya .,aditya ,8.0,2.0,2.0,0.0,400.0,not out
+zooterisdt8,3816,playwright,2,JNS SUPREMOS (ISDT 8.0),BD ROYALS (ISDT 8.0),1,Varun Sood,varun sood,5.0,7.0,0.0,0.0,71.43,b Suchit S
+zooterisdt8,3816,playwright,2,JNS SUPREMOS (ISDT 8.0),BD ROYALS (ISDT 8.0),2,Pratik Chitalia,pratik chitalia,25.0,23.0,3.0,0.0,108.7,c Ankit S b Himanshu R
+zooterisdt8,3816,playwright,2,JNS SUPREMOS (ISDT 8.0),BD ROYALS (ISDT 8.0),3,Manaan Gandhi,manaan gandhi,9.0,10.0,1.0,0.0,90.0,c Ankit S b Rishabh S
+zooterisdt8,3816,playwright,2,JNS SUPREMOS (ISDT 8.0),BD ROYALS (ISDT 8.0),4,Rahul Agarwal,rahul agarwal,27.0,25.0,1.0,0.0,108.0,run out ( Amit M )
+zooterisdt8,3816,playwright,2,JNS SUPREMOS (ISDT 8.0),BD ROYALS (ISDT 8.0),5,Abhishek Pingley,abhishek pingley,28.0,21.0,2.0,1.0,133.33,b Rajiv H
+zooterisdt8,3816,playwright,2,JNS SUPREMOS (ISDT 8.0),BD ROYALS (ISDT 8.0),6,Kanav Hingorani,kanav hingorani,25.0,21.0,3.0,0.0,119.05,c Himanshu R b Shamit D
+zooterisdt8,3816,playwright,2,JNS SUPREMOS (ISDT 8.0),BD ROYALS (ISDT 8.0),7,Navratan Bengani,navratan bengani,22.0,16.0,1.0,0.0,137.5,not out
+zooterisdt8,3822,playwright,1,JNS SUPREMOS (ISDT 8.0),AVM ARYANS (ISDT 8.0),1,Rahul Agarwal,rahul agarwal,24.0,26.0,3.0,0.0,92.31,c Ashwin P b Mahesh B
+zooterisdt8,3822,playwright,1,JNS SUPREMOS (ISDT 8.0),AVM ARYANS (ISDT 8.0),2,Jay Kedia,jay kedia,22.0,25.0,0.0,1.0,88.0,c † Amit M b Akshay B
+zooterisdt8,3822,playwright,1,JNS SUPREMOS (ISDT 8.0),AVM ARYANS (ISDT 8.0),3,Lavesh Kalsekar,lavesh kalsekar,18.0,15.0,1.0,0.0,120.0,c Prathmesh P b Mahesh B
+zooterisdt8,3822,playwright,1,JNS SUPREMOS (ISDT 8.0),AVM ARYANS (ISDT 8.0),4,Navratan Bengani,navratan bengani,33.0,21.0,4.0,0.0,157.14,b Balakrishna S
+zooterisdt8,3822,playwright,1,JNS SUPREMOS (ISDT 8.0),AVM ARYANS (ISDT 8.0),5,Sheel Vora,sheel vora,12.0,13.0,1.0,0.0,92.31,b Nishant P
+zooterisdt8,3822,playwright,1,JNS SUPREMOS (ISDT 8.0),AVM ARYANS (ISDT 8.0),6,Abhishek Pingley,abhishek pingley,14.0,10.0,2.0,0.0,140.0,not out
+zooterisdt8,3822,playwright,1,JNS SUPREMOS (ISDT 8.0),AVM ARYANS (ISDT 8.0),7,Varun Sood,varun sood,7.0,8.0,0.0,0.0,87.5,St Amit M b Balakrishna S
+zooterisdt8,3822,playwright,1,JNS SUPREMOS (ISDT 8.0),AVM ARYANS (ISDT 8.0),8,Vishal Merwana,vishal merwana,1.0,2.0,0.0,0.0,50.0,b Balakrishna S
+zooterisdt8,3831,playwright,1,JNS SUPREMOS (ISDT 8.0),OIS BLASTERS (ISDT 8.0),1,Pratik Chitalia,pratik chitalia,0.0,1.0,0.0,0.0,0.0,c † Vinit A b Jay P
+zooterisdt8,3831,playwright,1,JNS SUPREMOS (ISDT 8.0),OIS BLASTERS (ISDT 8.0),2,Rahul Agarwal,rahul agarwal,10.0,12.0,2.0,0.0,83.33,run out ( Kunal . / Rishi P )
+zooterisdt8,3831,playwright,1,JNS SUPREMOS (ISDT 8.0),OIS BLASTERS (ISDT 8.0),3,Lavesh Kalsekar,lavesh kalsekar,8.0,9.0,1.0,0.0,88.89,c † Rishi P b Jay P
+zooterisdt8,3831,playwright,1,JNS SUPREMOS (ISDT 8.0),OIS BLASTERS (ISDT 8.0),4,Manaan Gandhi,manaan gandhi,51.0,43.0,7.0,0.0,118.6,run out ( Amitraj B )
+zooterisdt8,3831,playwright,1,JNS SUPREMOS (ISDT 8.0),OIS BLASTERS (ISDT 8.0),5,Navratan Bengani,navratan bengani,23.0,17.0,2.0,0.0,135.29,c&b Vinod L
+zooterisdt8,3831,playwright,1,JNS SUPREMOS (ISDT 8.0),OIS BLASTERS (ISDT 8.0),6,Abhishek Pingley,abhishek pingley,1.0,2.0,0.0,0.0,50.0,c † Rishi P b Shivanand N
+zooterisdt8,3831,playwright,1,JNS SUPREMOS (ISDT 8.0),OIS BLASTERS (ISDT 8.0),7,Kanav Hingorani,kanav hingorani,53.0,29.0,5.0,1.0,182.76,not out
+zooterisdt8,3831,playwright,1,JNS SUPREMOS (ISDT 8.0),OIS BLASTERS (ISDT 8.0),8,Varun Sood,varun sood,10.0,8.0,1.0,0.0,125.0,run out ( Amitraj B / Gautam M )
+zooterisdt8,3933,playwright,1,JNS SUPREMOS (ISDT 8.0),JBCN AVENGERS (ISDT 8.0),1,Pratik Chitalia,pratik chitalia,21.0,19.0,2.0,0.0,110.53,c Ashish L b Sadiq L
+zooterisdt8,3933,playwright,1,JNS SUPREMOS (ISDT 8.0),JBCN AVENGERS (ISDT 8.0),2,Lavesh Kalsekar,lavesh kalsekar,15.0,10.0,2.0,0.0,150.0,St Ribhu D b Vaseem L
+zooterisdt8,3933,playwright,1,JNS SUPREMOS (ISDT 8.0),JBCN AVENGERS (ISDT 8.0),3,Jay Kedia,jay kedia,19.0,17.0,1.0,0.0,111.76,lbw b Vineet K
+zooterisdt8,3933,playwright,1,JNS SUPREMOS (ISDT 8.0),JBCN AVENGERS (ISDT 8.0),4,Manaan Gandhi,manaan gandhi,16.0,19.0,2.0,0.0,84.21,c Rayed M b Muddassar V
+zooterisdt8,3933,playwright,1,JNS SUPREMOS (ISDT 8.0),JBCN AVENGERS (ISDT 8.0),5,Rahul Agarwal,rahul agarwal,7.0,9.0,1.0,0.0,77.78,c † Ribhu D b Muddassar V
+zooterisdt8,3933,playwright,1,JNS SUPREMOS (ISDT 8.0),JBCN AVENGERS (ISDT 8.0),6,Abhishek Pingley,abhishek pingley,17.0,22.0,0.0,0.0,77.27,not out
+zooterisdt8,3933,playwright,1,JNS SUPREMOS (ISDT 8.0),JBCN AVENGERS (ISDT 8.0),7,Kanav Hingorani,kanav hingorani,44.0,24.0,2.0,3.0,183.33,c Fahim A b Rayed M
+jfscdpl202526,5418,playwright,2,JNS SUPREMOS,SVKM SUPER STRIKERS,1,Manaan Gandhi,manaan gandhi,18.0,17.0,3.0,0.0,105.88,b Mittal J
+jfscdpl202526,5418,playwright,2,JNS SUPREMOS,SVKM SUPER STRIKERS,2,Pratik Chitalia,pratik chitalia,1.0,3.0,0.0,0.0,33.33,b Mittal J
+jfscdpl202526,5418,playwright,2,JNS SUPREMOS,SVKM SUPER STRIKERS,3,Jay Kedia,jay kedia,1.0,3.0,0.0,0.0,33.33,run out ( Varun S / Mittal J )
+jfscdpl202526,5418,playwright,2,JNS SUPREMOS,SVKM SUPER STRIKERS,4,Varun Sood,varun sood,22.0,31.0,2.0,0.0,70.97,Retired Out
+jfscdpl202526,5418,playwright,2,JNS SUPREMOS,SVKM SUPER STRIKERS,5,Rahul Agarwal,rahul agarwal,29.0,20.0,4.0,0.0,145.0,c&b Raj G
+jfscdpl202526,5418,playwright,2,JNS SUPREMOS,SVKM SUPER STRIKERS,6,Lavesh Kalsekar,lavesh kalsekar,13.0,10.0,1.0,1.0,130.0,c Varun S b Prathik S
+jfscdpl202526,5418,playwright,2,JNS SUPREMOS,SVKM SUPER STRIKERS,7,Kanav Hingorani,kanav hingorani,38.0,13.0,2.0,4.0,292.31,c&b Amit K
+jfscdpl202526,5418,playwright,2,JNS SUPREMOS,SVKM SUPER STRIKERS,8,Navratan Bengani,navratan bengani,24.0,16.0,3.0,0.0,150.0,St Chirag J b Amit K
+jfscdpl202526,5418,playwright,2,JNS SUPREMOS,SVKM SUPER STRIKERS,9,Sheel Vora,sheel vora,3.0,4.0,0.0,0.0,75.0,run out ( Jigar S / Amit K )
+jfscdpl202526,5418,playwright,2,JNS SUPREMOS,SVKM SUPER STRIKERS,10,Aditya Jain,aditya jain,4.0,3.0,0.0,0.0,133.33,not out
+jfscdpl202526,5444,playwright,2,JNS SUPREMOS,JNS RANGERS,1,Manaan Gandhi,manaan gandhi,10.0,12.0,1.0,0.0,83.33,b Seemab K
+jfscdpl202526,5444,playwright,2,JNS SUPREMOS,JNS RANGERS,2,Rahul Agarwal,rahul agarwal,7.0,7.0,1.0,0.0,100.0,b Gokul P
+jfscdpl202526,5444,playwright,2,JNS SUPREMOS,JNS RANGERS,3,Lavesh Kalsekar,lavesh kalsekar,12.0,14.0,2.0,0.0,85.71,c&b Seemab K
+jfscdpl202526,5444,playwright,2,JNS SUPREMOS,JNS RANGERS,4,Pratik Chitalia,pratik chitalia,15.0,19.0,1.0,0.0,78.95,b Vishal M
+jfscdpl202526,5444,playwright,2,JNS SUPREMOS,JNS RANGERS,5,Varun Sood,varun sood,25.0,21.0,2.0,0.0,119.05,b Jay P
+jfscdpl202526,5444,playwright,2,JNS SUPREMOS,JNS RANGERS,6,Abhishek Pingley,abhishek pingley,1.0,3.0,0.0,0.0,33.33,run out ( Jaymin M / Neel P )
+jfscdpl202526,5444,playwright,2,JNS SUPREMOS,JNS RANGERS,7,Navratan Bengani,navratan bengani,24.0,19.0,3.0,0.0,126.32,b Abhishek K
+jfscdpl202526,5444,playwright,2,JNS SUPREMOS,JNS RANGERS,8,Kanav Hingorani,kanav hingorani,12.0,8.0,1.0,1.0,150.0,c Siddhart C b Jay P
+jfscdpl202526,5444,playwright,2,JNS SUPREMOS,JNS RANGERS,9,Ameya Deshpande,ameya deshpande,1.0,2.0,0.0,0.0,50.0,b Jay P
+jfscdpl202526,5444,playwright,2,JNS SUPREMOS,JNS RANGERS,10,Sheel Vora,sheel vora,1.0,3.0,0.0,0.0,33.33,run out ( Jaymin M )
+jfscdpl202526,5444,playwright,2,JNS SUPREMOS,JNS RANGERS,11,Aditya Jain,aditya jain,2.0,2.0,0.0,0.0,100.0,not out
+jfscdpl202526,5474,playwright,2,JNS SUPREMOS,SVKM RISING STRIKERS,1,Pratik Chitalia,pratik chitalia,22.0,26.0,2.0,0.0,84.62,b Yusuf P
+jfscdpl202526,5474,playwright,2,JNS SUPREMOS,SVKM RISING STRIKERS,2,Lavesh Kalsekar,lavesh kalsekar,36.0,31.0,2.0,2.0,116.13,run out ( Gaurav A )
+jfscdpl202526,5474,playwright,2,JNS SUPREMOS,SVKM RISING STRIKERS,3,Abhishek Pingley,abhishek pingley,17.0,14.0,0.0,2.0,121.43,b Yusuf P
+jfscdpl202526,5474,playwright,2,JNS SUPREMOS,SVKM RISING STRIKERS,4,Manaan Gandhi,manaan gandhi,30.0,22.0,5.0,0.0,136.36,c Nirav D b Prince D
+jfscdpl202526,5474,playwright,2,JNS SUPREMOS,SVKM RISING STRIKERS,5,Kanav Hingorani,kanav hingorani,21.0,12.0,2.0,1.0,175.0,c † Ketankumar R b Priyul S
+jfscdpl202526,5474,playwright,2,JNS SUPREMOS,SVKM RISING STRIKERS,6,Varun Sood,varun sood,5.0,5.0,1.0,0.0,100.0,run out ( Prince D )
+jfscdpl202526,5474,playwright,2,JNS SUPREMOS,SVKM RISING STRIKERS,7,Rahul Agarwal,rahul agarwal,13.0,7.0,1.0,0.0,185.71,not out
+jfscdpl202526,5474,playwright,2,JNS SUPREMOS,SVKM RISING STRIKERS,8,Pradeep Tewani,pradeep tewani,1.0,1.0,0.0,0.0,100.0,not out
+jfscdpl202526,5525,playwright,2,JNS SUPREMOS,AVM ARYANS,1,Varun Sood,varun sood,15.0,10.0,1.0,1.0,150.0,run out ( Amit M )
+jfscdpl202526,5525,playwright,2,JNS SUPREMOS,AVM ARYANS,2,Lavesh Kalsekar,lavesh kalsekar,2.0,8.0,0.0,0.0,25.0,c Nishant P b Akshay B
+jfscdpl202526,5525,playwright,2,JNS SUPREMOS,AVM ARYANS,3,Rahul Agarwal,rahul agarwal,10.0,11.0,2.0,0.0,90.91,b Anish .
+jfscdpl202526,5525,playwright,2,JNS SUPREMOS,AVM ARYANS,4,Manaan Gandhi,manaan gandhi,11.0,8.0,0.0,1.0,137.5,c&b Manindra S
+jfscdpl202526,5525,playwright,2,JNS SUPREMOS,AVM ARYANS,5,Pratik Chitalia,pratik chitalia,2.0,8.0,0.0,0.0,25.0,b Arjav P
+jfscdpl202526,5525,playwright,2,JNS SUPREMOS,AVM ARYANS,6,Pritesh Magodia,pritesh magodia,10.0,10.0,2.0,0.0,100.0,c † Amit M b Nishant P
+jfscdpl202526,5525,playwright,2,JNS SUPREMOS,AVM ARYANS,7,Kanav Hingorani,kanav hingorani,27.0,17.0,2.0,2.0,158.82,b Manindra S
+jfscdpl202526,5525,playwright,2,JNS SUPREMOS,AVM ARYANS,8,Navratan Bengani,navratan bengani,14.0,16.0,2.0,0.0,87.5,not out
+jfscdpl202526,5525,playwright,2,JNS SUPREMOS,AVM ARYANS,9,Aditya Jain,aditya jain,1.0,5.0,0.0,0.0,20.0,b Nishant P
+jfscdpl202526,5525,playwright,2,JNS SUPREMOS,AVM ARYANS,10,Pradeep Tewani,pradeep tewani,1.0,6.0,0.0,0.0,16.67,c&b Mahesh B
+jfscdpl202526,5525,playwright,2,JNS SUPREMOS,AVM ARYANS,11,Vishal .,vishal ,3.0,6.0,0.0,0.0,50.0,b Nishant P
+jfscdpl202526,5537,playwright,1,JNS SUPREMOS,AVM YODDHAS,1,Pratik Chitalia,pratik chitalia,58.0,33.0,6.0,2.0,175.76,c Vishal P b Chetan K
+jfscdpl202526,5537,playwright,1,JNS SUPREMOS,AVM YODDHAS,2,Varun Sood,varun sood,1.0,4.0,0.0,0.0,25.0,b Saurabh M
+jfscdpl202526,5537,playwright,1,JNS SUPREMOS,AVM YODDHAS,3,Lavesh Kalsekar,lavesh kalsekar,15.0,14.0,1.0,0.0,107.14,St Nilay S b Vishal P
+jfscdpl202526,5537,playwright,1,JNS SUPREMOS,AVM YODDHAS,4,Rahul Agarwal,rahul agarwal,9.0,8.0,1.0,0.0,112.5,b Rishi M
+jfscdpl202526,5537,playwright,1,JNS SUPREMOS,AVM YODDHAS,5,Kanav Hingorani,kanav hingorani,2.0,5.0,0.0,0.0,40.0,c Jayesh C b Chetan K
+jfscdpl202526,5537,playwright,1,JNS SUPREMOS,AVM YODDHAS,6,Sheel Vora,sheel vora,26.0,20.0,2.0,1.0,130.0,b Kaustubh G
+jfscdpl202526,5537,playwright,1,JNS SUPREMOS,AVM YODDHAS,7,Pritesh Magodia,pritesh magodia,3.0,7.0,0.0,0.0,42.86,lbw b Chetan K
+jfscdpl202526,5537,playwright,1,JNS SUPREMOS,AVM YODDHAS,8,Abhishek Pingley,abhishek pingley,24.0,24.0,3.0,0.0,100.0,not out
+jfscdpl202526,5537,playwright,1,JNS SUPREMOS,AVM YODDHAS,10,Aditya Jain,aditya jain,0.0,2.0,0.0,0.0,0.0,c&b Saurabh M
+jfscdpl202526,5537,playwright,1,JNS SUPREMOS,AVM YODDHAS,11,Pradeep Tewani,pradeep tewani,1.0,1.0,0.0,0.0,100.0,not out
+jfscdpl202526,5553,playwright,1,JNS SUPREMOS,OIS TIGERS,1,Manaan Gandhi,manaan gandhi,9.0,10.0,2.0,0.0,90.0,c Sahil S b Nimit .
+jfscdpl202526,5553,playwright,1,JNS SUPREMOS,OIS TIGERS,3,Jay Kedia,jay kedia,41.0,42.0,5.0,0.0,97.62,run out ( Sahil S )
+jfscdpl202526,5553,playwright,1,JNS SUPREMOS,OIS TIGERS,4,Abhishek Pingley,abhishek pingley,8.0,8.0,1.0,0.0,100.0,c Sharad K b Manav G
+jfscdpl202526,5553,playwright,1,JNS SUPREMOS,OIS TIGERS,5,Rahul Agarwal,rahul agarwal,17.0,13.0,1.0,0.0,130.77,run out ( Sahil S / Manav G )
+jfscdpl202526,5553,playwright,1,JNS SUPREMOS,OIS TIGERS,6,Navratan Bengani,navratan bengani,11.0,8.0,1.0,0.0,137.5,not out
+jfscdpl202526,5553,playwright,1,JNS SUPREMOS,OIS TIGERS,7,Varun Sood,varun sood,1.0,4.0,0.0,0.0,25.0,St Vicky S b Sahil S
+jfscdpl202526,5553,playwright,1,JNS SUPREMOS,OIS TIGERS,8,Aditya Jain,aditya jain,5.0,4.0,1.0,0.0,125.0,not out
+jfscdpl202526,5770,playwright,1,JNS SUPREMOS,UNITED GLADDIATORS,1,Manaan Gandhi,manaan gandhi,20.0,17.0,3.0,0.0,117.65,run out ( Ritesh B / Kamesh S )
+jfscdpl202526,5770,playwright,1,JNS SUPREMOS,UNITED GLADDIATORS,2,Pratik Chitalia,pratik chitalia,12.0,15.0,2.0,0.0,80.0,c Sadanand P b Pratik D
+jfscdpl202526,5770,playwright,1,JNS SUPREMOS,UNITED GLADDIATORS,3,Abhishek Pingley,abhishek pingley,31.0,18.0,4.0,2.0,172.22,b Shreyansh .
+jfscdpl202526,5770,playwright,1,JNS SUPREMOS,UNITED GLADDIATORS,4,Jay Kedia,jay kedia,17.0,19.0,0.0,0.0,89.47,c Pratik D b Andy .
+jfscdpl202526,5770,playwright,1,JNS SUPREMOS,UNITED GLADDIATORS,5,Rahul Agarwal,rahul agarwal,22.0,23.0,1.0,0.0,95.65,c Pratik D b Alok M
+jfscdpl202526,5770,playwright,1,JNS SUPREMOS,UNITED GLADDIATORS,6,Tanmay Godiawala,tanmay godiawala,9.0,5.0,1.0,0.0,180.0,c Sandeep J b Pratik D
+jfscdpl202526,5770,playwright,1,JNS SUPREMOS,UNITED GLADDIATORS,7,Varun Sood,varun sood,18.0,10.0,3.0,0.0,180.0,not out
+jfscdpl202526,5770,playwright,1,JNS SUPREMOS,UNITED GLADDIATORS,8,Aditya Jain,aditya jain,16.0,11.0,2.0,0.0,145.45,c Ronak M b Pratik D
+jfscdpl202526,5840,playwright,2,JNS SUPREMOS,JBCN AVENGERS,1,Pratik Chitalia,pratik chitalia,5.0,4.0,1.0,0.0,125.0,c Satish S b Vaseem L
+jfscdpl202526,5840,playwright,2,JNS SUPREMOS,JBCN AVENGERS,2,Aditya Jain,aditya jain,0.0,2.0,0.0,0.0,0.0,b Rayed M
+jfscdpl202526,5840,playwright,2,JNS SUPREMOS,JBCN AVENGERS,3,Abhishek Pingley,abhishek pingley,18.0,12.0,3.0,1.0,150.0,c&b Rayed M
+jfscdpl202526,5840,playwright,2,JNS SUPREMOS,JBCN AVENGERS,4,Manaan Gandhi,manaan gandhi,37.0,24.0,7.0,1.0,154.17,b Muddassar V
+jfscdpl202526,5840,playwright,2,JNS SUPREMOS,JBCN AVENGERS,5,Lavesh Kalsekar,lavesh kalsekar,36.0,34.0,2.0,1.0,105.88,lbw b Vineet K
+jfscdpl202526,5840,playwright,2,JNS SUPREMOS,JBCN AVENGERS,6,Navratan Bengani,navratan bengani,0.0,2.0,0.0,0.0,0.0,St Satish S b Muddassar V
+jfscdpl202526,5840,playwright,2,JNS SUPREMOS,JBCN AVENGERS,7,Rahul Agarwal,rahul agarwal,27.0,23.0,1.0,0.0,117.39,St Satish S b Vineet K
+jfscdpl202526,5840,playwright,2,JNS SUPREMOS,JBCN AVENGERS,8,Tanmay Godiawala,tanmay godiawala,4.0,6.0,0.0,0.0,66.67,b Kartik .
+jfscdpl202526,5840,playwright,2,JNS SUPREMOS,JBCN AVENGERS,9,Varun Sood,varun sood,15.0,12.0,0.0,1.0,125.0,not out
+jfscdpl202526,5840,playwright,2,JNS SUPREMOS,JBCN AVENGERS,10,Pritesh Magodia,pritesh magodia,1.0,1.0,0.0,0.0,100.0,not out
+jfscdpl202526,5851,playwright,2,JNS SUPREMOS,JNS MUSTANGS,1,Varun Sood,varun sood,0.0,5.0,0.0,0.0,0.0,b Hitesh .
+jfscdpl202526,5851,playwright,2,JNS SUPREMOS,JNS MUSTANGS,2,Aditya Jain,aditya jain,16.0,13.0,2.0,1.0,123.08,c Meet S b Rohit S
+jfscdpl202526,5851,playwright,2,JNS SUPREMOS,JNS MUSTANGS,3,Abhishek Pingley,abhishek pingley,0.0,3.0,0.0,0.0,0.0,b Hitesh .
+jfscdpl202526,5851,playwright,2,JNS SUPREMOS,JNS MUSTANGS,4,Pratik Chitalia,pratik chitalia,6.0,8.0,1.0,0.0,75.0,c Jekin S b Rohit S
+jfscdpl202526,5851,playwright,2,JNS SUPREMOS,JNS MUSTANGS,5,Ameya Deshpande,ameya deshpande,27.0,33.0,1.0,0.0,81.82,run out ( Jekin S )
+jfscdpl202526,5851,playwright,2,JNS SUPREMOS,JNS MUSTANGS,6,Navratan Bengani,navratan bengani,38.0,37.0,4.0,0.0,102.7,not out
+jfscdpl202526,5851,playwright,2,JNS SUPREMOS,JNS MUSTANGS,7,Tanmay Godiawala,tanmay godiawala,11.0,5.0,1.0,1.0,220.0,c Viral A b Jekin S
+jfscdpl202526,5851,playwright,2,JNS SUPREMOS,JNS MUSTANGS,8,Rahul Agarwal,rahul agarwal,0.0,2.0,0.0,0.0,0.0,c † Rishiraj L b Jekin S
+clt20s_pdf,1,txt,1,ANTIQUE FRIENDS,SUPREMOS,1,Balkrishna Shirke (LHB),balkrishna shirke lhb,1.0,3.0,0.0,0.0,33.33,b Navratan
+clt20s_pdf,1,txt,1,ANTIQUE FRIENDS,SUPREMOS,2,PRATIK JADHAV (RHB),pratik jadhav rhb,21.0,18.0,2.0,0.0,116.67,b Rajan Singh
+clt20s_pdf,1,txt,1,ANTIQUE FRIENDS,SUPREMOS,3,Mayur (RHB),mayur rhb,17.0,21.0,1.0,0.0,80.95,run out Jay Kedia
+clt20s_pdf,1,txt,1,ANTIQUE FRIENDS,SUPREMOS,4,Mahesh (LHB),mahesh lhb,6.0,5.0,1.0,0.0,120.0,b Varun Sood
+clt20s_pdf,1,txt,1,ANTIQUE FRIENDS,SUPREMOS,5,Akshay Borkar (RHB),akshay borkar rhb,47.0,36.0,4.0,1.0,130.56,run out Rajan Singh
+clt20s_pdf,1,txt,1,ANTIQUE FRIENDS,SUPREMOS,6,Chinmay Ghate (RHB),chinmay ghate rhb,0.0,1.0,0.0,0.0,0.0,b Abhishek P
+clt20s_pdf,1,txt,1,ANTIQUE FRIENDS,SUPREMOS,7,Ajay Thorat (LHB),ajay thorat lhb,16.0,10.0,1.0,1.0,160.0,c Kanav Hingorani b Navratan
+clt20s_pdf,1,txt,1,ANTIQUE FRIENDS,SUPREMOS,8,Sushil (RHB),sushil rhb,36.0,23.0,4.0,1.0,156.52,c Navratan b VISHAL
+clt20s_pdf,1,txt,1,ANTIQUE FRIENDS,SUPREMOS,9,Rajiv Atre (RHB),rajiv atre rhb,0.0,0.0,0.0,0.0,0.0,run out Rajan Singh
+clt20s_pdf,1,txt,1,ANTIQUE FRIENDS,SUPREMOS,10,tushar shinde (RHB),tushar shinde rhb,1.0,2.0,0.0,0.0,50.0,not out
+clt20s_pdf,1,txt,1,ANTIQUE FRIENDS,SUPREMOS,11,Sameer T (RHB),sameer t rhb,1.0,1.0,0.0,0.0,100.0,run out Navratan
+clt20s_pdf,1,txt,2,SUPREMOS,ANTIQUE FRIENDS,1,Rahul agarwal (RHB),rahul agarwal rhb,19.0,25.0,1.0,0.0,76.0,c Ajay Thorat b Sameer
+clt20s_pdf,1,txt,2,SUPREMOS,ANTIQUE FRIENDS,2,Varun Sood (RHB),varun sood rhb,15.0,17.0,2.0,0.0,88.24,c Akshay Borkar b Ajay Thorat
+clt20s_pdf,1,txt,2,SUPREMOS,ANTIQUE FRIENDS,3,Navratan (RHB),navratan rhb,6.0,7.0,0.0,0.0,85.71,b Sameer
+clt20s_pdf,1,txt,2,SUPREMOS,ANTIQUE FRIENDS,4,Jay Kedia (RHB),jay kedia rhb,10.0,8.0,1.0,0.0,125.0,b Sameer
+clt20s_pdf,1,txt,2,SUPREMOS,ANTIQUE FRIENDS,5,Kanav Hingorani (RHB),kanav hingorani rhb,9.0,11.0,1.0,0.0,81.82,b Mahesh
+clt20s_pdf,1,txt,2,SUPREMOS,ANTIQUE FRIENDS,6,Nihir Goradia (RHB),nihir goradia rhb,10.0,13.0,0.0,0.0,76.92,c Balkrishna Shirke b Mahesh
+clt20s_pdf,1,txt,2,SUPREMOS,ANTIQUE FRIENDS,7,Pratik Chitalia (RHB),pratik chitalia rhb,8.0,9.0,0.0,0.0,88.89,c&b Mahesh
+clt20s_pdf,1,txt,2,SUPREMOS,ANTIQUE FRIENDS,8,Rajan Singh (RHB),rajan singh rhb,30.0,16.0,2.0,2.0,187.5,not out
+clt20s_pdf,1,txt,2,SUPREMOS,ANTIQUE FRIENDS,9,VISHAL (LHB),vishal lhb,21.0,14.0,3.0,0.0,150.0,not out
+clt20s_pdf,2,txt,1,SUPREMOS,Saregama,1,Pratik Chitalia (RHB),pratik chitalia rhb,0.0,3.0,0.0,0.0,0.0,c †Amar b Pankaj
+clt20s_pdf,2,txt,1,SUPREMOS,Saregama,2,Dr. Manaan Gandhi (RHB),dr manaan gandhi rhb,1.0,4.0,0.0,0.0,25.0,run out Anurodh Gusain / † Amar
+clt20s_pdf,2,txt,1,SUPREMOS,Saregama,3,Varun Sood (RHB),varun sood rhb,7.0,8.0,1.0,0.0,87.5,c Ajit b Pankaj
+clt20s_pdf,2,txt,1,SUPREMOS,Saregama,4,Ameya Deshpande (RHB),ameya deshpande rhb,5.0,9.0,0.0,0.0,55.56,c Tarang Shah b Pankaj
+clt20s_pdf,2,txt,1,SUPREMOS,Saregama,5,Rahul agarwal (RHB),rahul agarwal rhb,31.0,33.0,3.0,0.0,93.94,c †Amar b Bunty
+clt20s_pdf,2,txt,1,SUPREMOS,Saregama,6,Lavesh (RHB),lavesh rhb,7.0,13.0,0.0,0.0,53.85,c Tarang Shah b Anurodh Gusain
+clt20s_pdf,2,txt,1,SUPREMOS,Saregama,7,Navratan (RHB),navratan rhb,40.0,26.0,6.0,1.0,153.85,b Anurodh Gusain
+clt20s_pdf,2,txt,1,SUPREMOS,Saregama,8,Abhishek P (RHB),abhishek p rhb,55.0,22.0,7.0,4.0,250.0,not out
+clt20s_pdf,2,txt,1,SUPREMOS,Saregama,9,Sheel (LHB),sheel lhb,1.0,4.0,0.0,0.0,25.0,not out
+clt20s_pdf,2,txt,2,Saregama,SUPREMOS,1,Anurodh Gusain (RHB),anurodh gusain rhb,9.0,9.0,2.0,0.0,100.0,c †Dr. Manaan Gandhi b VISHAL
+clt20s_pdf,2,txt,2,Saregama,SUPREMOS,2,Sumit (RHB),sumit rhb,22.0,18.0,2.0,1.0,122.22,b Varun Sood
+clt20s_pdf,2,txt,2,Saregama,SUPREMOS,3,Tushar Koli (RHB),tushar koli rhb,47.0,43.0,3.0,2.0,109.3,lbw b Pradeep Tewani
+clt20s_pdf,2,txt,2,Saregama,SUPREMOS,4,Amar (RHB),amar rhb,13.0,11.0,1.0,0.0,118.18,lbw b Varun Sood
+clt20s_pdf,2,txt,2,Saregama,SUPREMOS,5,Bunty (RHB),bunty rhb,11.0,9.0,1.0,0.0,122.22,c †Dr. Manaan Gandhi b Varun Sood
+clt20s_pdf,2,txt,2,Saregama,SUPREMOS,6,Tarang Shah (LHB),tarang shah lhb,0.0,2.0,0.0,0.0,0.0,b Abhishek P
+clt20s_pdf,2,txt,2,Saregama,SUPREMOS,7,Ajit (RHB),ajit rhb,17.0,8.0,0.0,2.0,212.5,c †Dr. Manaan Gandhi b Pradeep Tewani
+clt20s_pdf,2,txt,2,Saregama,SUPREMOS,8,Pankaj (RHB),pankaj rhb,4.0,5.0,1.0,0.0,80.0,run out Rahul agarwal / Abhishek P
+clt20s_pdf,2,txt,2,Saregama,SUPREMOS,9,Sumit Sharma (RHB),sumit sharma rhb,8.0,4.0,0.0,1.0,200.0,run out Abhishek P / † Dr. Manaan Gandhi
+clt20s_pdf,2,txt,2,Saregama,SUPREMOS,10,Uddhav S (RHB),uddhav s rhb,0.0,4.0,0.0,0.0,0.0,run out Varun Sood / † Dr. Manaan Gandhi
+clt20s_pdf,2,txt,2,Saregama,SUPREMOS,11,Lalit Singh (RHB),lalit singh rhb,1.0,1.0,0.0,0.0,100.0,not out
+clt20s_pdf,3,txt,1,CENTRAL AVENGERS,SUPREMOS,1,Soumik (RHB),soumik rhb,14.0,18.0,2.0,0.0,77.78,c †Dr. Manaan Gandhi b Varun Sood
+clt20s_pdf,3,txt,1,CENTRAL AVENGERS,SUPREMOS,2,Swapnil Sagotia (RHB),swapnil sagotia rhb,3.0,7.0,0.0,0.0,42.86,c Varun Sood b VISHAL
+clt20s_pdf,3,txt,1,CENTRAL AVENGERS,SUPREMOS,3,Milan Bhai (LHB),milan bhai lhb,7.0,7.0,1.0,0.0,100.0,c Rahul agarwal b Pradeep Tewani
+clt20s_pdf,3,txt,1,CENTRAL AVENGERS,SUPREMOS,4,Smit Desai (RHB),smit desai rhb,21.0,26.0,2.0,0.0,80.77,c Rahul agarwal b Abhishek P
+clt20s_pdf,3,txt,1,CENTRAL AVENGERS,SUPREMOS,5,Arjun Dadarkar (LHB),arjun dadarkar lhb,50.0,32.0,5.0,3.0,156.25,not out
+clt20s_pdf,3,txt,1,CENTRAL AVENGERS,SUPREMOS,6,Rishab Shah (RHB),rishab shah rhb,26.0,18.0,2.0,2.0,144.44,not out
+clt20s_pdf,3,txt,2,SUPREMOS,CENTRAL AVENGERS,1,Varun Sood (RHB),varun sood rhb,12.0,12.0,1.0,1.0,100.0,b Smit Desai
+clt20s_pdf,3,txt,2,SUPREMOS,CENTRAL AVENGERS,2,Pratik Chitalia (RHB),pratik chitalia rhb,14.0,24.0,2.0,0.0,58.33,b Harshil Shah
+clt20s_pdf,3,txt,2,SUPREMOS,CENTRAL AVENGERS,3,Dr. Manaan Gandhi (RHB),dr manaan gandhi rhb,56.0,36.0,6.0,3.0,155.56,run out Milan Bhai
+clt20s_pdf,3,txt,2,SUPREMOS,CENTRAL AVENGERS,4,Kanav Hingorani (RHB),kanav hingorani rhb,1.0,2.0,0.0,0.0,50.0,b Khushal desai
+clt20s_pdf,3,txt,2,SUPREMOS,CENTRAL AVENGERS,5,Rahul agarwal (RHB),rahul agarwal rhb,22.0,17.0,1.0,1.0,129.41,not out
+clt20s_pdf,3,txt,2,SUPREMOS,CENTRAL AVENGERS,6,Navratan (RHB),navratan rhb,16.0,12.0,3.0,0.0,133.33,not out
+clt20s_pdf,4,txt,1,SUPREMOS,MISFITS,1,Dr. Manaan Gandhi (RHB),dr manaan gandhi rhb,1.0,1.0,0.0,0.0,100.0,run out Karan / Vivek Ilawat
+clt20s_pdf,4,txt,1,SUPREMOS,MISFITS,2,Pratik Chitalia (RHB),pratik chitalia rhb,0.0,1.0,0.0,0.0,0.0,b Shazad Shroff
+clt20s_pdf,4,txt,1,SUPREMOS,MISFITS,3,Lavesh (RHB),lavesh rhb,45.0,39.0,3.0,2.0,115.38,c Akshay Tungare b Adnan
+clt20s_pdf,4,txt,1,SUPREMOS,MISFITS,4,Sheel (LHB),sheel lhb,13.0,9.0,2.0,0.0,144.44,b Karan
+clt20s_pdf,4,txt,1,SUPREMOS,MISFITS,5,Pritesh M (RHB),pritesh m rhb,22.0,14.0,5.0,0.0,157.14,lbw b Karan
+clt20s_pdf,4,txt,1,SUPREMOS,MISFITS,6,Navratan (RHB),navratan rhb,12.0,16.0,1.0,0.0,75.0,c †Vivek Ilawat b Harry
+clt20s_pdf,4,txt,1,SUPREMOS,MISFITS,7,Kanav Hingorani (RHB),kanav hingorani rhb,9.0,11.0,1.0,0.0,81.82,b Harsh Rajeev Chhabria
+clt20s_pdf,4,txt,1,SUPREMOS,MISFITS,8,Varun Sood (RHB),varun sood rhb,26.0,18.0,4.0,0.0,144.44,b Sachin M
+clt20s_pdf,4,txt,1,SUPREMOS,MISFITS,9,Rajan Singh (RHB),rajan singh rhb,4.0,6.0,0.0,0.0,66.67,b Sachin M
+clt20s_pdf,4,txt,1,SUPREMOS,MISFITS,10,Nihir Goradia (RHB),nihir goradia rhb,9.0,5.0,1.0,0.0,180.0,b Sachin M
+clt20s_pdf,4,txt,1,SUPREMOS,MISFITS,11,Shivam Tiwari (RHB),shivam tiwari rhb,1.0,1.0,0.0,0.0,100.0,not out
+clt20s_pdf,4,txt,1,SUPREMOS,MISFITS,12,"Extras: (wd 14, b 6, nb 1)",extras wd 14 b 6 nb 1,,,,,,
+clt20s_pdf,4,txt,1,SUPREMOS,MISFITS,13,"Total: Overs 20.0, Wickets 10",total overs 200 wickets 10,,,,,,
+clt20s_pdf,4,txt,2,MISFITS,SUPREMOS,1,Varun Singh (RHB),varun singh rhb,34.0,24.0,6.0,1.0,141.67,st †Dr. Manaan Gandhi b Pritesh M
+clt20s_pdf,4,txt,2,MISFITS,SUPREMOS,2,Akshay Tungare (RHB),akshay tungare rhb,18.0,24.0,2.0,0.0,75.0,c Sheel b Rajan Singh
+clt20s_pdf,4,txt,2,MISFITS,SUPREMOS,3,Parthasarathy Chakravarty (RHB),parthasarathy chakravarty rhb,8.0,8.0,1.0,0.0,100.0,b Rajan Singh
+clt20s_pdf,4,txt,2,MISFITS,SUPREMOS,4,Vivek Ilawat (RHB),vivek ilawat rhb,21.0,19.0,2.0,0.0,110.53,retired hurt
+clt20s_pdf,4,txt,2,MISFITS,SUPREMOS,5,Tushar Jha (RHB),tushar jha rhb,8.0,8.0,1.0,0.0,100.0,run out † Dr. Manaan Gandhi / Kanav Hingorani
+clt20s_pdf,4,txt,2,MISFITS,SUPREMOS,6,Karan (RHB),karan rhb,6.0,4.0,1.0,0.0,150.0,b Varun Sood
+clt20s_pdf,4,txt,2,MISFITS,SUPREMOS,7,Raunak Singh (LHB),raunak singh lhb,17.0,11.0,2.0,0.0,154.55,c †Dr. Manaan Gandhi b Rajan Singh
+clt20s_pdf,4,txt,2,MISFITS,SUPREMOS,8,Adnan (RHB),adnan rhb,15.0,6.0,1.0,1.0,250.0,not out
+clt20s_pdf,4,txt,2,MISFITS,SUPREMOS,9,Shazad Shroff (RHB),shazad shroff rhb,3.0,3.0,0.0,0.0,100.0,run out Lavesh / † Dr. Manaan Gandhi
+clt20s_pdf,4,txt,2,MISFITS,SUPREMOS,10,Kaushal Parikh (RHB),kaushal parikh rhb,5.0,3.0,1.0,0.0,166.67,b VISHAL
+clt20s_pdf,4,txt,2,MISFITS,SUPREMOS,11,Harry (RHB),harry rhb,0.0,1.0,0.0,0.0,0.0,st †Dr. Manaan Gandhi b VISHAL
+clt20s_pdf,4,txt,2,MISFITS,SUPREMOS,12,Harsh Rajeev Chhabria (RHB),harsh rajeev chhabria rhb,2.0,1.0,0.0,0.0,200.0,not out
+clt20s_pdf,4,txt,2,MISFITS,SUPREMOS,13,"Extras: (wd 5, b 1, nb 1)",extras wd 5 b 1 nb 1,,,,,,
+clt20s_pdf,4,txt,2,MISFITS,SUPREMOS,14,"Total: Overs 18.3, Wickets 9",total overs 183 wickets 9,,,,,,
+clt20s_pdf,5,txt,1,SUPREMOS,Zen Cricket Team,1,Nitin Hadale (RHB),nitin hadale rhb,12.0,11.0,2.0,0.0,109.09,lbw b Milan Gohil
+clt20s_pdf,5,txt,1,SUPREMOS,Zen Cricket Team,2,Pratik Chitalia (RHB),pratik chitalia rhb,85.0,53.0,11.0,2.0,160.38,b Jeremy James
+clt20s_pdf,5,txt,1,SUPREMOS,Zen Cricket Team,3,Sheel (LHB),sheel lhb,1.0,5.0,0.0,0.0,20.0,c Anubhav Agarwal b ELAN
+clt20s_pdf,5,txt,1,SUPREMOS,Zen Cricket Team,4,Abhishek P (RHB),abhishek p rhb,38.0,13.0,4.0,2.0,292.31,c Anubhav Agarwal b Jeremy James
+clt20s_pdf,5,txt,1,SUPREMOS,Zen Cricket Team,5,Navratan (RHB),navratan rhb,8.0,7.0,1.0,0.0,114.29,c Rohit Sarvaria b Ashlesh Shah
+clt20s_pdf,5,txt,1,SUPREMOS,Zen Cricket Team,6,Dr. Manaan Gandhi (RHB),dr manaan gandhi rhb,10.0,9.0,1.0,0.0,111.11,c Aviral b Parhtheshwar Sharma
+clt20s_pdf,5,txt,1,SUPREMOS,Zen Cricket Team,7,Varun Sood (RHB),varun sood rhb,20.0,15.0,2.0,0.0,133.33,not out
+clt20s_pdf,5,txt,1,SUPREMOS,Zen Cricket Team,8,Rahul agarwal (RHB),rahul agarwal rhb,0.0,1.0,0.0,0.0,0.0,lbw b Jeremy James
+clt20s_pdf,5,txt,1,SUPREMOS,Zen Cricket Team,9,Rajan Singh (RHB),rajan singh rhb,16.0,6.0,2.0,1.0,266.67,not out
+clt20s_pdf,5,txt,2,Zen Cricket Team,SUPREMOS,1,Anubhav Agarwal (RHB),anubhav agarwal rhb,19.0,14.0,2.0,1.0,135.71,c Varun Sood b Rajan Singh
+clt20s_pdf,5,txt,2,Zen Cricket Team,SUPREMOS,2,Rohit Sarvaria (RHB),rohit sarvaria rhb,24.0,13.0,5.0,0.0,184.62,c Shivam Tiwari b Varun Sood
+clt20s_pdf,5,txt,2,Zen Cricket Team,SUPREMOS,3,Adwit Singh Gosain (RHB),adwit singh gosain rhb,29.0,20.0,4.0,0.0,145.0,lbw b Varun Sood
+clt20s_pdf,5,txt,2,Zen Cricket Team,SUPREMOS,4,Abhishek Tandon (RHB),abhishek tandon rhb,37.0,28.0,3.0,1.0,132.14,c Rajan Singh b VISHAL
+clt20s_pdf,5,txt,2,Zen Cricket Team,SUPREMOS,5,Himanshu Sharma (RHB),himanshu sharma rhb,61.0,29.0,9.0,0.0,210.34,not out
+clt20s_pdf,5,txt,2,Zen Cricket Team,SUPREMOS,6,Ashlesh Shah (LHB),ashlesh shah lhb,18.0,10.0,2.0,0.0,180.0,b Rajan Singh
+clt20s_pdf,5,txt,2,Zen Cricket Team,SUPREMOS,7,Jeremy James (RHB),jeremy james rhb,3.0,4.0,0.0,0.0,75.0,c Abhishek P b Shivam Tiwari
+clt20s_pdf,5,txt,2,Zen Cricket Team,SUPREMOS,8,ELAN (RHB),elan rhb,0.0,1.0,0.0,0.0,0.0,c Mukesh b Shivam Tiwari
+clt20s_pdf,5,txt,2,Zen Cricket Team,SUPREMOS,9,Aviral (RHB),aviral rhb,0.0,1.0,0.0,0.0,0.0,not out
+clt20s_pdf,6,txt,1,SUPREMOS,Falcons,1,Pratik Chitalia (RHB),pratik chitalia rhb,3.0,8.0,0.0,0.0,37.5,b Ashwath Nair
+clt20s_pdf,6,txt,1,SUPREMOS,Falcons,2,Ameya Deshpande (RHB),ameya deshpande rhb,55.0,41.0,7.0,0.0,134.15,run out Ashwath Nair / † Arkaprovo Das
+clt20s_pdf,6,txt,1,SUPREMOS,Falcons,3,Jay Kedia (RHB),jay kedia rhb,15.0,11.0,2.0,0.0,136.36,c Shakib Alam b Yash Kasangottuwar
+clt20s_pdf,6,txt,1,SUPREMOS,Falcons,4,Abhishek P (RHB),abhishek p rhb,13.0,11.0,2.0,0.0,118.18,b Suvaaankoor Das
+clt20s_pdf,6,txt,1,SUPREMOS,Falcons,5,Lavesh (RHB),lavesh rhb,38.0,22.0,3.0,2.0,172.73,b Ashwath Nair
+clt20s_pdf,6,txt,1,SUPREMOS,Falcons,6,Navratan (RHB),navratan rhb,2.0,5.0,0.0,0.0,40.0,b Vijayendra Sharma
+clt20s_pdf,6,txt,1,SUPREMOS,Falcons,7,Rahul agarwal (RHB),rahul agarwal rhb,4.0,4.0,0.0,0.0,100.0,st †Arkaprovo Das b Suvaaankoor Das
+clt20s_pdf,6,txt,1,SUPREMOS,Falcons,8,Rajan Singh (RHB),rajan singh rhb,25.0,13.0,2.0,1.0,192.31,run out † Arkaprovo Das / † Arkaprovo Das
+clt20s_pdf,6,txt,1,SUPREMOS,Falcons,9,Varun Sood (RHB),varun sood rhb,3.0,4.0,0.0,0.0,75.0,run out Abhijeet Gomare / † Arkaprovo Das
+clt20s_pdf,6,txt,1,SUPREMOS,Falcons,10,Aditya (RHB),aditya rhb,0.0,1.0,0.0,0.0,0.0,not out
+clt20s_pdf,6,txt,2,Falcons,SUPREMOS,1,Arkaprovo Das (RHB),arkaprovo das rhb,0.0,1.0,0.0,0.0,0.0,b VISHAL
+clt20s_pdf,6,txt,2,Falcons,SUPREMOS,2,Shakib Alam (RHB),shakib alam rhb,0.0,4.0,0.0,0.0,0.0,c Lavesh b Pradeep Tewani
+clt20s_pdf,6,txt,2,Falcons,SUPREMOS,3,Abhushan Sarraf (RHB),abhushan sarraf rhb,3.0,9.0,0.0,0.0,33.33,c Abhishek P b Pradeep Tewani
+clt20s_pdf,6,txt,2,Falcons,SUPREMOS,4,Abhijeet Gomare (RHB),abhijeet gomare rhb,11.0,21.0,1.0,0.0,52.38,run out Pratik Chitalia
+clt20s_pdf,6,txt,2,Falcons,SUPREMOS,5,Om (RHB),om rhb,11.0,10.0,2.0,0.0,110.0,c Rajan Singh b Varun Sood
+clt20s_pdf,6,txt,2,Falcons,SUPREMOS,6,Suvaaankoor Das (RHB),suvaaankoor das rhb,58.0,41.0,8.0,0.0,141.46,not out
+clt20s_pdf,6,txt,2,Falcons,SUPREMOS,7,Ashwath Nair (RHB),ashwath nair rhb,41.0,28.0,5.0,0.0,146.43,c Rahul agarwal b Rajan Singh
+clt20s_pdf,6,txt,2,Falcons,SUPREMOS,8,Vijayendra Sharma (LHB),vijayendra sharma lhb,8.0,6.0,1.0,0.0,133.33,not out
+clt20s_pdf,7,txt,1,Group Satellite Developers,SUPREMOS,1,Krish Pardhi (RHB),krish pardhi rhb,1.0,3.0,0.0,0.0,33.33,c Lavesh b VISHAL
+clt20s_pdf,7,txt,1,Group Satellite Developers,SUPREMOS,2,Kavaldeep Singh (RHB),kavaldeep singh rhb,14.0,10.0,2.0,0.0,140.0,c Rahul agarwal b Shivam Tiwari
+clt20s_pdf,7,txt,1,Group Satellite Developers,SUPREMOS,3,Mayank Pilke (RHB),mayank pilke rhb,19.0,20.0,3.0,0.0,95.0,c Shivam Tiwari b VISHAL
+clt20s_pdf,7,txt,1,Group Satellite Developers,SUPREMOS,4,Manas Chavan (LHB),manas chavan lhb,15.0,11.0,2.0,0.0,136.36,c Shivam Tiwari b Jairaj
+clt20s_pdf,7,txt,1,Group Satellite Developers,SUPREMOS,5,Sarvesh Shiralkar (RHB),sarvesh shiralkar rhb,0.0,3.0,0.0,0.0,0.0,b Shivam Tiwari
+clt20s_pdf,7,txt,1,Group Satellite Developers,SUPREMOS,6,Vishal Yadav (RHB),vishal yadav rhb,2.0,5.0,0.0,0.0,40.0,c Abhishek P b Rajan Singh
+clt20s_pdf,7,txt,1,Group Satellite Developers,SUPREMOS,7,Shaker khan (RHB),shaker khan rhb,8.0,11.0,1.0,0.0,72.73,c Mukesh b Rajan Singh
+clt20s_pdf,7,txt,1,Group Satellite Developers,SUPREMOS,8,nirdosh yadav (RHB),nirdosh yadav rhb,49.0,34.0,6.0,1.0,144.12,not out
+clt20s_pdf,7,txt,1,Group Satellite Developers,SUPREMOS,9,Deepak Gaikwad (RHB),deepak gaikwad rhb,1.0,5.0,0.0,0.0,20.0,c Abhishek P b Rajan Singh
+clt20s_pdf,7,txt,1,Group Satellite Developers,SUPREMOS,10,Harsh Lathia (RHB),harsh lathia rhb,0.0,6.0,0.0,0.0,0.0,lbw b Jairaj
+clt20s_pdf,7,txt,1,Group Satellite Developers,SUPREMOS,11,Vicky Dulgach (RHB),vicky dulgach rhb,8.0,14.0,0.0,0.0,57.14,not out
+clt20s_pdf,7,txt,2,SUPREMOS,Group Satellite Developers,1,Pratik Chitalia (RHB),pratik chitalia rhb,0.0,3.0,0.0,0.0,0.0,b Deepak Gaikwad
+clt20s_pdf,7,txt,2,SUPREMOS,Group Satellite Developers,2,Abhishek P (RHB),abhishek p rhb,12.0,6.0,3.0,0.0,200.0,run out Deepak Gaikwad
+clt20s_pdf,7,txt,2,SUPREMOS,Group Satellite Developers,3,Dr. Manaan Gandhi (RHB),dr manaan gandhi rhb,10.0,9.0,2.0,0.0,111.11,run out Krish Pardhi
+clt20s_pdf,7,txt,2,SUPREMOS,Group Satellite Developers,4,Lavesh (RHB),lavesh rhb,4.0,7.0,1.0,0.0,57.14,lbw b Deepak Gaikwad
+clt20s_pdf,7,txt,2,SUPREMOS,Group Satellite Developers,5,Rahul agarwal (RHB),rahul agarwal rhb,12.0,24.0,1.0,0.0,50.0,b Vishal Yadav
+clt20s_pdf,7,txt,2,SUPREMOS,Group Satellite Developers,6,Vivek Singh (RHB),vivek singh rhb,3.0,6.0,0.0,0.0,50.0,run out † Shaker khan
+clt20s_pdf,7,txt,2,SUPREMOS,Group Satellite Developers,7,Milan Sen (RHB),milan sen rhb,16.0,27.0,0.0,0.0,59.26,c Kavaldeep Singh b Krish Pardhi
+clt20s_pdf,7,txt,2,SUPREMOS,Group Satellite Developers,8,Rajan Singh (RHB),rajan singh rhb,16.0,11.0,0.0,1.0,145.45,not out
+clt20s_pdf,7,txt,2,SUPREMOS,Group Satellite Developers,9,Jairaj (RHB),jairaj rhb,9.0,7.0,1.0,0.0,128.57,c&b Krish Pardhi
+clt20s_pdf,7,txt,2,SUPREMOS,Group Satellite Developers,10,Shivam Tiwari (RHB),shivam tiwari rhb,5.0,4.0,0.0,0.0,125.0,b Kavaldeep Singh
+clt20s_pdf,7,txt,2,SUPREMOS,Group Satellite Developers,11,Pradeep Tewani (RHB),pradeep tewani rhb,0.0,1.0,0.0,0.0,0.0,lbw b Kavaldeep Singh
