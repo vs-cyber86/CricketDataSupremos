@@ -58,15 +58,8 @@ def norm_opp(df: pd.DataFrame) -> pd.DataFrame:
 
 st.title("Cricket Performance Dashboard")
 
-with st.sidebar:
-    st.header("Data")
-    up_bat = st.file_uploader("Upload battinginnings.csv", type=["csv"], key="bat")
-    up_bowl = st.file_uploader("Upload bowlinginnings.csv", type=["csv"], key="bowl")
-    st.caption("If you don’t upload, the app will try reading local files in the same folder.")
-    st.divider()
-
-bat = load_csv(up_bat, "battinginnings.csv")
-bowl = load_csv(up_bowl, "bowlinginnings.csv")
+bat = load_csv(None, "battinginnings.csv")
+bowl = load_csv(None, "bowlinginnings.csv")
 
 # -----------------------------
 # Basic cleaning
@@ -97,7 +90,7 @@ bat = norm_opp(bat)
 bowl = norm_opp(bowl)
 
 # Navigation
-tab_player, tab_team = st.tabs(["Player performance", "Team match trends"])
+tab_player, tab_comparison, tab_team = st.tabs(["Player Performance", "Player Comparison", "Team Trends"])
 
 # -------------------------
 # Tab 1: Player performance
@@ -161,7 +154,7 @@ with tab_player:
         k4.metric("SR", f"{sr:.2f}" if balls else "—")
         k5.metric("4s/6s", f"{int(bat_f['fours'].sum(skipna=True))}/{int(bat_f['sixes'].sum(skipna=True))}")
 
-        st.markdown("#### Batting: innings details (Opponent instead of Match ID)")
+        st.markdown("#### Match-wise Batting Summary")
         sort_cols = ["tournamentkey", "opponent", "inningsno"]
         if "batpos" in bat_f.columns:
             sort_cols.append("batpos")
@@ -176,20 +169,6 @@ with tab_player:
         cols += ["runs", "balls", "sr", "fours", "sixes", "howout"]
 
         st.dataframe(bat_detail[cols], use_container_width=True)
-
-        st.markdown("#### Batting: opponent-wise (tournament-wise included)")
-        group_cols = ["tournament", "tournamentkey", "opponent", "inningsno", "battingteam"]
-        bat_game = bat_f.groupby(group_cols, as_index=False).agg(
-            runs=("runs", "sum"),
-            balls=("balls", "sum"),
-            fours=("fours", "sum"),
-            sixes=("sixes", "sum"),
-        )
-        bat_game["sr"] = (bat_game["runs"] * 100 / bat_game["balls"]).round(2)
-        bat_game = bat_game.sort_values(["tournamentkey", "opponent", "inningsno"])
-
-        show_cols = ["tournament", "opponent", "inningsno", "battingteam", "runs", "balls", "sr", "fours", "sixes"]
-        st.dataframe(bat_game[show_cols], use_container_width=True)
 
     # Bowling summary (below)
     st.markdown("### Bowling summary")
@@ -213,7 +192,7 @@ with tab_player:
         k4.metric("Econ", f"{econ:.2f}" if overs_equiv else "—")
         k5.metric("Avg / SR", f"{avg_b:.2f} / {sr_b:.1f}" if (avg_b is not None and sr_b is not None) else "—")
 
-        st.markdown("#### Bowling: spell details (Opponent instead of Match ID)")
+        st.markdown("#### Match-wise Bowling Summary")
         sort_cols = ["tournamentkey", "opponent", "inningsno"]
         if "matchid" in bowl_f.columns:
             sort_cols.append("matchid")  # stable ordering only (hidden)
@@ -222,22 +201,82 @@ with tab_player:
         cols = ["tournament", "opponent", "inningsno", "bowlingteam", "overs", "runsconceded", "wickets", "econ"]
         st.dataframe(bowl_detail[cols], use_container_width=True)
 
-        st.markdown("#### Bowling: opponent-wise (tournament-wise included)")
-        group_cols = ["tournament", "tournamentkey", "opponent", "inningsno", "bowlingteam"]
-        bowl_game = bowl_f.groupby(group_cols, as_index=False).agg(
-            balls=("balls_bowled", "sum"),
-            runs=("runsconceded", "sum"),
-            wkts=("wickets", "sum"),
-        )
-        bowl_game["overs"] = (bowl_game["balls"] / 6).round(1)
-        bowl_game["econ"] = (bowl_game["runs"] / (bowl_game["balls"] / 6)).round(2)
-        bowl_game = bowl_game.sort_values(["tournamentkey", "opponent", "inningsno"])
+# -------------------------
+# Tab 2: Player-wise overall comparison
+# -------------------------
+with tab_comparison:
+    st.subheader("Player-wise Overall Comparison")
 
-        show_cols = ["tournament", "opponent", "inningsno", "bowlingteam", "overs", "runs", "wkts", "econ"]
-        st.dataframe(bowl_game[show_cols], use_container_width=True)
+    # Option to select all players or specific players
+    all_players_list = sorted(set(bat["playername"]).union(set(bowl["bowlername"])))
+    
+    select_all = st.checkbox("Select all players", value=False)
+    if select_all:
+        selected_players = all_players_list
+    else:
+        selected_players = st.multiselect(
+            "Select players to compare",
+            all_players_list,
+            default=[all_players_list[0]] if all_players_list else []
+        )
+
+    if not selected_players:
+        st.info("Select at least one player to view comparison.")
+    else:
+        # Batting comparison
+        st.markdown("### Batting Comparison")
+        bat_comp = bat[bat["playername"].isin(selected_players)].copy()
+        if bat_comp.empty:
+            st.warning("No batting data for selected players.")
+        else:
+            bat_summary = bat_comp.groupby("playername", as_index=False).agg(
+                inns=("runs", "count"),
+                runs=("runs", "sum"),
+                balls=("balls", "sum"),
+                fours=("fours", "sum"),
+                sixes=("sixes", "sum"),
+            )
+            
+            # Calculate average separately
+            bat_dismissals = bat_comp.copy()
+            bat_dismissals["dismissal"] = (bat_dismissals["howout"].fillna("").str.lower() != "not out").astype(int)
+            dismissal_counts = bat_dismissals.groupby("playername")["dismissal"].sum()
+            
+            bat_summary["avg"] = bat_summary.apply(
+                lambda row: (row["runs"] / dismissal_counts.get(row["playername"], 0)) 
+                if dismissal_counts.get(row["playername"], 0) > 0 else None,
+                axis=1
+            ).round(2)
+            bat_summary["sr"] = (bat_summary["runs"] * 100 / bat_summary["balls"]).round(2)
+            
+            bat_summary = bat_summary.sort_values("runs", ascending=False)
+            display_cols = ["playername", "inns", "runs", "balls", "avg", "sr", "fours", "sixes"]
+            st.dataframe(bat_summary[display_cols], use_container_width=True)
+
+        # Bowling comparison
+        st.markdown("### Bowling Comparison")
+        bowl_comp = bowl[bowl["bowlername"].isin(selected_players)].copy()
+        if bowl_comp.empty:
+            st.warning("No bowling data for selected players.")
+        else:
+            bowl_summary = bowl_comp.groupby("bowlername", as_index=False).agg(
+                spells=("runsconceded", "count"),
+                runs=("runsconceded", "sum"),
+                balls=("balls_bowled", "sum"),
+                wickets=("wickets", "sum"),
+            )
+            # Calculate metrics
+            bowl_summary["overs"] = (bowl_summary["balls"] / 6).round(1)
+            bowl_summary["econ"] = (bowl_summary["runs"] / (bowl_summary["balls"] / 6)).round(2)
+            bowl_summary["avg"] = (bowl_summary["runs"] / bowl_summary["wickets"]).round(2)
+            bowl_summary["sr"] = (bowl_summary["balls"] / bowl_summary["wickets"]).round(1)
+            
+            bowl_summary = bowl_summary.sort_values("wickets", ascending=False)
+            display_cols = ["bowlername", "spells", "runs", "overs", "wickets", "avg", "econ", "sr"]
+            st.dataframe(bowl_summary[display_cols], use_container_width=True)
 
 # -------------------------
-# Tab 2: Team match trends
+# Tab 3: Team match trends
 # -------------------------
 with tab_team:
     st.subheader("Team trends")
