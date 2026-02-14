@@ -170,9 +170,9 @@ with tab_player:
 
         st.dataframe(bat_detail[cols], use_container_width=True)
 
-        # Batting position-wise runs chart
+        # Batting position-wise performance analysis
         if "batpos" in bat_f.columns and not bat_f["batpos"].isna().all():
-            st.markdown("#### Position-wise Runs Analysis")
+            st.markdown("#### Position-wise Performance Analysis")
             
             # Create position categories
             bat_pos_data = bat_f[bat_f["batpos"].notna()].copy()
@@ -184,13 +184,29 @@ with tab_player:
             )
             
             pos_summary = bat_pos_data.groupby("position_group", as_index=False).agg(
+                inns=("runs", "count"),
                 runs=("runs", "sum"),
-                inns=("runs", "count")
+                balls=("balls", "sum"),
+                fours=("fours", "sum"),
+                sixes=("sixes", "sum"),
             )
+            
+            # Calculate metrics for each position
+            pos_dismissals = bat_pos_data.copy()
+            pos_dismissals["dismissal"] = (pos_dismissals["howout"].fillna("").str.lower() != "not out").astype(int)
+            pos_dismissal_counts = pos_dismissals.groupby("position_group")["dismissal"].sum()
+            
+            pos_summary["avg"] = pos_summary.apply(
+                lambda row: (row["runs"] / pos_dismissal_counts.get(row["position_group"], 0)) 
+                if pos_dismissal_counts.get(row["position_group"], 0) > 0 else None,
+                axis=1
+            ).round(2)
+            pos_summary["sr"] = (pos_summary["runs"] * 100 / pos_summary["balls"]).round(2)
             
             if not pos_summary.empty:
                 pos_summary = pos_summary.sort_values("runs", ascending=False)
-                st.bar_chart(pos_summary.set_index("position_group")["runs"])
+                display_cols = ["position_group", "inns", "runs", "balls", "avg", "sr", "fours", "sixes"]
+                st.dataframe(pos_summary[display_cols], use_container_width=True)
 
     # Bowling summary (below)
     st.markdown("### Bowling summary")
