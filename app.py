@@ -90,7 +90,7 @@ bat = norm_opp(bat)
 bowl = norm_opp(bowl)
 
 # Navigation
-tab_player, tab_comparison, tab_team = st.tabs(["Player Performance", "Player Comparison", "Team Trends"])
+tab_player, tab_comparison = st.tabs(["Player Performance", "Player Comparison"])
 
 # -------------------------
 # Tab 1: Player performance
@@ -169,6 +169,28 @@ with tab_player:
         cols += ["runs", "balls", "sr", "fours", "sixes", "howout"]
 
         st.dataframe(bat_detail[cols], use_container_width=True)
+
+        # Batting position-wise runs chart
+        if "batpos" in bat_f.columns and not bat_f["batpos"].isna().all():
+            st.markdown("#### Position-wise Runs Analysis")
+            
+            # Create position categories
+            bat_pos_data = bat_f[bat_f["batpos"].notna()].copy()
+            bat_pos_data["position_group"] = pd.cut(
+                bat_pos_data["batpos"],
+                bins=[0, 2, 4, 6, 11],
+                labels=["1-2 (Opening)", "3-4 (Middle)", "5-6 (Lower Middle)", "7-11 (Tail)"],
+                include_lowest=True
+            )
+            
+            pos_summary = bat_pos_data.groupby("position_group", as_index=False).agg(
+                runs=("runs", "sum"),
+                inns=("runs", "count")
+            )
+            
+            if not pos_summary.empty:
+                pos_summary = pos_summary.sort_values("runs", ascending=False)
+                st.bar_chart(pos_summary.set_index("position_group")["runs"])
 
     # Bowling summary (below)
     st.markdown("### Bowling summary")
@@ -274,136 +296,3 @@ with tab_comparison:
             bowl_summary = bowl_summary.sort_values("wickets", ascending=False)
             display_cols = ["bowlername", "spells", "runs", "overs", "wickets", "avg", "econ", "sr"]
             st.dataframe(bowl_summary[display_cols], use_container_width=True)
-
-# -------------------------
-# Tab 3: Team match trends
-# -------------------------
-with tab_team:
-    st.subheader("Team trends")
-
-    team_query = st.text_input("Team name contains (e.g., 'SUPREMOS')", value="SUPREMOS")
-
-    tourn2 = st.multiselect(
-        "Tournament filter",
-        sorted(set(bat["tournamentkey"]).union(set(bowl["tournamentkey"]))),
-        default=[],
-        format_func=tournament_label,
-    )
-
-    group_by_opponent = st.checkbox("Group by opponent (if available)", value=True)
-
-    bat_t = bat.copy()
-    bowl_t = bowl.copy()
-
-    if tourn2:
-        bat_t = bat_t[bat_t["tournamentkey"].isin(tourn2)]
-        bowl_t = bowl_t[bowl_t["tournamentkey"].isin(tourn2)]
-
-    bat_team = bat_t[pick_team_mask(bat_t["battingteam"], team_query)]
-    bowl_team = bowl_t[pick_team_mask(bowl_t["bowlingteam"], team_query)]
-
-    if group_by_opponent and ("opponent" in bat_team.columns) and ("opponent" in bowl_team.columns):
-        trend_key = "opponent"
-    else:
-        trend_key = "matchid"
-
-    bm = bat_team.groupby(["tournamentkey", trend_key], as_index=False).agg(
-        runs_scored=("runs", "sum"),
-        balls_faced=("balls", "sum"),
-        wickets_lost=("howout", lambda s: (s.fillna("").str.lower() != "not out").sum()),
-    )
-    if not bm.empty:
-        bm["run_rate"] = (bm["runs_scored"] * 6 / bm["balls_faced"]).round(2)
-
-    wm = bowl_team.groupby(["tournamentkey", trend_key], as_index=False).agg(
-        runs_conceded=("runsconceded", "sum"),
-        balls_bowled=("balls_bowled", "sum"),
-        wickets_taken=("wickets", "sum"),
-    )
-    if not wm.empty:
-        wm["overs_bowled"] = (wm["balls_bowled"] / 6).round(1)
-        wm["economy"] = (wm["runs_conceded"] / wm["overs_bowled"]).round(2)
-
-    # Merge batting and bowling data
-    mm = bm.merge(wm, on=["tournamentkey", trend_key], how="outer").sort_values(["tournamentkey", trend_key])
-    
-    # Add tournament label
-    if len(mm) > 0:
-        mm = mm.copy()
-        mm["tournament"] = mm["tournamentkey"].map(lambda x: tournament_label(x))
-    
-    # ---- Game-wise comparison table ----
-    st.markdown("### Game-wise Summary")
-    if len(mm) == 0:
-        st.info("No game data found for this filter.")
-    else:
-        # Determine win/loss based on run rate comparison (SUPREMOS run rate > Opposition run rate)
-        mm["opposition_run_rate"] = (mm["runs_conceded"] * 6 / mm["balls_bowled"]).round(2)
-        mm["result"] = mm.apply(
-            lambda row: "Won" if (pd.notna(row["run_rate"]) and pd.notna(row["opposition_run_rate"]) 
-                                   and row["run_rate"] > row["opposition_run_rate"]) else "Lost",
-            axis=1
-        )
-        
-        display_cols = [
-            "tournament",
-            trend_key,
-            "runs_scored",
-            "wickets_lost",
-            "run_rate",
-            "runs_conceded",
-            "wickets_taken",
-            "opposition_run_rate",
-            "result",
-        ]
-        display_cols = [c for c in display_cols if c in mm.columns]
-        
-        game_table = mm[display_cols].sort_values(["tournament", trend_key])
-        st.dataframe(game_table, use_container_width=True)
-    
-    # ---- Trend analysis ----
-    st.markdown("### Trend Analysis")
-    if len(mm) == 0:
-        st.info("No data for trend analysis.")
-    else:
-        # Analyze patterns
-        total_games = len(mm)
-        wins = (mm["result"] == "Won").sum()
-        win_rate = (wins / total_games * 100) if total_games > 0 else 0
-        
-        st.write(f"**Overall Record:** {wins}/{total_games} wins ({win_rate:.1f}%)")
-        
-        # Pattern 1: Runs scored >= 150
-        high_score_games = mm[mm["runs_scored"] >= 150]
-        if len(high_score_games) > 0:
-            high_score_wins = (high_score_games["result"] == "Won").sum()
-            high_score_rate = (high_score_wins / len(high_score_games) * 100)
-            st.write(f"• **Runs ≥ 150:** {high_score_wins}/{len(high_score_games)} wins ({high_score_rate:.1f}%)")
-        
-        # Pattern 2: Runs scored >= 130
-        medium_score_games = mm[mm["runs_scored"] >= 130]
-        if len(medium_score_games) > 0:
-            medium_score_wins = (medium_score_games["result"] == "Won").sum()
-            medium_score_rate = (medium_score_wins / len(medium_score_games) * 100)
-            st.write(f"• **Runs ≥ 130:** {medium_score_wins}/{len(medium_score_games)} wins ({medium_score_rate:.1f}%)")
-        
-        # Pattern 3: Run rate >= 10
-        high_rr_games = mm[mm["run_rate"] >= 10]
-        if len(high_rr_games) > 0:
-            high_rr_wins = (high_rr_games["result"] == "Won").sum()
-            high_rr_rate = (high_rr_wins / len(high_rr_games) * 100)
-            st.write(f"• **Run Rate ≥ 10:** {high_rr_wins}/{len(high_rr_games)} wins ({high_rr_rate:.1f}%)")
-        
-        # Pattern 4: Wickets lost <= 3
-        low_wkts_games = mm[mm["wickets_lost"] <= 3]
-        if len(low_wkts_games) > 0:
-            low_wkts_wins = (low_wkts_games["result"] == "Won").sum()
-            low_wkts_rate = (low_wkts_wins / len(low_wkts_games) * 100)
-            st.write(f"• **Wickets Lost ≤ 3:** {low_wkts_wins}/{len(low_wkts_games)} wins ({low_wkts_rate:.1f}%)")
-        
-        # Pattern 5: Economy <= 7
-        low_econ_games = mm[mm["economy"] <= 7]
-        if len(low_econ_games) > 0:
-            low_econ_wins = (low_econ_games["result"] == "Won").sum()
-            low_econ_rate = (low_econ_wins / len(low_econ_games) * 100)
-            st.write(f"• **Bowling Economy ≤ 7:** {low_econ_wins}/{len(low_econ_games)} wins ({low_econ_rate:.1f}%)")
