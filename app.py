@@ -321,73 +321,89 @@ with tab_team:
         wickets_taken=("wickets", "sum"),
     )
     if not wm.empty:
-        wm["overs_bowled"] = (wm["balls_bowled"] / 6)
+        wm["overs_bowled"] = (wm["balls_bowled"] / 6).round(1)
         wm["economy"] = (wm["runs_conceded"] / wm["overs_bowled"]).round(2)
 
+    # Merge batting and bowling data
     mm = bm.merge(wm, on=["tournamentkey", trend_key], how="outer").sort_values(["tournamentkey", trend_key])
-
-    if all(c in mm.columns for c in ["runs_scored", "balls_faced", "runs_conceded", "overs_bowled"]):
-        mm["nrr_proxy"] = ((mm["runs_scored"] * 6 / mm["balls_faced"]) - (mm["runs_conceded"] / mm["overs_bowled"])).round(2)
-    else:
-        mm["nrr_proxy"] = pd.NA
-
-    # ---- SAFE plotting prep (no MultiIndex) ----
+    
+    # Add tournament label
     if len(mm) > 0:
         mm = mm.copy()
         mm["tournament"] = mm["tournamentkey"].map(lambda x: tournament_label(x))
-        mm["x"] = mm[trend_key].fillna("").astype(str).replace("", "(Unknown)")
-
-        for col in ["runs_scored", "wickets_lost", "run_rate", "runs_conceded", "wickets_taken", "economy"]:
-            if col not in mm.columns:
-                mm[col] = pd.NA
-
-    c1, c2 = st.columns(2)
-
-    with c1:
-        st.markdown("### Batting trend")
-        bat_cols = ["runs_scored", "wickets_lost", "run_rate"]
-        if len(mm) == 0:
-            st.info("No batting trend data found for this filter.")
-        else:
-            plot_df = mm[["tournament", "x"] + bat_cols].copy()
-            for c in bat_cols:
-                plot_df[c] = pd.to_numeric(plot_df[c], errors="coerce")
-            plot_df = plot_df.sort_values(["tournament", "x"]).set_index("x")
-            st.line_chart(plot_df[bat_cols])
-
-    with c2:
-        st.markdown("### Bowling trend")
-        bowl_cols = ["runs_conceded", "wickets_taken", "economy"]
-        if len(mm) == 0:
-            st.info("No bowling trend data found for this filter.")
-        else:
-            plot_df = mm[["tournament", "x"] + bowl_cols].copy()
-            for c in bowl_cols:
-                plot_df[c] = pd.to_numeric(plot_df[c], errors="coerce")
-            plot_df = plot_df.sort_values(["tournament", "x"]).set_index("x")
-            st.line_chart(plot_df[bowl_cols])
-
-    st.markdown("### Best vs worst (table)")
+    
+    # ---- Game-wise comparison table ----
+    st.markdown("### Game-wise Summary")
     if len(mm) == 0:
-        st.info("No data found for this filter.")
+        st.info("No game data found for this filter.")
     else:
-        out = mm.copy()
-        key_col = "opponent" if trend_key == "opponent" else "matchid"
-
+        # Determine win/loss based on run rate comparison (SUPREMOS run rate > Opposition run rate)
+        mm["opposition_run_rate"] = (mm["runs_conceded"] * 6 / mm["balls_bowled"]).round(2)
+        mm["result"] = mm.apply(
+            lambda row: "Won" if (pd.notna(row["run_rate"]) and pd.notna(row["opposition_run_rate"]) 
+                                   and row["run_rate"] > row["opposition_run_rate"]) else "Lost",
+            axis=1
+        )
+        
         display_cols = [
             "tournament",
-            key_col,
+            trend_key,
             "runs_scored",
             "wickets_lost",
             "run_rate",
             "runs_conceded",
             "wickets_taken",
-            "economy",
-            "nrr_proxy",
+            "opposition_run_rate",
+            "result",
         ]
-        display_cols = [c for c in display_cols if c in out.columns]
-
-        st.dataframe(
-            out.sort_values(["nrr_proxy", "runs_scored"], ascending=[False, False])[display_cols],
-            use_container_width=True,
-        )
+        display_cols = [c for c in display_cols if c in mm.columns]
+        
+        game_table = mm[display_cols].sort_values(["tournament", trend_key])
+        st.dataframe(game_table, use_container_width=True)
+    
+    # ---- Trend analysis ----
+    st.markdown("### Trend Analysis")
+    if len(mm) == 0:
+        st.info("No data for trend analysis.")
+    else:
+        # Analyze patterns
+        total_games = len(mm)
+        wins = (mm["result"] == "Won").sum()
+        win_rate = (wins / total_games * 100) if total_games > 0 else 0
+        
+        st.write(f"**Overall Record:** {wins}/{total_games} wins ({win_rate:.1f}%)")
+        
+        # Pattern 1: Runs scored >= 150
+        high_score_games = mm[mm["runs_scored"] >= 150]
+        if len(high_score_games) > 0:
+            high_score_wins = (high_score_games["result"] == "Won").sum()
+            high_score_rate = (high_score_wins / len(high_score_games) * 100)
+            st.write(f"• **Runs ≥ 150:** {high_score_wins}/{len(high_score_games)} wins ({high_score_rate:.1f}%)")
+        
+        # Pattern 2: Runs scored >= 130
+        medium_score_games = mm[mm["runs_scored"] >= 130]
+        if len(medium_score_games) > 0:
+            medium_score_wins = (medium_score_games["result"] == "Won").sum()
+            medium_score_rate = (medium_score_wins / len(medium_score_games) * 100)
+            st.write(f"• **Runs ≥ 130:** {medium_score_wins}/{len(medium_score_games)} wins ({medium_score_rate:.1f}%)")
+        
+        # Pattern 3: Run rate >= 10
+        high_rr_games = mm[mm["run_rate"] >= 10]
+        if len(high_rr_games) > 0:
+            high_rr_wins = (high_rr_games["result"] == "Won").sum()
+            high_rr_rate = (high_rr_wins / len(high_rr_games) * 100)
+            st.write(f"• **Run Rate ≥ 10:** {high_rr_wins}/{len(high_rr_games)} wins ({high_rr_rate:.1f}%)")
+        
+        # Pattern 4: Wickets lost <= 3
+        low_wkts_games = mm[mm["wickets_lost"] <= 3]
+        if len(low_wkts_games) > 0:
+            low_wkts_wins = (low_wkts_games["result"] == "Won").sum()
+            low_wkts_rate = (low_wkts_wins / len(low_wkts_games) * 100)
+            st.write(f"• **Wickets Lost ≤ 3:** {low_wkts_wins}/{len(low_wkts_games)} wins ({low_wkts_rate:.1f}%)")
+        
+        # Pattern 5: Economy <= 7
+        low_econ_games = mm[mm["economy"] <= 7]
+        if len(low_econ_games) > 0:
+            low_econ_wins = (low_econ_games["result"] == "Won").sum()
+            low_econ_rate = (low_econ_wins / len(low_econ_games) * 100)
+            st.write(f"• **Bowling Economy ≤ 7:** {low_econ_wins}/{len(low_econ_games)} wins ({low_econ_rate:.1f}%)")
