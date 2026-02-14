@@ -20,8 +20,10 @@ def tournament_label(k: str) -> str:
 
 
 @st.cache_data
-def load_csv(path: str) -> pd.DataFrame:
-    return pd.read_csv(path)
+def load_csv(uploaded_file, fallback_path: str):
+    if uploaded_file is not None:
+        return pd.read_csv(uploaded_file)
+    return pd.read_csv(fallback_path)
 
 
 def to_float(s):
@@ -45,6 +47,7 @@ def pick_team_mask(series: pd.Series, team_query: str) -> pd.Series:
 
 
 def norm_opp(df: pd.DataFrame) -> pd.DataFrame:
+    # Keep blank opponents as "(Unknown)" for display
     if "opponent" in df.columns:
         df["opponent"] = df["opponent"].fillna("").astype(str).str.strip()
         df.loc[df["opponent"] == "", "opponent"] = "(Unknown)"
@@ -55,9 +58,15 @@ def norm_opp(df: pd.DataFrame) -> pd.DataFrame:
 
 st.title("Cricket Performance Dashboard")
 
-# Always read committed files (no user uploads)
-bat = load_csv("battinginnings.csv")
-bowl = load_csv("bowlinginnings.csv")
+with st.sidebar:
+    st.header("Data")
+    up_bat = st.file_uploader("Upload battinginnings.csv", type=["csv"], key="bat")
+    up_bowl = st.file_uploader("Upload bowlinginnings.csv", type=["csv"], key="bowl")
+    st.caption("If you don’t upload, the app will try reading local files in the same folder.")
+    st.divider()
+
+bat = load_csv(up_bat, "battinginnings.csv")
+bowl = load_csv(up_bowl, "bowlinginnings.csv")
 
 # -----------------------------
 # Basic cleaning
@@ -71,10 +80,18 @@ bat["sr"] = to_float(bat.get("sr"))
 if "batpos" in bat.columns:
     bat["batpos"] = pd.to_numeric(bat["batpos"], errors="coerce")
 
+# Normalize player names to lowercase for consistent deduplication
+if "playername" in bat.columns:
+    bat["playername"] = bat["playername"].str.lower()
+
 bowl["runsconceded"] = to_float(bowl.get("runsconceded"))
 bowl["wickets"] = to_float(bowl.get("wickets"))
 bowl["econ"] = to_float(bowl.get("econ"))
 bowl["balls_bowled"] = overs_to_balls(bowl.get("overs", pd.Series(dtype=str)))
+
+# Normalize bowler names to lowercase for consistent deduplication
+if "bowlername" in bowl.columns:
+    bowl["bowlername"] = bowl["bowlername"].str.lower()
 
 bat = norm_opp(bat)
 bowl = norm_opp(bowl)
@@ -125,7 +142,7 @@ with tab_player:
     if not bowl_f.empty:
         bowl_f["tournament"] = bowl_f["tournamentkey"].map(lambda x: tournament_label(x))
 
-    # Batting summary
+    # Batting summary (top)
     st.markdown("### Batting summary")
     if bat_f.empty:
         st.warning("No batting data for this selection.")
@@ -149,7 +166,7 @@ with tab_player:
         if "batpos" in bat_f.columns:
             sort_cols.append("batpos")
         if "matchid" in bat_f.columns:
-            sort_cols.append("matchid")  # stable ordering only (hidden)
+            sort_cols.append("matchid")  # for stable ordering only (hidden)
 
         bat_detail = bat_f.sort_values(sort_cols)
 
@@ -174,7 +191,7 @@ with tab_player:
         show_cols = ["tournament", "opponent", "inningsno", "battingteam", "runs", "balls", "sr", "fours", "sixes"]
         st.dataframe(bat_game[show_cols], use_container_width=True)
 
-    # Bowling summary
+    # Bowling summary (below)
     st.markdown("### Bowling summary")
     if bowl_f.empty:
         st.warning("No bowling data for this selection.")
