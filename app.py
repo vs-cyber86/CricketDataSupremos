@@ -46,6 +46,15 @@ def pick_team_mask(series: pd.Series, team_query: str) -> pd.Series:
     return series.astype(str).str.lower().str.contains(q, regex=False)
 
 
+def norm_opp(df: pd.DataFrame) -> pd.DataFrame:
+    if "opponent" in df.columns:
+        df["opponent"] = df["opponent"].fillna("").astype(str).str.strip()
+        df.loc[df["opponent"] == "", "opponent"] = "(Unknown)"
+    else:
+        df["opponent"] = "(Unknown)"
+    return df
+
+
 st.title("Cricket Performance Dashboard")
 
 with st.sidebar:
@@ -65,10 +74,17 @@ bat["fours"] = to_float(bat.get("fours"))
 bat["sixes"] = to_float(bat.get("sixes"))
 bat["sr"] = to_float(bat.get("sr"))
 
+if "batpos" in bat.columns:
+    bat["batpos"] = pd.to_numeric(bat["batpos"], errors="coerce")
+
 bowl["runsconceded"] = to_float(bowl.get("runsconceded"))
 bowl["wickets"] = to_float(bowl.get("wickets"))
 bowl["econ"] = to_float(bowl.get("econ"))
 bowl["balls_bowled"] = overs_to_balls(bowl.get("overs", pd.Series(dtype=str)))
+
+# Ensure opponent column exists + is clean for display
+bat = norm_opp(bat)
+bowl = norm_opp(bowl)
 
 # Navigation
 tab_player, tab_team = st.tabs(["Player performance", "Team match trends"])
@@ -79,11 +95,11 @@ tab_player, tab_team = st.tabs(["Player performance", "Team match trends"])
 with tab_player:
     st.subheader("Player performance")
 
-    # Dropdown 1: Player Name
+    # Dropdown 1 - Player Name
     all_players = sorted(set(bat["playername"]).union(set(bowl["bowlername"])))
     player = st.selectbox("Player Name", ["(Select a player)"] + all_players)
 
-    # Dropdown 2: Tournament
+    # Dropdown 2 - Tournament (options depend on selected player)
     if player == "(Select a player)":
         tourn_options = sorted(set(bat["tournamentkey"]).union(set(bowl["tournamentkey"])))
     else:
@@ -95,30 +111,28 @@ with tab_player:
     display_to_key = {tournament_label(t): t for t in tourn_options}
     tourn_choice = st.selectbox("Tournament", ["(All)"] + tourn_display)
 
-    # No data until a player is selected
+    # No data until player is selected
     if player == "(Select a player)":
-        st.info("Select a player to view batting and bowling performance.")
+        st.info("Select a player to view performance.")
         st.stop()
 
     # Filter data for selected player
     bat_f = bat[bat["playername"] == player].copy()
     bowl_f = bowl[bowl["bowlername"] == player].copy()
 
-    # Tournament filter (optional)
+    # Apply tournament filter
     if tourn_choice != "(All)":
         tkey = display_to_key[tourn_choice]
         bat_f = bat_f[bat_f["tournamentkey"] == tkey]
         bowl_f = bowl_f[bowl_f["tournamentkey"] == tkey]
 
-    # Add pretty tournament name for display
+    # Add friendly tournament label
     if not bat_f.empty:
         bat_f["tournament"] = bat_f["tournamentkey"].map(lambda x: tournament_label(x))
     if not bowl_f.empty:
         bowl_f["tournament"] = bowl_f["tournamentkey"].map(lambda x: tournament_label(x))
 
-    # -------------------
-    # Batting summary (top)
-    # -------------------
+    # Batting summary
     st.markdown("### Batting summary")
     if bat_f.empty:
         st.warning("No batting data for this selection.")
@@ -137,30 +151,37 @@ with tab_player:
         k4.metric("SR", f"{sr:.2f}" if balls else "—")
         k5.metric("4s/6s", f"{int(bat_f['fours'].sum(skipna=True))}/{int(bat_f['sixes'].sum(skipna=True))}")
 
-        st.markdown("#### Batting: game-wise (tournament-wise included)")
-        bat_game = bat_f.groupby(["tournament", "tournamentkey", "matchid", "inningsno", "battingteam"], as_index=False).agg(
+        st.markdown("#### Batting: innings details (Opponent instead of Match ID)")
+        sort_cols = ["tournamentkey", "opponent", "inningsno"]
+        if "batpos" in bat_f.columns:
+            sort_cols.append("batpos")
+        if "matchid" in bat_f.columns:
+            sort_cols.append("matchid")
+
+        bat_detail = bat_f.sort_values(sort_cols)
+
+        cols = ["tournament", "opponent", "inningsno", "battingteam"]
+        if "batpos" in bat_detail.columns:
+            cols.append("batpos")
+        cols += ["runs", "balls", "sr", "fours", "sixes", "howout"]
+
+        st.dataframe(bat_detail[cols], use_container_width=True)
+
+        st.markdown("#### Batting: opponent-wise (tournament-wise included)")
+        group_cols = ["tournament", "tournamentkey", "opponent", "inningsno", "battingteam"]
+        bat_game = bat_f.groupby(group_cols, as_index=False).agg(
             runs=("runs", "sum"),
             balls=("balls", "sum"),
             fours=("fours", "sum"),
             sixes=("sixes", "sum"),
         )
         bat_game["sr"] = (bat_game["runs"] * 100 / bat_game["balls"]).round(2)
-        bat_game = bat_game.sort_values(["tournamentkey", "matchid", "inningsno"])
-        st.dataframe(
-            bat_game[["tournament", "matchid", "inningsno", "battingteam", "runs", "balls", "sr", "fours", "sixes"]],
-            use_container_width=True,
-        )
+        bat_game = bat_game.sort_values(["tournamentkey", "opponent", "inningsno"])
 
-        st.markdown("#### Batting: innings details")
-        bat_detail = bat_f.sort_values(["tournamentkey", "matchid", "inningsno"])
-        st.dataframe(
-            bat_detail[["tournament", "matchid", "inningsno", "battingteam", "runs", "balls", "sr", "fours", "sixes", "howout"]],
-            use_container_width=True,
-        )
+        show_cols = ["tournament", "opponent", "inningsno", "battingteam", "runs", "balls", "sr", "fours", "sixes"]
+        st.dataframe(bat_game[show_cols], use_container_width=True)
 
-    # -------------------
     # Bowling summary (below)
-    # -------------------
     st.markdown("### Bowling summary")
     if bowl_f.empty:
         st.warning("No bowling data for this selection.")
@@ -182,26 +203,28 @@ with tab_player:
         k4.metric("Econ", f"{econ:.2f}" if overs_equiv else "—")
         k5.metric("Avg / SR", f"{avg_b:.2f} / {sr_b:.1f}" if (avg_b is not None and sr_b is not None) else "—")
 
-        st.markdown("#### Bowling: game-wise (tournament-wise included)")
-        bowl_game = bowl_f.groupby(["tournament", "tournamentkey", "matchid", "inningsno", "bowlingteam"], as_index=False).agg(
+        st.markdown("#### Bowling: spell details (Opponent instead of Match ID)")
+        sort_cols = ["tournamentkey", "opponent", "inningsno"]
+        if "matchid" in bowl_f.columns:
+            sort_cols.append("matchid")
+        bowl_detail = bowl_f.sort_values(sort_cols)
+
+        cols = ["tournament", "opponent", "inningsno", "bowlingteam", "overs", "runsconceded", "wickets", "econ"]
+        st.dataframe(bowl_detail[cols], use_container_width=True)
+
+        st.markdown("#### Bowling: opponent-wise (tournament-wise included)")
+        group_cols = ["tournament", "tournamentkey", "opponent", "inningsno", "bowlingteam"]
+        bowl_game = bowl_f.groupby(group_cols, as_index=False).agg(
             balls=("balls_bowled", "sum"),
             runs=("runsconceded", "sum"),
             wkts=("wickets", "sum"),
         )
         bowl_game["overs"] = (bowl_game["balls"] / 6).round(1)
         bowl_game["econ"] = (bowl_game["runs"] / (bowl_game["balls"] / 6)).round(2)
-        bowl_game = bowl_game.sort_values(["tournamentkey", "matchid", "inningsno"])
-        st.dataframe(
-            bowl_game[["tournament", "matchid", "inningsno", "bowlingteam", "overs", "runs", "wkts", "econ"]],
-            use_container_width=True,
-        )
+        bowl_game = bowl_game.sort_values(["tournamentkey", "opponent", "inningsno"])
 
-        st.markdown("#### Bowling: spell details")
-        bowl_detail = bowl_f.sort_values(["tournamentkey", "matchid", "inningsno"])
-        st.dataframe(
-            bowl_detail[["tournament", "matchid", "inningsno", "bowlingteam", "overs", "runsconceded", "wickets", "econ"]],
-            use_container_width=True,
-        )
+        show_cols = ["tournament", "opponent", "inningsno", "bowlingteam", "overs", "runs", "wkts", "econ"]
+        st.dataframe(bowl_game[show_cols], use_container_width=True)
 
 # -------------------------
 # Tab 2: Team match trends
@@ -218,6 +241,8 @@ with tab_team:
         format_func=tournament_label,
     )
 
+    group_by_opponent = st.checkbox("Group by opponent (if available)", value=True)
+
     bat_t = bat.copy()
     bowl_t = bowl.copy()
 
@@ -228,8 +253,12 @@ with tab_team:
     bat_team = bat_t[pick_team_mask(bat_t["battingteam"], team_query)]
     bowl_team = bowl_t[pick_team_mask(bowl_t["bowlingteam"], team_query)]
 
-    # Batting match trend
-    bm = bat_team.groupby(["tournamentkey", "matchid"], as_index=False).agg(
+    if group_by_opponent and ("opponent" in bat_team.columns) and ("opponent" in bowl_team.columns):
+        trend_key = "opponent"
+    else:
+        trend_key = "matchid"
+
+    bm = bat_team.groupby(["tournamentkey", trend_key], as_index=False).agg(
         runs_scored=("runs", "sum"),
         balls_faced=("balls", "sum"),
         wickets_lost=("howout", lambda s: (s.fillna("").str.lower() != "not out").sum()),
@@ -237,8 +266,7 @@ with tab_team:
     if not bm.empty:
         bm["run_rate"] = (bm["runs_scored"] * 6 / bm["balls_faced"]).round(2)
 
-    # Bowling match trend
-    wm = bowl_team.groupby(["tournamentkey", "matchid"], as_index=False).agg(
+    wm = bowl_team.groupby(["tournamentkey", trend_key], as_index=False).agg(
         runs_conceded=("runsconceded", "sum"),
         balls_bowled=("balls_bowled", "sum"),
         wickets_taken=("wickets", "sum"),
@@ -247,51 +275,53 @@ with tab_team:
         wm["overs_bowled"] = (wm["balls_bowled"] / 6)
         wm["economy"] = (wm["runs_conceded"] / wm["overs_bowled"]).round(2)
 
-    # Merge
-    mm = bm.merge(wm, on=["tournamentkey", "matchid"], how="outer")
-    mm = mm.sort_values(["tournamentkey", "matchid"])
+    mm = bm.merge(wm, on=["tournamentkey", trend_key], how="outer")
+    mm = mm.sort_values(["tournamentkey", trend_key])
 
-    # nrr proxy only if we have the inputs
     if all(c in mm.columns for c in ["runs_scored", "balls_faced", "runs_conceded", "overs_bowled"]):
         mm["nrr_proxy"] = ((mm["runs_scored"] * 6 / mm["balls_faced"]) - (mm["runs_conceded"] / mm["overs_bowled"])).round(2)
     else:
         mm["nrr_proxy"] = pd.NA
 
-    # Charts (safe: show only if columns exist + data present)
     c1, c2 = st.columns(2)
 
     with c1:
-        st.markdown("### Batting trend (match-by-match)")
+        st.markdown("### Batting trend")
         bat_cols = ["runs_scored", "wickets_lost", "run_rate"]
         if len(mm) == 0 or any(c not in mm.columns for c in bat_cols):
-            st.info("No batting trend data found for this team filter. Try changing 'Team name contains' or tournament filter.")
+            st.info("No batting trend data found for this filter.")
         else:
-            st.line_chart(mm.set_index(["tournamentkey", "matchid"])[bat_cols])
+            st.line_chart(mm.set_index(["tournamentkey", trend_key])[bat_cols])
 
     with c2:
-        st.markdown("### Bowling trend (match-by-match)")
+        st.markdown("### Bowling trend")
         bowl_cols = ["runs_conceded", "wickets_taken", "economy"]
         if len(mm) == 0 or any(c not in mm.columns for c in bowl_cols):
-            st.info("No bowling trend data found for this team filter. Try changing 'Team name contains' or tournament filter.")
+            st.info("No bowling trend data found for this filter.")
         else:
-            st.line_chart(mm.set_index(["tournamentkey", "matchid"])[bowl_cols])
+            st.line_chart(mm.set_index(["tournamentkey", trend_key])[bowl_cols])
 
-    st.markdown("### Best vs worst matches (table)")
+    st.markdown("### Best vs worst (table)")
     if len(mm) == 0:
-        st.info("No matches found for this team filter.")
+        st.info("No data found for this filter.")
     else:
-        show_cols = [c for c in [
-            "tournamentkey", "matchid",
-            "runs_scored", "wickets_lost", "run_rate",
-            "runs_conceded", "wickets_taken", "economy",
-            "nrr_proxy"
-        ] if c in mm.columns]
         out = mm.copy()
         out["tournament"] = out["tournamentkey"].map(lambda x: tournament_label(x))
-        # Put tournament label first
-        if "tournament" in out.columns:
-            show_cols = ["tournament"] + [c for c in show_cols if c != "tournamentkey"]
+
+        display_cols = [
+            "tournament",
+            trend_key,
+            "runs_scored",
+            "wickets_lost",
+            "run_rate",
+            "runs_conceded",
+            "wickets_taken",
+            "economy",
+            "nrr_proxy",
+        ]
+        display_cols = [c for c in display_cols if c in out.columns]
+
         st.dataframe(
-            out.sort_values(["nrr_proxy", "runs_scored"], ascending=[False, False])[show_cols],
+            out.sort_values(["nrr_proxy", "runs_scored"], ascending=[False, False])[display_cols],
             use_container_width=True,
         )
