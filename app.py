@@ -67,7 +67,9 @@ with st.sidebar:
 bat = load_csv(up_bat, "battinginnings.csv")
 bowl = load_csv(up_bowl, "bowlinginnings.csv")
 
+# -----------------------------
 # Basic cleaning
+# -----------------------------
 bat["runs"] = to_float(bat.get("runs"))
 bat["balls"] = to_float(bat.get("balls"))
 bat["fours"] = to_float(bat.get("fours"))
@@ -258,6 +260,7 @@ with tab_team:
     else:
         trend_key = "matchid"
 
+    # Batting match trend
     bm = bat_team.groupby(["tournamentkey", trend_key], as_index=False).agg(
         runs_scored=("runs", "sum"),
         balls_faced=("balls", "sum"),
@@ -266,6 +269,7 @@ with tab_team:
     if not bm.empty:
         bm["run_rate"] = (bm["runs_scored"] * 6 / bm["balls_faced"]).round(2)
 
+    # Bowling match trend
     wm = bowl_team.groupby(["tournamentkey", trend_key], as_index=False).agg(
         runs_conceded=("runsconceded", "sum"),
         balls_bowled=("balls_bowled", "sum"),
@@ -275,6 +279,7 @@ with tab_team:
         wm["overs_bowled"] = (wm["balls_bowled"] / 6)
         wm["economy"] = (wm["runs_conceded"] / wm["overs_bowled"]).round(2)
 
+    # Merge + NRR proxy
     mm = bm.merge(wm, on=["tournamentkey", trend_key], how="outer")
     mm = mm.sort_values(["tournamentkey", trend_key])
 
@@ -283,34 +288,56 @@ with tab_team:
     else:
         mm["nrr_proxy"] = pd.NA
 
+    # ---- SAFE plotting prep (no MultiIndex) ----
+    if len(mm) > 0:
+        mm = mm.copy()
+        mm["tournament"] = mm["tournamentkey"].map(lambda x: tournament_label(x))
+
+        if trend_key == "opponent":
+            mm["x"] = mm["opponent"].fillna("").astype(str).replace("", "(Unknown)")
+        else:
+            mm["x"] = mm["matchid"].astype(str)
+
+        for col in ["runs_scored", "wickets_lost", "run_rate", "runs_conceded", "wickets_taken", "economy"]:
+            if col not in mm.columns:
+                mm[col] = pd.NA
+
     c1, c2 = st.columns(2)
 
     with c1:
         st.markdown("### Batting trend")
         bat_cols = ["runs_scored", "wickets_lost", "run_rate"]
-        if len(mm) == 0 or any(c not in mm.columns for c in bat_cols):
+        if len(mm) == 0:
             st.info("No batting trend data found for this filter.")
         else:
-            st.line_chart(mm.set_index(["tournamentkey", trend_key])[bat_cols])
+            plot_df = mm[["tournament", "x"] + bat_cols].copy()
+            for c in bat_cols:
+                plot_df[c] = pd.to_numeric(plot_df[c], errors="coerce")
+            plot_df = plot_df.sort_values(["tournament", "x"]).set_index("x")
+            st.line_chart(plot_df[bat_cols])
 
     with c2:
         st.markdown("### Bowling trend")
         bowl_cols = ["runs_conceded", "wickets_taken", "economy"]
-        if len(mm) == 0 or any(c not in mm.columns for c in bowl_cols):
+        if len(mm) == 0:
             st.info("No bowling trend data found for this filter.")
         else:
-            st.line_chart(mm.set_index(["tournamentkey", trend_key])[bowl_cols])
+            plot_df = mm[["tournament", "x"] + bowl_cols].copy()
+            for c in bowl_cols:
+                plot_df[c] = pd.to_numeric(plot_df[c], errors="coerce")
+            plot_df = plot_df.sort_values(["tournament", "x"]).set_index("x")
+            st.line_chart(plot_df[bowl_cols])
 
     st.markdown("### Best vs worst (table)")
     if len(mm) == 0:
         st.info("No data found for this filter.")
     else:
         out = mm.copy()
-        out["tournament"] = out["tournamentkey"].map(lambda x: tournament_label(x))
+        key_col = "opponent" if trend_key == "opponent" else "matchid"
 
         display_cols = [
             "tournament",
-            trend_key,
+            key_col,
             "runs_scored",
             "wickets_lost",
             "run_rate",
