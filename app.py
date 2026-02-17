@@ -56,6 +56,103 @@ def norm_opp(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def generate_player_blurb(player_name: str, bat_stats: dict, bowl_stats: dict) -> str:
+    """Generate a cricket-specific blurb based on performance metrics."""
+    
+    runs = bat_stats.get('runs', 0)
+    avg = bat_stats.get('avg', 0) or 0
+    sr = bat_stats.get('sr', 0) or 0
+    bat_inns = bat_stats.get('inns', 0)
+    fours = bat_stats.get('fours', 0)
+    sixes = bat_stats.get('sixes', 0)
+    
+    wickets = bowl_stats.get('wickets', 0) or 0
+    econ = bowl_stats.get('econ', 0) or 0
+    bowl_inns = bowl_stats.get('spells', 0)
+    
+    # ===== BATTING ASSESSMENT =====
+    # Overall run-scoring category
+    if runs > 1000:
+        run_category = "prolific run-scorer with exceptional consistency"
+    elif runs > 500:
+        run_category = "prolific run-scorer"
+    elif runs > 250:
+        run_category = "reliable run-maker"
+    elif runs > 100:
+        run_category = "developing batter with solid fundamentals"
+    else:
+        run_category = "emerging talent with limited opportunities"
+    
+    # Batting style based on strike rate
+    if sr > 150:
+        bat_style = "ultra-aggressive batting style"
+    elif sr > 130:
+        bat_style = "aggressive batting approach"
+    elif sr > 110:
+        bat_style = "balanced, all-around batting"
+    elif sr > 90:
+        bat_style = "conservative, accumulation-focused batting"
+    else:
+        bat_style = "cautious batting approach"
+    
+    # Average quality
+    if avg > 40:
+        avg_quality = "exceptional average"
+    elif avg > 30:
+        avg_quality = "strong average"
+    elif avg > 20:
+        avg_quality = "solid average"
+    elif avg > 10:
+        avg_quality = "decent average"
+    else:
+        avg_quality = "developing consistency"
+    
+    # Aggression indicator (4s and 6s)
+    total_boundaries = fours + sixes
+    if sixes > fours * 0.5:  # High ratio of sixes to fours
+        aggression = "highly aggressive with strong striking ability"
+    elif total_boundaries > runs * 0.2:  # Good boundary percentage
+        aggression = "good boundary hitter"
+    else:
+        aggression = "rotates strike effectively"
+    
+    # ===== BOWLING ASSESSMENT =====
+    bowl_text = ""
+    if bowl_inns > 0 and wickets > 0:
+        # Bowling impact
+        if wickets > 50:
+            bowl_category = "leading bowler"
+        elif wickets > 20:
+            bowl_category = "impactful bowler"
+        elif wickets > 10:
+            bowl_category = "useful bowler"
+        else:
+            bowl_category = "occasional bowler"
+        
+        # Economy assessment
+        if econ < 5:
+            econ_quality = "excellent economy rate"
+        elif econ < 6.5:
+            econ_quality = "good economy rate"
+        elif econ < 8:
+            econ_quality = "acceptable economy rate"
+        else:
+            econ_quality = "economical bowling needed"
+        
+        bowl_text = f" As a {bowl_category}, {player_name} bowls with {econ_quality} (Economy: {econ:.2f}) and has claimed {int(wickets)} wickets across {int(bowl_inns)} spells."
+    
+    # ===== BUILD THE FINAL BLURB =====
+    blurb = f"**{player_name}** is a {run_category} with a {bat_style}. "
+    blurb += f"With an {avg_quality} ({avg:.2f}) and strike rate of {sr:.0f}, {player_name} {aggression}. "
+    
+    if bowl_text:
+        blurb += bowl_text
+    else:
+        blurb += f"Primary focus on batting with {int(bat_inns)} innings played."
+    
+    return blurb
+
+
 st.title("Cricket Performance Dashboard")
 
 bat = load_csv(None, "battinginnings.csv")
@@ -134,6 +231,35 @@ with tab_player:
         bat_f["tournament"] = bat_f["tournamentkey"].map(lambda x: tournament_label(x))
     if not bowl_f.empty:
         bowl_f["tournament"] = bowl_f["tournamentkey"].map(lambda x: tournament_label(x))
+
+    # ===== GENERATE AND DISPLAY PLAYER BLURB =====
+    bat_stats = {}
+    bowl_stats = {}
+    
+    if not bat_f.empty:
+        dismissals = (bat_f["howout"].fillna("").str.lower() != "not out").sum()
+        bat_stats = {
+            'inns': len(bat_f),
+            'runs': bat_f["runs"].sum(skipna=True),
+            'avg': (bat_f["runs"].sum(skipna=True) / dismissals) if dismissals else None,
+            'sr': (bat_f["runs"].sum(skipna=True) * 100 / bat_f["balls"].sum(skipna=True)) if bat_f["balls"].sum(skipna=True) else 0,
+            'fours': bat_f["fours"].sum(skipna=True),
+            'sixes': bat_f["sixes"].sum(skipna=True),
+        }
+    
+    if not bowl_f.empty:
+        balls_bowled = bowl_f["balls_bowled"].sum()
+        bowl_stats = {
+            'spells': len(bowl_f),
+            'wickets': bowl_f["wickets"].sum(skipna=True),
+            'econ': (bowl_f["runsconceded"].sum(skipna=True) / (balls_bowled / 6)) if balls_bowled else 0,
+        }
+    
+    # Display the AI-generated blurb
+    if bat_stats or bowl_stats:
+        blurb = generate_player_blurb(player, bat_stats, bowl_stats)
+        st.markdown(blurb)
+        st.markdown("---")
 
     # Batting summary (top)
     st.markdown("### Batting summary")
@@ -258,7 +384,7 @@ with tab_player:
         k1.metric("Spells", int(inns_b))
         k2.metric("Runs", int(runs_c) if pd.notna(runs_c) else 0)
         k3.metric("Wkts", int(wkts) if pd.notna(wkts) else 0)
-        k4.metric("Econ", f"{econ:.2f}" if overs_equiv else "—")
+        k4.metric("Econ", f"{econ:.2f}" if overs_equiv else "��")
         k5.metric("Avg / SR", f"{avg_b:.2f} / {sr_b:.1f}" if (avg_b is not None and sr_b is not None) else "—")
 
         st.markdown("#### Match-wise Bowling Summary")
