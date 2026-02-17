@@ -158,8 +158,36 @@ def generate_player_blurb(player_name: str, bat_stats: dict, bowl_stats: dict, b
     else:
         aggression = "relies on singles and twos"
     
+    # ===== AREAS OF IMPROVEMENT - BATTING =====
+    improvements = []
+    
+    if runs < 100 and bat_inns > 0:
+        improvements.append("needs to increase run accumulation")
+    elif avg < 20 and bat_inns > 3:
+        improvements.append("should focus on consistency and reducing dismissals")
+    elif avg < 30 and bat_inns > 3:
+        improvements.append("needs to elevate his average")
+    
+    if sr < 100 and bat_inns > 5:
+        improvements.append("should work on increasing strike rate")
+    elif sr > 160 and bat_inns > 5:
+        improvements.append("needs to balance aggression with stability")
+    
+    if boundary_ratio < 0.10 and runs > 50:
+        improvements.append("should look to score more boundaries")
+    elif sixes == 0 and sr > 120:
+        improvements.append("should work on developing six-hitting ability")
+    
+    if bat_inns > 5:
+        not_outs = (bat_f["howout"].fillna("").str.lower() == "not out").sum()
+        dismissal_rate = 1 - (not_outs / bat_inns)
+        if dismissal_rate > 0.8:
+            improvements.append("needs to work on converting starts into substantial scores")
+    
     # ===== BOWLING ASSESSMENT =====
     bowl_text = ""
+    bowl_improvements = []
+    
     if bowl_inns > 0 and wickets > 0:
         # Bowling impact
         if wickets > 50:
@@ -182,6 +210,15 @@ def generate_player_blurb(player_name: str, bat_stats: dict, bowl_stats: dict, b
             econ_quality = "needs to work on economy"
         
         bowl_text = f" As {bowl_category}, he bowls with {econ_quality} (Econ: {econ:.2f}) and has taken {int(wickets)} wickets across {int(bowl_inns)} spells."
+        
+        # Bowling improvements
+        if econ > 8 and bowl_inns > 3:
+            bowl_improvements.append("should work on tightening bowling lines and lengths")
+        
+        if wickets < 5 and bowl_inns > 10:
+            bowl_improvements.append("needs to improve wicket-taking ability")
+        elif wickets < 10 and bowl_inns > 15:
+            bowl_improvements.append("should focus on taking more wickets")
     
     # ===== BUILD THE FINAL BLURB =====
     blurb = f"**{player_name}** is {article(run_category)} {run_category}"
@@ -197,6 +234,12 @@ def generate_player_blurb(player_name: str, bat_stats: dict, bowl_stats: dict, b
     else:
         if bat_inns > 0:
             blurb += f" He has played {int(bat_inns)} innings in this period with a primary focus on batting."
+    
+    # Add areas for improvement section
+    all_improvements = improvements + bowl_improvements
+    if all_improvements:
+        blurb += f"\n\n**Areas for Improvement:** "
+        blurb += ", ".join(all_improvements) + "."
     
     return blurb
 
