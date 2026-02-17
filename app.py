@@ -56,8 +56,14 @@ def norm_opp(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def generate_player_blurb(player_name: str, bat_stats: dict, bowl_stats: dict) -> str:
-    """Generate a cricket-specific blurb based on performance metrics."""
+def article(word: str) -> str:
+    """Return the appropriate article (a/an) for a word."""
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    return "an" if word[0].lower() in vowels else "a"
+
+
+def generate_player_blurb(player_name: str, bat_stats: dict, bowl_stats: dict, bat_f: pd.DataFrame) -> str:
+    """Generate a cricket-specific blurb based on performance metrics and batting positions."""
     
     runs = bat_stats.get('runs', 0)
     avg = bat_stats.get('avg', 0) or 0
@@ -69,6 +75,30 @@ def generate_player_blurb(player_name: str, bat_stats: dict, bowl_stats: dict) -
     wickets = bowl_stats.get('wickets', 0) or 0
     econ = bowl_stats.get('econ', 0) or 0
     bowl_inns = bowl_stats.get('spells', 0)
+    
+    # ===== BATTING POSITION ANALYSIS =====
+    position_insight = ""
+    primary_position = ""
+    if "batpos" in bat_f.columns and not bat_f["batpos"].isna().all():
+        bat_pos_data = bat_f[bat_f["batpos"].notna()].copy()
+        if not bat_pos_data.empty:
+            avg_position = bat_pos_data["batpos"].mean()
+            position_counts = bat_pos_data["batpos"].value_counts()
+            primary_position_num = position_counts.idxmax()
+            
+            # Categorize position
+            if primary_position_num <= 2:
+                primary_position = "opening batter"
+                position_insight = "He is a reliable opener who can set the tone at the start of innings. "
+            elif primary_position_num <= 4:
+                primary_position = "middle-order batter"
+                position_insight = "He is an important middle-order player who provides stability and acceleration. "
+            elif primary_position_num <= 6:
+                primary_position = "lower middle-order batter"
+                position_insight = "He plays in the lower-middle order and can transition from consolidation to aggressive batting. "
+            else:
+                primary_position = "lower-order batter"
+                position_insight = "He contributes valuable support in the lower order with both bat and ball. "
     
     # ===== BATTING ASSESSMENT =====
     # Overall run-scoring category
@@ -86,14 +116,19 @@ def generate_player_blurb(player_name: str, bat_stats: dict, bowl_stats: dict) -
     # Batting style based on strike rate
     if sr > 150:
         bat_style = "ultra-aggressive batting style"
+        bat_style_desc = "plays with explosive intent"
     elif sr > 130:
         bat_style = "aggressive batting approach"
+        bat_style_desc = "plays with aggressive intent"
     elif sr > 110:
         bat_style = "balanced, all-around batting"
+        bat_style_desc = "balances aggression with caution"
     elif sr > 90:
         bat_style = "conservative, accumulation-focused batting"
+        bat_style_desc = "focuses on steady accumulation"
     else:
         bat_style = "cautious batting approach"
+        bat_style_desc = "plays a cautious game"
     
     # Average quality
     if avg > 40:
@@ -109,25 +144,32 @@ def generate_player_blurb(player_name: str, bat_stats: dict, bowl_stats: dict) -
     
     # Aggression indicator (4s and 6s)
     total_boundaries = fours + sixes
-    if sixes > fours * 0.5:  # High ratio of sixes to fours
-        aggression = "highly aggressive with strong striking ability"
-    elif total_boundaries > runs * 0.2:  # Good boundary percentage
-        aggression = "good boundary hitter"
+    if runs > 0:
+        boundary_ratio = total_boundaries / runs
     else:
-        aggression = "rotates strike effectively"
+        boundary_ratio = 0
+    
+    if sixes > fours * 0.5 and sixes > 0:
+        aggression = "demonstrates strong six-hitting ability"
+    elif boundary_ratio > 0.25:
+        aggression = "is a strong boundary hitter"
+    elif boundary_ratio > 0.15:
+        aggression = "rotates the strike well with regular boundaries"
+    else:
+        aggression = "relies on singles and twos"
     
     # ===== BOWLING ASSESSMENT =====
     bowl_text = ""
     if bowl_inns > 0 and wickets > 0:
         # Bowling impact
         if wickets > 50:
-            bowl_category = "leading bowler"
+            bowl_category = "a leading bowler"
         elif wickets > 20:
-            bowl_category = "impactful bowler"
+            bowl_category = "an impactful bowler"
         elif wickets > 10:
-            bowl_category = "useful bowler"
+            bowl_category = "a useful bowler"
         else:
-            bowl_category = "occasional bowler"
+            bowl_category = "an occasional bowler"
         
         # Economy assessment
         if econ < 5:
@@ -137,18 +179,24 @@ def generate_player_blurb(player_name: str, bat_stats: dict, bowl_stats: dict) -
         elif econ < 8:
             econ_quality = "acceptable economy rate"
         else:
-            econ_quality = "economical bowling needed"
+            econ_quality = "needs to work on economy"
         
-        bowl_text = f" As a {bowl_category}, {player_name} bowls with {econ_quality} (Economy: {econ:.2f}) and has claimed {int(wickets)} wickets across {int(bowl_inns)} spells."
+        bowl_text = f" As {bowl_category}, he bowls with {econ_quality} (Econ: {econ:.2f}) and has taken {int(wickets)} wickets across {int(bowl_inns)} spells."
     
     # ===== BUILD THE FINAL BLURB =====
-    blurb = f"**{player_name}** is a {run_category} with a {bat_style}. "
-    blurb += f"With an {avg_quality} ({avg:.2f}) and strike rate of {sr:.0f}, {player_name} {aggression}. "
+    blurb = f"**{player_name}** is {article(run_category)} {run_category}"
+    
+    if primary_position:
+        blurb += f" and {primary_position}"
+    
+    blurb += f". {position_insight}"
+    blurb += f"With {article(avg_quality)} {avg_quality} of {avg:.2f} and a strike rate of {sr:.0f}, {player_name} {bat_style_desc} and {aggression}."
     
     if bowl_text:
         blurb += bowl_text
     else:
-        blurb += f"Primary focus on batting with {int(bat_inns)} innings played."
+        if bat_inns > 0:
+            blurb += f" He has played {int(bat_inns)} innings in this period with a primary focus on batting."
     
     return blurb
 
@@ -257,7 +305,7 @@ with tab_player:
     
     # Display the AI-generated blurb
     if bat_stats or bowl_stats:
-        blurb = generate_player_blurb(player, bat_stats, bowl_stats)
+        blurb = generate_player_blurb(player, bat_stats, bowl_stats, bat_f)
         st.markdown(blurb)
         st.markdown("---")
 
@@ -384,7 +432,7 @@ with tab_player:
         k1.metric("Spells", int(inns_b))
         k2.metric("Runs", int(runs_c) if pd.notna(runs_c) else 0)
         k3.metric("Wkts", int(wkts) if pd.notna(wkts) else 0)
-        k4.metric("Econ", f"{econ:.2f}" if overs_equiv else "��")
+        k4.metric("Econ", f"{econ:.2f}" if overs_equiv else "—")
         k5.metric("Avg / SR", f"{avg_b:.2f} / {sr_b:.1f}" if (avg_b is not None and sr_b is not None) else "—")
 
         st.markdown("#### Match-wise Bowling Summary")
