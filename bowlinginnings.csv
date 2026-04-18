@@ -1,143 +1,161 @@
 inningsno,bowlingteam,bowlername,playerkey,overs,maidens,runsconceded,wickets,econ,opponent,tournamentkey,matchid,source
-1,SUPREMOS,Vishal Baxi,vishal baxi,4,0.0,35.0,1.0,8.75,ANTIQUE FRIENDS,clt20s_pdf,1,txt
-1,SUPREMOS,Navratan Bengani,navratan bengani,4,0.0,20.0,2.0,5.0,ANTIQUE FRIENDS,clt20s_pdf,1,txt
-1,SUPREMOS,Rajan Singh,rajan singh,3,0.0,27.0,1.0,9.0,ANTIQUE FRIENDS,clt20s_pdf,1,txt
-1,SUPREMOS,Aditya Jain,aditya jain,3,0.0,23.0,0.0,7.67,ANTIQUE FRIENDS,clt20s_pdf,1,txt
-1,SUPREMOS,Varun Sood,varun sood,3,0.0,13.0,1.0,4.33,ANTIQUE FRIENDS,clt20s_pdf,1,txt
-1,SUPREMOS,Abhishek Pingley,abhishek pingley,3,0.0,31.0,1.0,10.33,ANTIQUE FRIENDS,clt20s_pdf,1,txt
-1,SUPREMOS,Vishal Baxi,vishal baxi,4,0.0,32.0,1.0,8.0,Saregama,clt20s_pdf,2,txt
-1,SUPREMOS,Pradeep Tewani,pradeep tewani,4,0.0,30.0,2.0,7.5,Saregama,clt20s_pdf,2,txt
-1,SUPREMOS,Pratik Chitalia,pratik chitalia,1,0.0,9.0,0.0,9.0,Saregama,clt20s_pdf,2,txt
-1,SUPREMOS,Varun Sood,varun sood,4,0.0,25.0,3.0,6.25,Saregama,clt20s_pdf,2,txt
-1,SUPREMOS,Abhishek Pingley,abhishek pingley,4,0.0,27.0,1.0,6.75,Saregama,clt20s_pdf,2,txt
-1,SUPREMOS,Aditya Jain,aditya jain,2,0.0,19.0,0.0,9.5,Saregama,clt20s_pdf,2,txt
-1,SUPREMOS,Vishal Baxi,vishal baxi,3,0.0,10.0,1.0,3.33,CENTRAL AVENGERS,clt20s_pdf,3,txt
-1,SUPREMOS,Pradeep Tewani,pradeep tewani,3,0.0,26.0,1.0,8.67,CENTRAL AVENGERS,clt20s_pdf,3,txt
-1,SUPREMOS,Varun Sood,varun sood,4,0.0,18.0,1.0,4.5,CENTRAL AVENGERS,clt20s_pdf,3,txt
-1,SUPREMOS,Pritesh Magodia,pritesh magodia,2,0.0,9.0,0.0,4.5,CENTRAL AVENGERS,clt20s_pdf,3,txt
-1,SUPREMOS,Kanav Hingorani,kanav hingorani,2,0.0,23.0,0.0,11.5,CENTRAL AVENGERS,clt20s_pdf,3,txt
-1,SUPREMOS,Abhishek Pingley,abhishek pingley,4,0.0,40.0,1.0,10.0,CENTRAL AVENGERS,clt20s_pdf,3,txt
-1,SUPREMOS,Vishal Baxi,vishal baxi,3.3,0.0,21.0,2.0,6.0,MISFITS,clt20s_pdf,4,txt
-1,SUPREMOS,Shivam Tiwari,shivam tiwari,3,0.0,38.0,0.0,12.67,MISFITS,clt20s_pdf,4,txt
-1,SUPREMOS,Varun Sood,varun sood,3,0.0,22.0,1.0,7.33,MISFITS,clt20s_pdf,4,txt
-1,SUPREMOS,Pritesh Magodia,pritesh magodia,4,0.0,23.0,1.0,5.75,MISFITS,clt20s_pdf,4,txt
-1,SUPREMOS,Rajan Singh,rajan singh,4,0.0,29.0,3.0,7.25,MISFITS,clt20s_pdf,4,txt
-1,SUPREMOS,Kanav Hingorani,kanav hingorani,1,0.0,10.0,0.0,10.0,MISFITS,clt20s_pdf,4,txt
-1,SUPREMOS,Vishal Baxi,vishal baxi,4,0.0,42.0,1.0,10.5,Zen Cricket Team,clt20s_pdf,5,txt
-1,SUPREMOS,Shivam Tiwari,shivam tiwari,3,0.0,33.0,2.0,11.0,Zen Cricket Team,clt20s_pdf,5,txt
-1,SUPREMOS,Varun Sood,varun sood,4,0.0,36.0,2.0,9.0,Zen Cricket Team,clt20s_pdf,5,txt
-1,SUPREMOS,Rajan Singh,rajan singh,4,0.0,20.0,2.0,5.0,Zen Cricket Team,clt20s_pdf,5,txt
-1,SUPREMOS,Abhishek Pingley,abhishek pingley,1,0.0,11.0,0.0,11.0,Zen Cricket Team,clt20s_pdf,5,txt
-1,SUPREMOS,Rahul Agarwal,rahul agarwal,4,0.0,55.0,0.0,13.75,Zen Cricket Team,clt20s_pdf,5,txt
-1,SUPREMOS,Vishal Baxi,vishal baxi,4,0.0,22.0,1.0,5.5,Falcons,clt20s_pdf,6,txt
-1,SUPREMOS,Pradeep Tewani,pradeep tewani,4,0.0,30.0,2.0,7.5,Falcons,clt20s_pdf,6,txt
-1,SUPREMOS,Rajan Singh,rajan singh,4,0.0,20.0,1.0,5.0,Falcons,clt20s_pdf,6,txt
-1,SUPREMOS,Varun Sood,varun sood,4,0.0,32.0,1.0,8.0,Falcons,clt20s_pdf,6,txt
-1,SUPREMOS,Aditya Jain,aditya jain,4,0.0,39.0,0.0,9.75,Falcons,clt20s_pdf,6,txt
-1,SUPREMOS,Vishal Baxi,vishal baxi,4,0.0,19.0,2.0,4.75,Group Satellite Developers,clt20s_pdf,7,txt
-1,SUPREMOS,Pradeep Tewani,pradeep tewani,4,0.0,30.0,0.0,7.5,Group Satellite Developers,clt20s_pdf,7,txt
-1,SUPREMOS,Shivam Tiwari,shivam tiwari,4,0.0,37.0,2.0,9.25,Group Satellite Developers,clt20s_pdf,7,txt
-1,SUPREMOS,Rajan Singh,rajan singh,4,0.0,12.0,3.0,3.0,Group Satellite Developers,clt20s_pdf,7,txt
-1,SUPREMOS,Jairaj,jairaj,4,1.0,24.0,2.0,6.0,Group Satellite Developers,clt20s_pdf,7,txt
-2,JNS SUPREMOS (MT20CB 3.0),Vishal Baxi,vishal baxi,4.0,0.0,33.0,1.0,8.25,SOMAIYA SPORTS ACADEMY (MT20CB 3.0),zootermt20cb3,3879,playwright
-2,JNS SUPREMOS (MT20CB 3.0),Pradeep Tewani,pradeep tewani,3.0,0.0,23.0,0.0,7.67,SOMAIYA SPORTS ACADEMY (MT20CB 3.0),zootermt20cb3,3879,playwright
-2,JNS SUPREMOS (MT20CB 3.0),Aditya Jain,aditya jain,2.0,0.0,16.0,0.0,8.0,SOMAIYA SPORTS ACADEMY (MT20CB 3.0),zootermt20cb3,3879,playwright
-2,JNS SUPREMOS (MT20CB 3.0),Urvish,urvish,1.0,0.0,16.0,0.0,16.0,SOMAIYA SPORTS ACADEMY (MT20CB 3.0),zootermt20cb3,3879,playwright
-2,JNS SUPREMOS (MT20CB 3.0),Varun Sood,varun sood,4.0,0.0,39.0,1.0,9.75,SOMAIYA SPORTS ACADEMY (MT20CB 3.0),zootermt20cb3,3879,playwright
-2,JNS SUPREMOS (MT20CB 3.0),Pritesh Magodia,pritesh magodia,2.2,0.0,24.0,1.0,10.29,SOMAIYA SPORTS ACADEMY (MT20CB 3.0),zootermt20cb3,3879,playwright
-2,JNS SUPREMOS (MT20CB 3.0),Kanav Hingorani,kanav hingorani,2.0,0.0,17.0,0.0,8.5,SOMAIYA SPORTS ACADEMY (MT20CB 3.0),zootermt20cb3,3879,playwright
-2,JNS SUPREMOS (MT20CB 3.0),Nitin H,nitin h,1.0,0.0,14.0,0.0,14.0,SOMAIYA SPORTS ACADEMY (MT20CB 3.0),zootermt20cb3,3879,playwright
-1,JNS SUPREMOS (MT20CB 3.0),Vishal Baxi,vishal baxi,1.0,0.0,13.0,0.0,13.0,BOMBAY VIKINGS (MT20CB 3.0),zootermt20cb3,3985,playwright
-1,JNS SUPREMOS (MT20CB 3.0),Pradeep Tewani,pradeep tewani,4.0,0.0,32.0,4.0,8.0,BOMBAY VIKINGS (MT20CB 3.0),zootermt20cb3,3985,playwright
-1,JNS SUPREMOS (MT20CB 3.0),Rajan Singh,rajan singh,3.0,0.0,34.0,0.0,11.33,BOMBAY VIKINGS (MT20CB 3.0),zootermt20cb3,3985,playwright
-1,JNS SUPREMOS (MT20CB 3.0),Varun Sood,varun sood,4.0,0.0,33.0,0.0,8.25,BOMBAY VIKINGS (MT20CB 3.0),zootermt20cb3,3985,playwright
-1,JNS SUPREMOS (MT20CB 3.0),Pritesh Magodia,pritesh magodia,3.0,0.0,15.0,1.0,5.0,BOMBAY VIKINGS (MT20CB 3.0),zootermt20cb3,3985,playwright
-1,JNS SUPREMOS (MT20CB 3.0),Aditya Jain,aditya jain,3.0,0.0,28.0,0.0,9.33,BOMBAY VIKINGS (MT20CB 3.0),zootermt20cb3,3985,playwright
-1,JNS SUPREMOS (MT20CB 3.0),Urvish,urvish,2.0,0.0,10.0,2.0,5.0,BOMBAY VIKINGS (MT20CB 3.0),zootermt20cb3,3985,playwright
-1,JNS SUPREMOS (MT20CB 3.0),Vishal Baxi,vishal baxi,4.0,0.0,40.0,0.0,10.0,LEARNERS ACADEMY TITANS (MT20CB 3.0),zootermt20cb3,4033,playwright
-1,JNS SUPREMOS (MT20CB 3.0),Pradeep Tewani,pradeep tewani,4.0,0.0,30.0,2.0,7.5,LEARNERS ACADEMY TITANS (MT20CB 3.0),zootermt20cb3,4033,playwright
-1,JNS SUPREMOS (MT20CB 3.0),Varun Sood,varun sood,4.0,0.0,27.0,2.0,6.75,LEARNERS ACADEMY TITANS (MT20CB 3.0),zootermt20cb3,4033,playwright
-1,JNS SUPREMOS (MT20CB 3.0),Rajan Singh,rajan singh,4.0,0.0,39.0,1.0,9.75,LEARNERS ACADEMY TITANS (MT20CB 3.0),zootermt20cb3,4033,playwright
-1,JNS SUPREMOS (MT20CB 3.0),Aditya Jain,aditya jain,4.0,0.0,26.0,4.0,6.5,LEARNERS ACADEMY TITANS (MT20CB 3.0),zootermt20cb3,4033,playwright
-1,JNS SUPREMOS (ISDT 8.0),Pradeep Tewani,pradeep tewani,4.0,1.0,32.0,1.0,8.0,BD ROYALS (ISDT 8.0),zooterisdt8,3816,playwright
-1,JNS SUPREMOS (ISDT 8.0),Aditya Jain,aditya jain,3.0,0.0,33.0,0.0,11.0,BD ROYALS (ISDT 8.0),zooterisdt8,3816,playwright
-1,JNS SUPREMOS (ISDT 8.0),Varun Sood,varun sood,4.0,0.0,22.0,1.0,5.5,BD ROYALS (ISDT 8.0),zooterisdt8,3816,playwright
-1,JNS SUPREMOS (ISDT 8.0),Abhishek Pingley,abhishek pingley,4.0,0.0,33.0,1.0,8.25,BD ROYALS (ISDT 8.0),zooterisdt8,3816,playwright
-1,JNS SUPREMOS (ISDT 8.0),Pritesh Magodia,pritesh magodia,1.0,0.0,16.0,0.0,16.0,BD ROYALS (ISDT 8.0),zooterisdt8,3816,playwright
-1,JNS SUPREMOS (ISDT 8.0),Rahul Agarwal,rahul agarwal,1.0,0.0,17.0,0.0,17.0,BD ROYALS (ISDT 8.0),zooterisdt8,3816,playwright
-1,JNS SUPREMOS (ISDT 8.0),Kanav Hingorani,kanav hingorani,3.0,0.0,18.0,0.0,6.0,BD ROYALS (ISDT 8.0),zooterisdt8,3816,playwright
-2,JNS SUPREMOS (ISDT 8.0),Vishal Baxi,vishal baxi,4.0,0.0,26.0,2.0,6.5,AVM ARYANS (ISDT 8.0),zooterisdt8,3822,playwright
-2,JNS SUPREMOS (ISDT 8.0),Pradeep Tewani,pradeep tewani,4.0,0.0,20.0,3.0,5.0,AVM ARYANS (ISDT 8.0),zooterisdt8,3822,playwright
-2,JNS SUPREMOS (ISDT 8.0),Varun Sood,varun sood,3.4,1.0,20.0,4.0,5.45,AVM ARYANS (ISDT 8.0),zooterisdt8,3822,playwright
-2,JNS SUPREMOS (ISDT 8.0),Pritesh Magodia,pritesh magodia,2.0,0.0,19.0,0.0,9.5,AVM ARYANS (ISDT 8.0),zooterisdt8,3822,playwright
-2,JNS SUPREMOS (ISDT 8.0),Aditya Jain,aditya jain,3.0,0.0,26.0,0.0,8.67,AVM ARYANS (ISDT 8.0),zooterisdt8,3822,playwright
-2,JNS SUPREMOS (ISDT 8.0),Vishal Merwana,vishal merwana,2.0,0.0,21.0,0.0,10.5,AVM ARYANS (ISDT 8.0),zooterisdt8,3822,playwright
-2,JNS SUPREMOS (ISDT 8.0),Vishal Baxi,vishal baxi,4.0,0.0,20.0,1.0,5.0,OIS BLASTERS (ISDT 8.0),zooterisdt8,3831,playwright
-2,JNS SUPREMOS (ISDT 8.0),Rahul Agarwal,rahul agarwal,4.0,0.0,26.0,0.0,6.5,OIS BLASTERS (ISDT 8.0),zooterisdt8,3831,playwright
-2,JNS SUPREMOS (ISDT 8.0),Varun Sood,varun sood,4.0,0.0,22.0,3.0,5.5,OIS BLASTERS (ISDT 8.0),zooterisdt8,3831,playwright
-2,JNS SUPREMOS (ISDT 8.0),Abhishek Pingley,abhishek pingley,1.0,0.0,15.0,0.0,15.0,OIS BLASTERS (ISDT 8.0),zooterisdt8,3831,playwright
-2,JNS SUPREMOS (ISDT 8.0),Pritesh Magodia,pritesh magodia,4.0,0.0,21.0,3.0,5.25,OIS BLASTERS (ISDT 8.0),zooterisdt8,3831,playwright
-2,JNS SUPREMOS (ISDT 8.0),Kanav Hingorani,kanav hingorani,3.0,0.0,25.0,0.0,8.33,OIS BLASTERS (ISDT 8.0),zooterisdt8,3831,playwright
-2,JNS SUPREMOS (ISDT 8.0),Vishal Baxi,vishal baxi,4.0,0.0,31.0,2.0,7.75,JBCN AVENGERS (ISDT 8.0),zooterisdt8,3933,playwright
-2,JNS SUPREMOS (ISDT 8.0),Pradeep Tewani,pradeep tewani,3.1,0.0,19.0,0.0,6.0,JBCN AVENGERS (ISDT 8.0),zooterisdt8,3933,playwright
-2,JNS SUPREMOS (ISDT 8.0),Varun Sood,varun sood,4.0,0.0,18.0,2.0,4.5,JBCN AVENGERS (ISDT 8.0),zooterisdt8,3933,playwright
-2,JNS SUPREMOS (ISDT 8.0),Pritesh Magodia,pritesh magodia,4.0,0.0,26.0,0.0,6.5,JBCN AVENGERS (ISDT 8.0),zooterisdt8,3933,playwright
-2,JNS SUPREMOS (ISDT 8.0),Abhishek Pingley,abhishek pingley,3.0,0.0,41.0,0.0,13.67,JBCN AVENGERS (ISDT 8.0),zooterisdt8,3933,playwright
-2,JNS SUPREMOS (ISDT 8.0),Rahul Agarwal,rahul agarwal,1.0,0.0,18.0,0.0,18.0,JBCN AVENGERS (ISDT 8.0),zooterisdt8,3933,playwright
-1,JNS SUPREMOS,Pradeep Tewani,pradeep tewani,4.0,0.0,43.0,2.0,10.75,SVKM SUPER STRIKERS,jfscdpl202526,5418,playwright
-1,JNS SUPREMOS,Aditya Jain,aditya jain,4.0,0.0,42.0,0.0,10.5,SVKM SUPER STRIKERS,jfscdpl202526,5418,playwright
-1,JNS SUPREMOS,Kanav Hingorani,kanav hingorani,2.0,0.0,27.0,0.0,13.5,SVKM SUPER STRIKERS,jfscdpl202526,5418,playwright
-1,JNS SUPREMOS,Abhishek Pingley,abhishek pingley,3.0,0.0,39.0,0.0,13.0,SVKM SUPER STRIKERS,jfscdpl202526,5418,playwright
-1,JNS SUPREMOS,Varun Sood,varun sood,4.0,0.0,29.0,1.0,7.25,SVKM SUPER STRIKERS,jfscdpl202526,5418,playwright
-1,JNS SUPREMOS,Pritesh Magodia,pritesh magodia,3.0,0.0,26.0,0.0,8.67,SVKM SUPER STRIKERS,jfscdpl202526,5418,playwright
-1,JNS SUPREMOS,Vishal Baxi,vishal baxi,4.0,0.0,26.0,1.0,6.5,JNS RANGERS,jfscdpl202526,5444,playwright
-1,JNS SUPREMOS,Aditya Jain,aditya jain,4.0,0.0,20.0,1.0,5.0,JNS RANGERS,jfscdpl202526,5444,playwright
-1,JNS SUPREMOS,Kanav Hingorani,kanav hingorani,3.0,0.0,25.0,0.0,8.33,JNS RANGERS,jfscdpl202526,5444,playwright
-1,JNS SUPREMOS,Varun Sood,varun sood,3.0,0.0,25.0,0.0,8.33,JNS RANGERS,jfscdpl202526,5444,playwright
-1,JNS SUPREMOS,Abhishek Pingley,abhishek pingley,3.0,0.0,28.0,0.0,9.33,JNS RANGERS,jfscdpl202526,5444,playwright
-1,JNS SUPREMOS,Pritesh Magodia,pritesh magodia,3.0,0.0,29.0,1.0,9.67,JNS RANGERS,jfscdpl202526,5444,playwright
-1,JNS SUPREMOS,Vishal Baxi,vishal baxi,4.0,0.0,16.0,3.0,4.0,SVKM RISING STRIKERS,jfscdpl202526,5474,playwright
-1,JNS SUPREMOS,Pradeep Tewani,pradeep tewani,3.0,0.0,37.0,0.0,12.33,SVKM RISING STRIKERS,jfscdpl202526,5474,playwright
-1,JNS SUPREMOS,Kanav Hingorani,kanav hingorani,4.0,0.0,28.0,0.0,7.0,SVKM RISING STRIKERS,jfscdpl202526,5474,playwright
-1,JNS SUPREMOS,Varun Sood,varun sood,3.0,0.0,26.0,1.0,8.67,SVKM RISING STRIKERS,jfscdpl202526,5474,playwright
-1,JNS SUPREMOS,Abhishek Pingley,abhishek pingley,3.0,0.0,28.0,0.0,9.33,SVKM RISING STRIKERS,jfscdpl202526,5474,playwright
-1,JNS SUPREMOS,Pritesh Magodia,pritesh magodia,3.0,0.0,29.0,2.0,9.67,SVKM RISING STRIKERS,jfscdpl202526,5474,playwright
-1,JNS SUPREMOS,Vishal Baxi,vishal baxi,4.0,0.0,26.0,3.0,6.5,AVM ARYANS,jfscdpl202526,5525,playwright
-1,JNS SUPREMOS,Pradeep Tewani,pradeep tewani,4.0,0.0,43.0,1.0,10.75,AVM ARYANS,jfscdpl202526,5525,playwright
-1,JNS SUPREMOS,Varun Sood,varun sood,3.0,0.0,33.0,0.0,11.0,AVM ARYANS,jfscdpl202526,5525,playwright
-1,JNS SUPREMOS,Aditya Jain,aditya jain,4.0,0.0,36.0,1.0,9.0,AVM ARYANS,jfscdpl202526,5525,playwright
-1,JNS SUPREMOS,Pritesh Magodia,pritesh magodia,2.0,0.0,16.0,0.0,8.0,AVM ARYANS,jfscdpl202526,5525,playwright
-1,JNS SUPREMOS,Kanav Hingorani,kanav hingorani,3.0,0.0,39.0,0.0,13.0,AVM ARYANS,jfscdpl202526,5525,playwright
-2,JNS SUPREMOS,Vishal Baxi,vishal baxi,3.0,0.0,23.0,1.0,7.67,AVM YODDHAS,jfscdpl202526,5537,playwright
-2,JNS SUPREMOS,Pradeep Tewani,pradeep tewani,2.0,0.0,17.0,0.0,8.5,AVM YODDHAS,jfscdpl202526,5537,playwright
-2,JNS SUPREMOS,Aditya Jain,aditya jain,3.0,0.0,35.0,1.0,11.67,AVM YODDHAS,jfscdpl202526,5537,playwright
-2,JNS SUPREMOS,Varun Sood,varun sood,2.0,0.0,18.0,2.0,9.0,AVM YODDHAS,jfscdpl202526,5537,playwright
-2,JNS SUPREMOS,Abhishek Pingley,abhishek pingley,2.0,0.0,25.0,0.0,12.5,AVM YODDHAS,jfscdpl202526,5537,playwright
-2,JNS SUPREMOS,Pritesh Magodia,pritesh magodia,2.0,0.0,17.0,0.0,8.5,AVM YODDHAS,jfscdpl202526,5537,playwright
-2,JNS SUPREMOS,Jairaj,jairaj,2.0,0.0,16.0,0.0,8.0,AVM YODDHAS,jfscdpl202526,5537,playwright
-2,JNS SUPREMOS,Romit Mehta,romit mehta,2.1,0.0,18.0,0.0,8.31,AVM YODDHAS,jfscdpl202526,5537,playwright
-2,JNS SUPREMOS,Vishal Baxi,vishal baxi,4.0,0.0,21.0,1.0,5.25,OIS TIGERS,jfscdpl202526,5553,playwright
-2,JNS SUPREMOS,Pradeep Tewani,pradeep tewani,3.0,0.0,26.0,1.0,8.67,OIS TIGERS,jfscdpl202526,5553,playwright
-2,JNS SUPREMOS,Varun Sood,varun sood,4.0,0.0,18.0,0.0,4.5,OIS TIGERS,jfscdpl202526,5553,playwright
-2,JNS SUPREMOS,Aditya Jain,aditya jain,3.1,0.0,37.0,1.0,11.68,OIS TIGERS,jfscdpl202526,5553,playwright
-2,JNS SUPREMOS,Abhishek Pingley,abhishek pingley,1.0,0.0,15.0,0.0,15.0,OIS TIGERS,jfscdpl202526,5553,playwright
-2,JNS SUPREMOS,Pritesh Magodia,pritesh magodia,1.0,0.0,10.0,0.0,10.0,OIS TIGERS,jfscdpl202526,5553,playwright
-2,JNS SUPREMOS,Romit Mehta,romit mehta,1.0,0.0,18.0,0.0,18.0,OIS TIGERS,jfscdpl202526,5553,playwright
-2,JNS SUPREMOS,Vishal Baxi,vishal baxi,4.0,0.0,31.0,3.0,7.75,UNITED GLADDIATORS,jfscdpl202526,5770,playwright
-2,JNS SUPREMOS,Pradeep Tewani,pradeep tewani,4.0,0.0,43.0,3.0,10.75,UNITED GLADDIATORS,jfscdpl202526,5770,playwright
-2,JNS SUPREMOS,Jairaj,jairaj,4.0,0.0,31.0,3.0,7.75,UNITED GLADDIATORS,jfscdpl202526,5770,playwright
-2,JNS SUPREMOS,Varun Sood,varun sood,4.0,0.0,29.0,0.0,7.25,UNITED GLADDIATORS,jfscdpl202526,5770,playwright
-2,JNS SUPREMOS,Aditya Jain,aditya jain,4.0,0.0,17.0,0.0,4.25,UNITED GLADDIATORS,jfscdpl202526,5770,playwright
-1,JNS SUPREMOS,Vishal Baxi,vishal baxi,4.0,0.0,44.0,1.0,11.0,JBCN AVENGERS,jfscdpl202526,5840,playwright
-1,JNS SUPREMOS,Aditya Jain,aditya jain,3.0,0.0,29.0,0.0,9.67,JBCN AVENGERS,jfscdpl202526,5840,playwright
-1,JNS SUPREMOS,Varun Sood,varun sood,4.0,0.0,30.0,0.0,7.5,JBCN AVENGERS,jfscdpl202526,5840,playwright
-1,JNS SUPREMOS,Pritesh Magodia,pritesh magodia,4.0,0.0,29.0,2.0,7.25,JBCN AVENGERS,jfscdpl202526,5840,playwright
-1,JNS SUPREMOS,Romit Mehta,romit mehta,4.0,0.0,46.0,2.0,11.5,JBCN AVENGERS,jfscdpl202526,5840,playwright
-1,JNS SUPREMOS,Rahul Agarwal,rahul agarwal,1.0,0.0,11.0,0.0,11.0,JBCN AVENGERS,jfscdpl202526,5840,playwright
-1,JNS SUPREMOS,Vishal Baxi,vishal baxi,4.0,0.0,9.0,2.0,2.25,JNS MUSTANGS,jfscdpl202526,5851,playwright
-1,JNS SUPREMOS,Jairaj,jairaj,4.0,0.0,17.0,3.0,4.25,JNS MUSTANGS,jfscdpl202526,5851,playwright
-1,JNS SUPREMOS,Varun Sood,varun sood,4.0,0.0,27.0,2.0,6.75,JNS MUSTANGS,jfscdpl202526,5851,playwright
-1,JNS SUPREMOS,Pradeep Tewani,pradeep tewani,2.0,0.0,17.0,0.0,8.5,JNS MUSTANGS,jfscdpl202526,5851,playwright
-1,JNS SUPREMOS,Aditya Jain,aditya jain,4.0,0.0,29.0,2.0,7.25,JNS MUSTANGS,jfscdpl202526,5851,playwright
-1,JNS SUPREMOS,Pratik Chitalia,pratik chitalia,1.0,0.0,9.0,0.0,9.0,JNS MUSTANGS,jfscdpl202526,5851,playwright
-1,JNS SUPREMOS,Ameya Deshpande,ameya deshpande,1.0,0.0,3.0,0.0,3.0,JNS MUSTANGS,jfscdpl202526,5851,playwright
+1,SUPREMOS,Vishal Baxi,vishal baxi,4,0,35,1,8.75,ANTIQUE FRIENDS,clt20s_pdf,1,txt
+1,SUPREMOS,Navratan Bengani,navratan bengani,4,0,20,2,5,ANTIQUE FRIENDS,clt20s_pdf,1,txt
+1,SUPREMOS,Rajan Singh,rajan singh,3,0,27,1,9,ANTIQUE FRIENDS,clt20s_pdf,1,txt
+1,SUPREMOS,Aditya Jain,aditya jain,3,0,23,0,7.67,ANTIQUE FRIENDS,clt20s_pdf,1,txt
+1,SUPREMOS,Varun Sood,varun sood,3,0,13,1,4.33,ANTIQUE FRIENDS,clt20s_pdf,1,txt
+1,SUPREMOS,Abhishek Pingley,abhishek pingley,3,0,31,1,10.33,ANTIQUE FRIENDS,clt20s_pdf,1,txt
+1,SUPREMOS,Vishal Baxi,vishal baxi,4,0,32,1,8,Saregama,clt20s_pdf,2,txt
+1,SUPREMOS,Pradeep Tewani,pradeep tewani,4,0,30,2,7.5,Saregama,clt20s_pdf,2,txt
+1,SUPREMOS,Pratik Chitalia,pratik chitalia,1,0,9,0,9,Saregama,clt20s_pdf,2,txt
+1,SUPREMOS,Varun Sood,varun sood,4,0,25,3,6.25,Saregama,clt20s_pdf,2,txt
+1,SUPREMOS,Abhishek Pingley,abhishek pingley,4,0,27,1,6.75,Saregama,clt20s_pdf,2,txt
+1,SUPREMOS,Aditya Jain,aditya jain,2,0,19,0,9.5,Saregama,clt20s_pdf,2,txt
+1,SUPREMOS,Vishal Baxi,vishal baxi,3,0,10,1,3.33,CENTRAL AVENGERS,clt20s_pdf,3,txt
+1,SUPREMOS,Pradeep Tewani,pradeep tewani,3,0,26,1,8.67,CENTRAL AVENGERS,clt20s_pdf,3,txt
+1,SUPREMOS,Varun Sood,varun sood,4,0,18,1,4.5,CENTRAL AVENGERS,clt20s_pdf,3,txt
+1,SUPREMOS,Pritesh Magodia,pritesh magodia,2,0,9,0,4.5,CENTRAL AVENGERS,clt20s_pdf,3,txt
+1,SUPREMOS,Kanav Hingorani,kanav hingorani,2,0,23,0,11.5,CENTRAL AVENGERS,clt20s_pdf,3,txt
+1,SUPREMOS,Abhishek Pingley,abhishek pingley,4,0,40,1,10,CENTRAL AVENGERS,clt20s_pdf,3,txt
+1,SUPREMOS,Vishal Baxi,vishal baxi,3.3,0,21,2,6,MISFITS,clt20s_pdf,4,txt
+1,SUPREMOS,Shivam Tiwari,shivam tiwari,3,0,38,0,12.67,MISFITS,clt20s_pdf,4,txt
+1,SUPREMOS,Varun Sood,varun sood,3,0,22,1,7.33,MISFITS,clt20s_pdf,4,txt
+1,SUPREMOS,Pritesh Magodia,pritesh magodia,4,0,23,1,5.75,MISFITS,clt20s_pdf,4,txt
+1,SUPREMOS,Rajan Singh,rajan singh,4,0,29,3,7.25,MISFITS,clt20s_pdf,4,txt
+1,SUPREMOS,Kanav Hingorani,kanav hingorani,1,0,10,0,10,MISFITS,clt20s_pdf,4,txt
+1,SUPREMOS,Vishal Baxi,vishal baxi,4,0,42,1,10.5,Zen Cricket Team,clt20s_pdf,5,txt
+1,SUPREMOS,Shivam Tiwari,shivam tiwari,3,0,33,2,11,Zen Cricket Team,clt20s_pdf,5,txt
+1,SUPREMOS,Varun Sood,varun sood,4,0,36,2,9,Zen Cricket Team,clt20s_pdf,5,txt
+1,SUPREMOS,Rajan Singh,rajan singh,4,0,20,2,5,Zen Cricket Team,clt20s_pdf,5,txt
+1,SUPREMOS,Abhishek Pingley,abhishek pingley,1,0,11,0,11,Zen Cricket Team,clt20s_pdf,5,txt
+1,SUPREMOS,Rahul Agarwal,rahul agarwal,4,0,55,0,13.75,Zen Cricket Team,clt20s_pdf,5,txt
+1,SUPREMOS,Vishal Baxi,vishal baxi,4,0,22,1,5.5,Falcons,clt20s_pdf,6,txt
+1,SUPREMOS,Pradeep Tewani,pradeep tewani,4,0,30,2,7.5,Falcons,clt20s_pdf,6,txt
+1,SUPREMOS,Rajan Singh,rajan singh,4,0,20,1,5,Falcons,clt20s_pdf,6,txt
+1,SUPREMOS,Varun Sood,varun sood,4,0,32,1,8,Falcons,clt20s_pdf,6,txt
+1,SUPREMOS,Aditya Jain,aditya jain,4,0,39,0,9.75,Falcons,clt20s_pdf,6,txt
+1,SUPREMOS,Vishal Baxi,vishal baxi,4,0,19,2,4.75,Group Satellite Developers,clt20s_pdf,7,txt
+1,SUPREMOS,Pradeep Tewani,pradeep tewani,4,0,30,0,7.5,Group Satellite Developers,clt20s_pdf,7,txt
+1,SUPREMOS,Shivam Tiwari,shivam tiwari,4,0,37,2,9.25,Group Satellite Developers,clt20s_pdf,7,txt
+1,SUPREMOS,Rajan Singh,rajan singh,4,0,12,3,3,Group Satellite Developers,clt20s_pdf,7,txt
+1,SUPREMOS,Jairaj,jairaj,4,1,24,2,6,Group Satellite Developers,clt20s_pdf,7,txt
+2,JNS SUPREMOS (MT20CB 3.0),Vishal Baxi,vishal baxi,4,0,33,1,8.25,SOMAIYA SPORTS ACADEMY (MT20CB 3.0),zootermt20cb3,3879,playwright
+2,JNS SUPREMOS (MT20CB 3.0),Pradeep Tewani,pradeep tewani,3,0,23,0,7.67,SOMAIYA SPORTS ACADEMY (MT20CB 3.0),zootermt20cb3,3879,playwright
+2,JNS SUPREMOS (MT20CB 3.0),Aditya Jain,aditya jain,2,0,16,0,8,SOMAIYA SPORTS ACADEMY (MT20CB 3.0),zootermt20cb3,3879,playwright
+2,JNS SUPREMOS (MT20CB 3.0),Urvish,urvish,1,0,16,0,16,SOMAIYA SPORTS ACADEMY (MT20CB 3.0),zootermt20cb3,3879,playwright
+2,JNS SUPREMOS (MT20CB 3.0),Varun Sood,varun sood,4,0,39,1,9.75,SOMAIYA SPORTS ACADEMY (MT20CB 3.0),zootermt20cb3,3879,playwright
+2,JNS SUPREMOS (MT20CB 3.0),Pritesh Magodia,pritesh magodia,2.2,0,24,1,10.29,SOMAIYA SPORTS ACADEMY (MT20CB 3.0),zootermt20cb3,3879,playwright
+2,JNS SUPREMOS (MT20CB 3.0),Kanav Hingorani,kanav hingorani,2,0,17,0,8.5,SOMAIYA SPORTS ACADEMY (MT20CB 3.0),zootermt20cb3,3879,playwright
+2,JNS SUPREMOS (MT20CB 3.0),Nitin H,nitin h,1,0,14,0,14,SOMAIYA SPORTS ACADEMY (MT20CB 3.0),zootermt20cb3,3879,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Vishal Baxi,vishal baxi,1,0,13,0,13,BOMBAY VIKINGS (MT20CB 3.0),zootermt20cb3,3985,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Pradeep Tewani,pradeep tewani,4,0,32,4,8,BOMBAY VIKINGS (MT20CB 3.0),zootermt20cb3,3985,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Rajan Singh,rajan singh,3,0,34,0,11.33,BOMBAY VIKINGS (MT20CB 3.0),zootermt20cb3,3985,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Varun Sood,varun sood,4,0,33,0,8.25,BOMBAY VIKINGS (MT20CB 3.0),zootermt20cb3,3985,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Pritesh Magodia,pritesh magodia,3,0,15,1,5,BOMBAY VIKINGS (MT20CB 3.0),zootermt20cb3,3985,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Aditya Jain,aditya jain,3,0,28,0,9.33,BOMBAY VIKINGS (MT20CB 3.0),zootermt20cb3,3985,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Urvish,urvish,2,0,10,2,5,BOMBAY VIKINGS (MT20CB 3.0),zootermt20cb3,3985,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Vishal Baxi,vishal baxi,4,0,40,0,10,LEARNERS ACADEMY TITANS (MT20CB 3.0),zootermt20cb3,4033,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Pradeep Tewani,pradeep tewani,4,0,30,2,7.5,LEARNERS ACADEMY TITANS (MT20CB 3.0),zootermt20cb3,4033,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Varun Sood,varun sood,4,0,27,2,6.75,LEARNERS ACADEMY TITANS (MT20CB 3.0),zootermt20cb3,4033,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Rajan Singh,rajan singh,4,0,39,1,9.75,LEARNERS ACADEMY TITANS (MT20CB 3.0),zootermt20cb3,4033,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Aditya Jain,aditya jain,4,0,26,4,6.5,LEARNERS ACADEMY TITANS (MT20CB 3.0),zootermt20cb3,4033,playwright
+2,JNS SUPREMOS (MT20CB 3.0),Vishal Baxi,vishal baxi,3,0,21,1,7,SUPERHEROES (MT20CB 3.0),zootermt20cb3,4045,playwright
+2,JNS SUPREMOS (MT20CB 3.0),Varun Sood,varun sood,3,0,23,0,7.67,SUPERHEROES (MT20CB 3.0),zootermt20cb3,4045,playwright
+2,JNS SUPREMOS (MT20CB 3.0),Rahul Agarwal,rahul agarwal,3,0,30,0,10,SUPERHEROES (MT20CB 3.0),zootermt20cb3,4045,playwright
+2,JNS SUPREMOS (MT20CB 3.0),Mukesh,mukesh,1,0,13,0,13,SUPERHEROES (MT20CB 3.0),zootermt20cb3,4045,playwright
+2,JNS SUPREMOS (MT20CB 3.0),Navneet,navneet,2,0,28,0,14,SUPERHEROES (MT20CB 3.0),zootermt20cb3,4045,playwright
+2,JNS SUPREMOS (MT20CB 3.0),Abhishek Pingley,abhishek pingley,0.5,0,27,0,32.4,SUPERHEROES (MT20CB 3.0),zootermt20cb3,4045,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Vishal Baxi,vishal baxi,4,0,43,0,10.75,WEEKEND WARRIORS (MT20CB 3.0),zootermt20cb3,4053,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Pradeep Tewani,pradeep tewani,4,0,54,0,13.5,WEEKEND WARRIORS (MT20CB 3.0),zootermt20cb3,4053,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Varun Sood,varun sood,4,0,41,0,10.25,WEEKEND WARRIORS (MT20CB 3.0),zootermt20cb3,4053,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Pritesh Magodia,pritesh magodia,3,0,34,2,11.33,WEEKEND WARRIORS (MT20CB 3.0),zootermt20cb3,4053,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Aditya Jain,aditya jain,3,0,47,1,15.67,WEEKEND WARRIORS (MT20CB 3.0),zootermt20cb3,4053,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Rahul Agarwal,rahul agarwal,2,0,32,1,16,WEEKEND WARRIORS (MT20CB 3.0),zootermt20cb3,4053,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Vishal Baxi,vishal baxi,4,0,43,1,10.75,MAGNUS SUPERGIANTS (MT20CB 3.0),zootermt20cb3,4077,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Pradeep Tewani,pradeep tewani,3,0,25,1,8.33,MAGNUS SUPERGIANTS (MT20CB 3.0),zootermt20cb3,4077,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Sachin,sachin,4,0,20,2,5,MAGNUS SUPERGIANTS (MT20CB 3.0),zootermt20cb3,4077,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Varun Sood,varun sood,4,0,31,2,7.75,MAGNUS SUPERGIANTS (MT20CB 3.0),zootermt20cb3,4077,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Aditya Jain,aditya jain,3,0,32,0,10.67,MAGNUS SUPERGIANTS (MT20CB 3.0),zootermt20cb3,4077,playwright
+1,JNS SUPREMOS (MT20CB 3.0),Rahul Agarwal,rahul agarwal,2,0,14,1,7,MAGNUS SUPERGIANTS (MT20CB 3.0),zootermt20cb3,4077,playwright
+1,JNS SUPREMOS (ISDT 8.0),Pradeep Tewani,pradeep tewani,4,1,32,1,8,BD ROYALS (ISDT 8.0),zooterisdt8,3816,playwright
+1,JNS SUPREMOS (ISDT 8.0),Aditya Jain,aditya jain,3,0,33,0,11,BD ROYALS (ISDT 8.0),zooterisdt8,3816,playwright
+1,JNS SUPREMOS (ISDT 8.0),Varun Sood,varun sood,4,0,22,1,5.5,BD ROYALS (ISDT 8.0),zooterisdt8,3816,playwright
+1,JNS SUPREMOS (ISDT 8.0),Abhishek Pingley,abhishek pingley,4,0,33,1,8.25,BD ROYALS (ISDT 8.0),zooterisdt8,3816,playwright
+1,JNS SUPREMOS (ISDT 8.0),Pritesh Magodia,pritesh magodia,1,0,16,0,16,BD ROYALS (ISDT 8.0),zooterisdt8,3816,playwright
+1,JNS SUPREMOS (ISDT 8.0),Rahul Agarwal,rahul agarwal,1,0,17,0,17,BD ROYALS (ISDT 8.0),zooterisdt8,3816,playwright
+1,JNS SUPREMOS (ISDT 8.0),Kanav Hingorani,kanav hingorani,3,0,18,0,6,BD ROYALS (ISDT 8.0),zooterisdt8,3816,playwright
+2,JNS SUPREMOS (ISDT 8.0),Vishal Baxi,vishal baxi,4,0,26,2,6.5,AVM ARYANS (ISDT 8.0),zooterisdt8,3822,playwright
+2,JNS SUPREMOS (ISDT 8.0),Pradeep Tewani,pradeep tewani,4,0,20,3,5,AVM ARYANS (ISDT 8.0),zooterisdt8,3822,playwright
+2,JNS SUPREMOS (ISDT 8.0),Varun Sood,varun sood,3.4,1,20,4,5.45,AVM ARYANS (ISDT 8.0),zooterisdt8,3822,playwright
+2,JNS SUPREMOS (ISDT 8.0),Pritesh Magodia,pritesh magodia,2,0,19,0,9.5,AVM ARYANS (ISDT 8.0),zooterisdt8,3822,playwright
+2,JNS SUPREMOS (ISDT 8.0),Aditya Jain,aditya jain,3,0,26,0,8.67,AVM ARYANS (ISDT 8.0),zooterisdt8,3822,playwright
+2,JNS SUPREMOS (ISDT 8.0),Vishal Merwana,vishal merwana,2,0,21,0,10.5,AVM ARYANS (ISDT 8.0),zooterisdt8,3822,playwright
+2,JNS SUPREMOS (ISDT 8.0),Vishal Baxi,vishal baxi,4,0,20,1,5,OIS BLASTERS (ISDT 8.0),zooterisdt8,3831,playwright
+2,JNS SUPREMOS (ISDT 8.0),Rahul Agarwal,rahul agarwal,4,0,26,0,6.5,OIS BLASTERS (ISDT 8.0),zooterisdt8,3831,playwright
+2,JNS SUPREMOS (ISDT 8.0),Varun Sood,varun sood,4,0,22,3,5.5,OIS BLASTERS (ISDT 8.0),zooterisdt8,3831,playwright
+2,JNS SUPREMOS (ISDT 8.0),Abhishek Pingley,abhishek pingley,1,0,15,0,15,OIS BLASTERS (ISDT 8.0),zooterisdt8,3831,playwright
+2,JNS SUPREMOS (ISDT 8.0),Pritesh Magodia,pritesh magodia,4,0,21,3,5.25,OIS BLASTERS (ISDT 8.0),zooterisdt8,3831,playwright
+2,JNS SUPREMOS (ISDT 8.0),Kanav Hingorani,kanav hingorani,3,0,25,0,8.33,OIS BLASTERS (ISDT 8.0),zooterisdt8,3831,playwright
+2,JNS SUPREMOS (ISDT 8.0),Vishal Baxi,vishal baxi,4,0,31,2,7.75,JBCN AVENGERS (ISDT 8.0),zooterisdt8,3933,playwright
+2,JNS SUPREMOS (ISDT 8.0),Pradeep Tewani,pradeep tewani,3.1,0,19,0,6,JBCN AVENGERS (ISDT 8.0),zooterisdt8,3933,playwright
+2,JNS SUPREMOS (ISDT 8.0),Varun Sood,varun sood,4,0,18,2,4.5,JBCN AVENGERS (ISDT 8.0),zooterisdt8,3933,playwright
+2,JNS SUPREMOS (ISDT 8.0),Pritesh Magodia,pritesh magodia,4,0,26,0,6.5,JBCN AVENGERS (ISDT 8.0),zooterisdt8,3933,playwright
+2,JNS SUPREMOS (ISDT 8.0),Abhishek Pingley,abhishek pingley,3,0,41,0,13.67,JBCN AVENGERS (ISDT 8.0),zooterisdt8,3933,playwright
+2,JNS SUPREMOS (ISDT 8.0),Rahul Agarwal,rahul agarwal,1,0,18,0,18,JBCN AVENGERS (ISDT 8.0),zooterisdt8,3933,playwright
+1,JNS SUPREMOS,Pradeep Tewani,pradeep tewani,4,0,43,2,10.75,SVKM SUPER STRIKERS,jfscdpl202526,5418,playwright
+1,JNS SUPREMOS,Aditya Jain,aditya jain,4,0,42,0,10.5,SVKM SUPER STRIKERS,jfscdpl202526,5418,playwright
+1,JNS SUPREMOS,Kanav Hingorani,kanav hingorani,2,0,27,0,13.5,SVKM SUPER STRIKERS,jfscdpl202526,5418,playwright
+1,JNS SUPREMOS,Abhishek Pingley,abhishek pingley,3,0,39,0,13,SVKM SUPER STRIKERS,jfscdpl202526,5418,playwright
+1,JNS SUPREMOS,Varun Sood,varun sood,4,0,29,1,7.25,SVKM SUPER STRIKERS,jfscdpl202526,5418,playwright
+1,JNS SUPREMOS,Pritesh Magodia,pritesh magodia,3,0,26,0,8.67,SVKM SUPER STRIKERS,jfscdpl202526,5418,playwright
+1,JNS SUPREMOS,Vishal Baxi,vishal baxi,4,0,26,1,6.5,JNS RANGERS,jfscdpl202526,5444,playwright
+1,JNS SUPREMOS,Aditya Jain,aditya jain,4,0,20,1,5,JNS RANGERS,jfscdpl202526,5444,playwright
+1,JNS SUPREMOS,Kanav Hingorani,kanav hingorani,3,0,25,0,8.33,JNS RANGERS,jfscdpl202526,5444,playwright
+1,JNS SUPREMOS,Varun Sood,varun sood,3,0,25,0,8.33,JNS RANGERS,jfscdpl202526,5444,playwright
+1,JNS SUPREMOS,Abhishek Pingley,abhishek pingley,3,0,28,0,9.33,JNS RANGERS,jfscdpl202526,5444,playwright
+1,JNS SUPREMOS,Pritesh Magodia,pritesh magodia,3,0,29,1,9.67,JNS RANGERS,jfscdpl202526,5444,playwright
+1,JNS SUPREMOS,Vishal Baxi,vishal baxi,4,0,16,3,4,SVKM RISING STRIKERS,jfscdpl202526,5474,playwright
+1,JNS SUPREMOS,Pradeep Tewani,pradeep tewani,3,0,37,0,12.33,SVKM RISING STRIKERS,jfscdpl202526,5474,playwright
+1,JNS SUPREMOS,Kanav Hingorani,kanav hingorani,4,0,28,0,7,SVKM RISING STRIKERS,jfscdpl202526,5474,playwright
+1,JNS SUPREMOS,Varun Sood,varun sood,3,0,26,1,8.67,SVKM RISING STRIKERS,jfscdpl202526,5474,playwright
+1,JNS SUPREMOS,Abhishek Pingley,abhishek pingley,3,0,28,0,9.33,SVKM RISING STRIKERS,jfscdpl202526,5474,playwright
+1,JNS SUPREMOS,Pritesh Magodia,pritesh magodia,3,0,29,2,9.67,SVKM RISING STRIKERS,jfscdpl202526,5474,playwright
+1,JNS SUPREMOS,Vishal Baxi,vishal baxi,4,0,26,3,6.5,AVM ARYANS,jfscdpl202526,5525,playwright
+1,JNS SUPREMOS,Pradeep Tewani,pradeep tewani,4,0,43,1,10.75,AVM ARYANS,jfscdpl202526,5525,playwright
+1,JNS SUPREMOS,Varun Sood,varun sood,3,0,33,0,11,AVM ARYANS,jfscdpl202526,5525,playwright
+1,JNS SUPREMOS,Aditya Jain,aditya jain,4,0,36,1,9,AVM ARYANS,jfscdpl202526,5525,playwright
+1,JNS SUPREMOS,Pritesh Magodia,pritesh magodia,2,0,16,0,8,AVM ARYANS,jfscdpl202526,5525,playwright
+1,JNS SUPREMOS,Kanav Hingorani,kanav hingorani,3,0,39,0,13,AVM ARYANS,jfscdpl202526,5525,playwright
+2,JNS SUPREMOS,Vishal Baxi,vishal baxi,3,0,23,1,7.67,AVM YODDHAS,jfscdpl202526,5537,playwright
+2,JNS SUPREMOS,Pradeep Tewani,pradeep tewani,2,0,17,0,8.5,AVM YODDHAS,jfscdpl202526,5537,playwright
+2,JNS SUPREMOS,Aditya Jain,aditya jain,3,0,35,1,11.67,AVM YODDHAS,jfscdpl202526,5537,playwright
+2,JNS SUPREMOS,Varun Sood,varun sood,2,0,18,2,9,AVM YODDHAS,jfscdpl202526,5537,playwright
+2,JNS SUPREMOS,Abhishek Pingley,abhishek pingley,2,0,25,0,12.5,AVM YODDHAS,jfscdpl202526,5537,playwright
+2,JNS SUPREMOS,Pritesh Magodia,pritesh magodia,2,0,17,0,8.5,AVM YODDHAS,jfscdpl202526,5537,playwright
+2,JNS SUPREMOS,Jairaj,jairaj,2,0,16,0,8,AVM YODDHAS,jfscdpl202526,5537,playwright
+2,JNS SUPREMOS,Romit Mehta,romit mehta,2.1,0,18,0,8.31,AVM YODDHAS,jfscdpl202526,5537,playwright
+2,JNS SUPREMOS,Vishal Baxi,vishal baxi,4,0,21,1,5.25,OIS TIGERS,jfscdpl202526,5553,playwright
+2,JNS SUPREMOS,Pradeep Tewani,pradeep tewani,3,0,26,1,8.67,OIS TIGERS,jfscdpl202526,5553,playwright
+2,JNS SUPREMOS,Varun Sood,varun sood,4,0,18,0,4.5,OIS TIGERS,jfscdpl202526,5553,playwright
+2,JNS SUPREMOS,Aditya Jain,aditya jain,3.1,0,37,1,11.68,OIS TIGERS,jfscdpl202526,5553,playwright
+2,JNS SUPREMOS,Abhishek Pingley,abhishek pingley,1,0,15,0,15,OIS TIGERS,jfscdpl202526,5553,playwright
+2,JNS SUPREMOS,Pritesh Magodia,pritesh magodia,1,0,10,0,10,OIS TIGERS,jfscdpl202526,5553,playwright
+2,JNS SUPREMOS,Romit Mehta,romit mehta,1,0,18,0,18,OIS TIGERS,jfscdpl202526,5553,playwright
+2,JNS SUPREMOS,Vishal Baxi,vishal baxi,4,0,31,3,7.75,UNITED GLADDIATORS,jfscdpl202526,5770,playwright
+2,JNS SUPREMOS,Pradeep Tewani,pradeep tewani,4,0,43,3,10.75,UNITED GLADDIATORS,jfscdpl202526,5770,playwright
+2,JNS SUPREMOS,Jairaj,jairaj,4,0,31,3,7.75,UNITED GLADDIATORS,jfscdpl202526,5770,playwright
+2,JNS SUPREMOS,Varun Sood,varun sood,4,0,29,0,7.25,UNITED GLADDIATORS,jfscdpl202526,5770,playwright
+2,JNS SUPREMOS,Aditya Jain,aditya jain,4,0,17,0,4.25,UNITED GLADDIATORS,jfscdpl202526,5770,playwright
+1,JNS SUPREMOS,Vishal Baxi,vishal baxi,4,0,44,1,11,JBCN AVENGERS,jfscdpl202526,5840,playwright
+1,JNS SUPREMOS,Aditya Jain,aditya jain,3,0,29,0,9.67,JBCN AVENGERS,jfscdpl202526,5840,playwright
+1,JNS SUPREMOS,Varun Sood,varun sood,4,0,30,0,7.5,JBCN AVENGERS,jfscdpl202526,5840,playwright
+1,JNS SUPREMOS,Pritesh Magodia,pritesh magodia,4,0,29,2,7.25,JBCN AVENGERS,jfscdpl202526,5840,playwright
+1,JNS SUPREMOS,Romit Mehta,romit mehta,4,0,46,2,11.5,JBCN AVENGERS,jfscdpl202526,5840,playwright
+1,JNS SUPREMOS,Rahul Agarwal,rahul agarwal,1,0,11,0,11,JBCN AVENGERS,jfscdpl202526,5840,playwright
+1,JNS SUPREMOS,Vishal Baxi,vishal baxi,4,0,9,2,2.25,JNS MUSTANGS,jfscdpl202526,5851,playwright
+1,JNS SUPREMOS,Jairaj,jairaj,4,0,17,3,4.25,JNS MUSTANGS,jfscdpl202526,5851,playwright
+1,JNS SUPREMOS,Varun Sood,varun sood,4,0,27,2,6.75,JNS MUSTANGS,jfscdpl202526,5851,playwright
+1,JNS SUPREMOS,Pradeep Tewani,pradeep tewani,2,0,17,0,8.5,JNS MUSTANGS,jfscdpl202526,5851,playwright
+1,JNS SUPREMOS,Aditya Jain,aditya jain,4,0,29,2,7.25,JNS MUSTANGS,jfscdpl202526,5851,playwright
+1,JNS SUPREMOS,Pratik Chitalia,pratik chitalia,1,0,9,0,9,JNS MUSTANGS,jfscdpl202526,5851,playwright
+1,JNS SUPREMOS,Ameya Deshpande,ameya deshpande,1,0,3,0,3,JNS MUSTANGS,jfscdpl202526,5851,playwright

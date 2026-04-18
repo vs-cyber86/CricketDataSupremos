@@ -56,198 +56,17 @@ def norm_opp(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def article(word: str) -> str:
-    """Return the appropriate article (a/an) for a word."""
-    vowels = ['a', 'e', 'i', 'o', 'u']
-    return "an" if word[0].lower() in vowels else "a"
-
-
-def generate_player_blurb(player_name: str, bat_stats: dict, bowl_stats: dict, bat_f: pd.DataFrame) -> str:
-    """Generate a cricket-specific blurb based on performance metrics and batting positions."""
-    
-    runs = bat_stats.get('runs', 0)
-    avg = bat_stats.get('avg', 0) or 0
-    sr = bat_stats.get('sr', 0) or 0
-    bat_inns = bat_stats.get('inns', 0)
-    fours = bat_stats.get('fours', 0)
-    sixes = bat_stats.get('sixes', 0)
-    
-    wickets = bowl_stats.get('wickets', 0) or 0
-    econ = bowl_stats.get('econ', 0) or 0
-    bowl_inns = bowl_stats.get('spells', 0)
-    
-    # ===== BATTING POSITION ANALYSIS =====
-    position_insight = ""
-    primary_position = ""
-    if "batpos" in bat_f.columns and not bat_f["batpos"].isna().all():
-        bat_pos_data = bat_f[bat_f["batpos"].notna()].copy()
-        if not bat_pos_data.empty:
-            avg_position = bat_pos_data["batpos"].mean()
-            position_counts = bat_pos_data["batpos"].value_counts()
-            primary_position_num = position_counts.idxmax()
-            
-            # Categorize position
-            if primary_position_num <= 2:
-                primary_position = "opening batter"
-                position_insight = "He is a reliable opener who can set the tone at the start of innings. "
-            elif primary_position_num <= 4:
-                primary_position = "middle-order batter"
-                position_insight = "He is an important middle-order player who provides stability and acceleration. "
-            elif primary_position_num <= 6:
-                primary_position = "lower middle-order batter"
-                position_insight = "He plays in the lower-middle order and can transition from consolidation to aggressive batting. "
-            else:
-                primary_position = "lower-order batter"
-                position_insight = "He contributes valuable support in the lower order with both bat and ball. "
-    
-    # ===== BATTING ASSESSMENT =====
-    # Overall run-scoring category
-    if runs > 1000:
-        run_category = "prolific run-scorer with exceptional consistency"
-    elif runs > 500:
-        run_category = "prolific run-scorer"
-    elif runs > 250:
-        run_category = "reliable run-maker"
-    elif runs > 100:
-        run_category = "developing batter with solid fundamentals"
-    else:
-        run_category = "emerging talent with limited opportunities"
-    
-    # Batting style based on strike rate
-    if sr > 150:
-        bat_style = "ultra-aggressive batting style"
-        bat_style_desc = "plays with explosive intent"
-    elif sr > 130:
-        bat_style = "aggressive batting approach"
-        bat_style_desc = "plays with aggressive intent"
-    elif sr > 110:
-        bat_style = "balanced, all-around batting"
-        bat_style_desc = "balances aggression with caution"
-    elif sr > 90:
-        bat_style = "conservative, accumulation-focused batting"
-        bat_style_desc = "focuses on steady accumulation"
-    else:
-        bat_style = "cautious batting approach"
-        bat_style_desc = "plays a cautious game"
-    
-    # Average quality
-    if avg > 40:
-        avg_quality = "exceptional average"
-    elif avg > 30:
-        avg_quality = "strong average"
-    elif avg > 20:
-        avg_quality = "solid average"
-    elif avg > 10:
-        avg_quality = "decent average"
-    else:
-        avg_quality = "developing consistency"
-    
-    # Aggression indicator (4s and 6s)
-    total_boundaries = fours + sixes
-    if runs > 0:
-        boundary_ratio = total_boundaries / runs
-    else:
-        boundary_ratio = 0
-    
-    if sixes > fours * 0.5 and sixes > 0:
-        aggression = "demonstrates strong six-hitting ability"
-    elif boundary_ratio > 0.25:
-        aggression = "is a strong boundary hitter"
-    elif boundary_ratio > 0.15:
-        aggression = "rotates the strike well with regular boundaries"
-    else:
-        aggression = "relies on singles and twos"
-    
-    # ===== AREAS OF IMPROVEMENT - BATTING =====
-    improvements = []
-    
-    if runs < 100 and bat_inns > 0:
-        improvements.append("needs to increase run accumulation")
-    elif avg < 20 and bat_inns > 3:
-        improvements.append("should focus on consistency and reducing dismissals")
-    elif avg < 30 and bat_inns > 3:
-        improvements.append("needs to elevate his average")
-    
-    if sr < 100 and bat_inns > 5:
-        improvements.append("should work on increasing strike rate")
-    elif sr > 160 and bat_inns > 5:
-        improvements.append("needs to balance aggression with stability")
-    
-    if boundary_ratio < 0.10 and runs > 50:
-        improvements.append("should look to score more boundaries")
-    elif sixes == 0 and sr > 120:
-        improvements.append("should work on developing six-hitting ability")
-    
-    if bat_inns > 5:
-        not_outs = (bat_f["howout"].fillna("").str.lower() == "not out").sum()
-        dismissal_rate = 1 - (not_outs / bat_inns)
-        if dismissal_rate > 0.8:
-            improvements.append("needs to work on converting starts into substantial scores")
-    
-    # ===== BOWLING ASSESSMENT =====
-    bowl_text = ""
-    bowl_improvements = []
-    
-    if bowl_inns > 0 and wickets > 0:
-        # Bowling impact
-        if wickets > 50:
-            bowl_category = "a leading bowler"
-        elif wickets > 20:
-            bowl_category = "an impactful bowler"
-        elif wickets > 10:
-            bowl_category = "a useful bowler"
-        else:
-            bowl_category = "an occasional bowler"
-        
-        # Economy assessment
-        if econ < 5:
-            econ_quality = "excellent economy rate"
-        elif econ < 6.5:
-            econ_quality = "good economy rate"
-        elif econ < 8:
-            econ_quality = "acceptable economy rate"
-        else:
-            econ_quality = "needs to work on economy"
-        
-        bowl_text = f" As {bowl_category}, he bowls with {econ_quality} (Econ: {econ:.2f}) and has taken {int(wickets)} wickets across {int(bowl_inns)} spells."
-        
-        # Bowling improvements
-        if econ > 8 and bowl_inns > 3:
-            bowl_improvements.append("should work on tightening bowling lines and lengths")
-        
-        if wickets < 5 and bowl_inns > 10:
-            bowl_improvements.append("needs to improve wicket-taking ability")
-        elif wickets < 10 and bowl_inns > 15:
-            bowl_improvements.append("should focus on taking more wickets")
-    
-    # ===== BUILD THE FINAL BLURB =====
-    blurb = f"**{player_name}** is {article(run_category)} {run_category}"
-    
-    if primary_position:
-        blurb += f" and {primary_position}"
-    
-    blurb += f". {position_insight}"
-    blurb += f"With {article(avg_quality)} {avg_quality} of {avg:.2f} and a strike rate of {sr:.0f}, {player_name} {bat_style_desc} and {aggression}."
-    
-    if bowl_text:
-        blurb += bowl_text
-    else:
-        if bat_inns > 0:
-            blurb += f" He has played {int(bat_inns)} innings in this period with a primary focus on batting."
-    
-    # Add areas for improvement section
-    all_improvements = improvements + bowl_improvements
-    if all_improvements:
-        blurb += f"\n\n**Areas for Improvement:** "
-        blurb += ", ".join(all_improvements) + "."
-    
-    return blurb
-
-
 st.title("Cricket Performance Dashboard")
 
-bat = load_csv(None, "battinginnings.csv")
-bowl = load_csv(None, "bowlinginnings.csv")
+with st.sidebar:
+    st.header("Data")
+    up_bat = st.file_uploader("Upload battinginnings.csv", type=["csv"], key="bat")
+    up_bowl = st.file_uploader("Upload bowlinginnings.csv", type=["csv"], key="bowl")
+    st.caption("If you don’t upload, the app will try reading local files in the same folder.")
+    st.divider()
+
+bat = load_csv(up_bat, "battinginnings.csv")
+bowl = load_csv(up_bowl, "bowlinginnings.csv")
 
 # -----------------------------
 # Basic cleaning
@@ -261,24 +80,16 @@ bat["sr"] = to_float(bat.get("sr"))
 if "batpos" in bat.columns:
     bat["batpos"] = pd.to_numeric(bat["batpos"], errors="coerce")
 
-# Normalize player names to lowercase for consistent deduplication
-if "playername" in bat.columns:
-    bat["playername"] = bat["playername"].str.lower()
-
 bowl["runsconceded"] = to_float(bowl.get("runsconceded"))
 bowl["wickets"] = to_float(bowl.get("wickets"))
 bowl["econ"] = to_float(bowl.get("econ"))
 bowl["balls_bowled"] = overs_to_balls(bowl.get("overs", pd.Series(dtype=str)))
 
-# Normalize bowler names to lowercase for consistent deduplication
-if "bowlername" in bowl.columns:
-    bowl["bowlername"] = bowl["bowlername"].str.lower()
-
 bat = norm_opp(bat)
 bowl = norm_opp(bowl)
 
 # Navigation
-tab_player, tab_comparison = st.tabs(["Player Performance", "Player Comparison"])
+tab_player, tab_team = st.tabs(["Player performance", "Team match trends"])
 
 # -------------------------
 # Tab 1: Player performance
@@ -323,35 +134,6 @@ with tab_player:
     if not bowl_f.empty:
         bowl_f["tournament"] = bowl_f["tournamentkey"].map(lambda x: tournament_label(x))
 
-    # ===== GENERATE AND DISPLAY PLAYER BLURB =====
-    bat_stats = {}
-    bowl_stats = {}
-    
-    if not bat_f.empty:
-        dismissals = (bat_f["howout"].fillna("").str.lower() != "not out").sum()
-        bat_stats = {
-            'inns': len(bat_f),
-            'runs': bat_f["runs"].sum(skipna=True),
-            'avg': (bat_f["runs"].sum(skipna=True) / dismissals) if dismissals else None,
-            'sr': (bat_f["runs"].sum(skipna=True) * 100 / bat_f["balls"].sum(skipna=True)) if bat_f["balls"].sum(skipna=True) else 0,
-            'fours': bat_f["fours"].sum(skipna=True),
-            'sixes': bat_f["sixes"].sum(skipna=True),
-        }
-    
-    if not bowl_f.empty:
-        balls_bowled = bowl_f["balls_bowled"].sum()
-        bowl_stats = {
-            'spells': len(bowl_f),
-            'wickets': bowl_f["wickets"].sum(skipna=True),
-            'econ': (bowl_f["runsconceded"].sum(skipna=True) / (balls_bowled / 6)) if balls_bowled else 0,
-        }
-    
-    # Display the AI-generated blurb
-    if bat_stats or bowl_stats:
-        blurb = generate_player_blurb(player, bat_stats, bowl_stats, bat_f)
-        st.markdown(blurb)
-        st.markdown("---")
-
     # Batting summary (top)
     st.markdown("### Batting summary")
     if bat_f.empty:
@@ -371,7 +153,7 @@ with tab_player:
         k4.metric("SR", f"{sr:.2f}" if balls else "—")
         k5.metric("4s/6s", f"{int(bat_f['fours'].sum(skipna=True))}/{int(bat_f['sixes'].sum(skipna=True))}")
 
-        st.markdown("#### Match-wise Batting Summary")
+        st.markdown("#### Batting: innings details (Opponent instead of Match ID)")
         sort_cols = ["tournamentkey", "opponent", "inningsno"]
         if "batpos" in bat_f.columns:
             sort_cols.append("batpos")
@@ -387,74 +169,19 @@ with tab_player:
 
         st.dataframe(bat_detail[cols], use_container_width=True)
 
-        # Batting position-wise performance analysis
-        if "batpos" in bat_f.columns and not bat_f["batpos"].isna().all():
-            st.markdown("#### Position-wise Performance Analysis")
-            
-            # Create position categories
-            bat_pos_data = bat_f[bat_f["batpos"].notna()].copy()
-            bat_pos_data["position_group"] = pd.cut(
-                bat_pos_data["batpos"],
-                bins=[0, 2, 4, 6, 11],
-                labels=["1-2 (Opening)", "3-4 (Middle)", "5-6 (Lower Middle)", "7-11 (Tail)"],
-                include_lowest=True
-            )
-            
-            pos_summary = bat_pos_data.groupby("position_group", as_index=False).agg(
-                inns=("runs", "count"),
-                runs=("runs", "sum"),
-                balls=("balls", "sum"),
-                fours=("fours", "sum"),
-                sixes=("sixes", "sum"),
-            )
-            
-            # Calculate metrics for each position
-            pos_dismissals = bat_pos_data.copy()
-            pos_dismissals["dismissal"] = (pos_dismissals["howout"].fillna("").str.lower() != "not out").astype(int)
-            pos_dismissal_counts = pos_dismissals.groupby("position_group")["dismissal"].sum()
-            
-            pos_summary["avg"] = pos_summary.apply(
-                lambda row: (row["runs"] / pos_dismissal_counts.get(row["position_group"], 0)) 
-                if pos_dismissal_counts.get(row["position_group"], 0) > 0 else None,
-                axis=1
-            ).round(2)
-            pos_summary["sr"] = (pos_summary["runs"] * 100 / pos_summary["balls"]).round(2)
-            
-            if not pos_summary.empty:
-                pos_summary = pos_summary.sort_values("runs", ascending=False)
-                display_cols = ["position_group", "inns", "runs", "balls", "avg", "sr", "fours", "sixes"]
-                st.dataframe(pos_summary[display_cols], use_container_width=True)
+        st.markdown("#### Batting: opponent-wise (tournament-wise included)")
+        group_cols = ["tournament", "tournamentkey", "opponent", "inningsno", "battingteam"]
+        bat_game = bat_f.groupby(group_cols, as_index=False).agg(
+            runs=("runs", "sum"),
+            balls=("balls", "sum"),
+            fours=("fours", "sum"),
+            sixes=("sixes", "sum"),
+        )
+        bat_game["sr"] = (bat_game["runs"] * 100 / bat_game["balls"]).round(2)
+        bat_game = bat_game.sort_values(["tournamentkey", "opponent", "inningsno"])
 
-        # Batting tournament-wise performance analysis
-        st.markdown("#### Tournament-wise Batting Performance")
-        bat_tourn = bat_f[bat_f["tournamentkey"].notna()].copy()
-        
-        if not bat_tourn.empty:
-            bat_tourn_summary = bat_tourn.groupby("tournament", as_index=False).agg(
-                inns=("runs", "count"),
-                runs=("runs", "sum"),
-                balls=("balls", "sum"),
-                fours=("fours", "sum"),
-                sixes=("sixes", "sum"),
-            )
-            
-            # Calculate average separately
-            bat_tourn_dismissals = bat_tourn.copy()
-            bat_tourn_dismissals["dismissal"] = (bat_tourn_dismissals["howout"].fillna("").str.lower() != "not out").astype(int)
-            bat_tourn_dismissal_counts = bat_tourn_dismissals.groupby("tournament")["dismissal"].sum()
-            
-            bat_tourn_summary["avg"] = bat_tourn_summary.apply(
-                lambda row: (row["runs"] / bat_tourn_dismissal_counts.get(row["tournament"], 0)) 
-                if bat_tourn_dismissal_counts.get(row["tournament"], 0) > 0 else None,
-                axis=1
-            ).round(2)
-            bat_tourn_summary["sr"] = (bat_tourn_summary["runs"] * 100 / bat_tourn_summary["balls"]).round(2)
-            
-            bat_tourn_summary = bat_tourn_summary.sort_values("runs", ascending=False)
-            display_cols = ["tournament", "inns", "runs", "balls", "avg", "sr", "fours", "sixes"]
-            st.dataframe(bat_tourn_summary[display_cols], use_container_width=True)
-        else:
-            st.info("No tournament data available for batting performance.")
+        show_cols = ["tournament", "opponent", "inningsno", "battingteam", "runs", "balls", "sr", "fours", "sixes"]
+        st.dataframe(bat_game[show_cols], use_container_width=True)
 
     # Bowling summary (below)
     st.markdown("### Bowling summary")
@@ -478,7 +205,7 @@ with tab_player:
         k4.metric("Econ", f"{econ:.2f}" if overs_equiv else "—")
         k5.metric("Avg / SR", f"{avg_b:.2f} / {sr_b:.1f}" if (avg_b is not None and sr_b is not None) else "—")
 
-        st.markdown("#### Match-wise Bowling Summary")
+        st.markdown("#### Bowling: spell details (Opponent instead of Match ID)")
         sort_cols = ["tournamentkey", "opponent", "inningsno"]
         if "matchid" in bowl_f.columns:
             sort_cols.append("matchid")  # stable ordering only (hidden)
@@ -487,100 +214,133 @@ with tab_player:
         cols = ["tournament", "opponent", "inningsno", "bowlingteam", "overs", "runsconceded", "wickets", "econ"]
         st.dataframe(bowl_detail[cols], use_container_width=True)
 
-        # Bowling tournament-wise performance analysis
-        st.markdown("#### Tournament-wise Bowling Performance")
-        bowl_tourn = bowl_f[bowl_f["tournamentkey"].notna()].copy()
-        
-        if not bowl_tourn.empty:
-            bowl_tourn_summary = bowl_tourn.groupby("tournament", as_index=False).agg(
-                spells=("runsconceded", "count"),
-                runs=("runsconceded", "sum"),
-                balls=("balls_bowled", "sum"),
-                wickets=("wickets", "sum"),
-            )
-            
-            # Calculate metrics
-            bowl_tourn_summary["overs"] = (bowl_tourn_summary["balls"] / 6).round(1)
-            bowl_tourn_summary["econ"] = (bowl_tourn_summary["runs"] / (bowl_tourn_summary["balls"] / 6)).round(2)
-            bowl_tourn_summary["avg"] = (bowl_tourn_summary["runs"] / bowl_tourn_summary["wickets"]).round(2)
-            bowl_tourn_summary["sr"] = (bowl_tourn_summary["balls"] / bowl_tourn_summary["wickets"]).round(1)
-            
-            bowl_tourn_summary = bowl_tourn_summary.sort_values("wickets", ascending=False)
-            display_cols = ["tournament", "spells", "runs", "overs", "wickets", "avg", "econ", "sr"]
-            st.dataframe(bowl_tourn_summary[display_cols], use_container_width=True)
-        else:
-            st.info("No tournament data available for bowling performance.")
-
-# -------------------------
-# Tab 2: Player-wise overall comparison
-# -------------------------
-with tab_comparison:
-    st.subheader("Player-wise Overall Comparison")
-
-    # Option to select all players or specific players
-    all_players_list = sorted(set(bat["playername"]).union(set(bowl["bowlername"])))
-    
-    select_all = st.checkbox("Select all players", value=False)
-    if select_all:
-        selected_players = all_players_list
-    else:
-        selected_players = st.multiselect(
-            "Select players to compare",
-            all_players_list,
-            default=[all_players_list[0]] if all_players_list else []
+        st.markdown("#### Bowling: opponent-wise (tournament-wise included)")
+        group_cols = ["tournament", "tournamentkey", "opponent", "inningsno", "bowlingteam"]
+        bowl_game = bowl_f.groupby(group_cols, as_index=False).agg(
+            balls=("balls_bowled", "sum"),
+            runs=("runsconceded", "sum"),
+            wkts=("wickets", "sum"),
         )
+        bowl_game["overs"] = (bowl_game["balls"] / 6).round(1)
+        bowl_game["econ"] = (bowl_game["runs"] / (bowl_game["balls"] / 6)).round(2)
+        bowl_game = bowl_game.sort_values(["tournamentkey", "opponent", "inningsno"])
 
-    if not selected_players:
-        st.info("Select at least one player to view comparison.")
+        show_cols = ["tournament", "opponent", "inningsno", "bowlingteam", "overs", "runs", "wkts", "econ"]
+        st.dataframe(bowl_game[show_cols], use_container_width=True)
+
+# -------------------------
+# Tab 2: Team match trends
+# -------------------------
+with tab_team:
+    st.subheader("Team trends")
+
+    team_query = st.text_input("Team name contains (e.g., 'SUPREMOS')", value="SUPREMOS")
+
+    tourn2 = st.multiselect(
+        "Tournament filter",
+        sorted(set(bat["tournamentkey"]).union(set(bowl["tournamentkey"]))),
+        default=[],
+        format_func=tournament_label,
+    )
+
+    group_by_opponent = st.checkbox("Group by opponent (if available)", value=True)
+
+    bat_t = bat.copy()
+    bowl_t = bowl.copy()
+
+    if tourn2:
+        bat_t = bat_t[bat_t["tournamentkey"].isin(tourn2)]
+        bowl_t = bowl_t[bowl_t["tournamentkey"].isin(tourn2)]
+
+    bat_team = bat_t[pick_team_mask(bat_t["battingteam"], team_query)]
+    bowl_team = bowl_t[pick_team_mask(bowl_t["bowlingteam"], team_query)]
+
+    if group_by_opponent and ("opponent" in bat_team.columns) and ("opponent" in bowl_team.columns):
+        trend_key = "opponent"
     else:
-        # Batting comparison
-        st.markdown("### Batting Comparison")
-        bat_comp = bat[bat["playername"].isin(selected_players)].copy()
-        if bat_comp.empty:
-            st.warning("No batting data for selected players.")
-        else:
-            bat_summary = bat_comp.groupby("playername", as_index=False).agg(
-                inns=("runs", "count"),
-                runs=("runs", "sum"),
-                balls=("balls", "sum"),
-                fours=("fours", "sum"),
-                sixes=("sixes", "sum"),
-            )
-            
-            # Calculate average separately
-            bat_dismissals = bat_comp.copy()
-            bat_dismissals["dismissal"] = (bat_dismissals["howout"].fillna("").str.lower() != "not out").astype(int)
-            dismissal_counts = bat_dismissals.groupby("playername")["dismissal"].sum()
-            
-            bat_summary["avg"] = bat_summary.apply(
-                lambda row: (row["runs"] / dismissal_counts.get(row["playername"], 0)) 
-                if dismissal_counts.get(row["playername"], 0) > 0 else None,
-                axis=1
-            ).round(2)
-            bat_summary["sr"] = (bat_summary["runs"] * 100 / bat_summary["balls"]).round(2)
-            
-            bat_summary = bat_summary.sort_values("runs", ascending=False)
-            display_cols = ["playername", "inns", "runs", "balls", "avg", "sr", "fours", "sixes"]
-            st.dataframe(bat_summary[display_cols], use_container_width=True)
+        trend_key = "matchid"
 
-        # Bowling comparison
-        st.markdown("### Bowling Comparison")
-        bowl_comp = bowl[bowl["bowlername"].isin(selected_players)].copy()
-        if bowl_comp.empty:
-            st.warning("No bowling data for selected players.")
+    bm = bat_team.groupby(["tournamentkey", trend_key], as_index=False).agg(
+        runs_scored=("runs", "sum"),
+        balls_faced=("balls", "sum"),
+        wickets_lost=("howout", lambda s: (s.fillna("").str.lower() != "not out").sum()),
+    )
+    if not bm.empty:
+        bm["run_rate"] = (bm["runs_scored"] * 6 / bm["balls_faced"]).round(2)
+
+    wm = bowl_team.groupby(["tournamentkey", trend_key], as_index=False).agg(
+        runs_conceded=("runsconceded", "sum"),
+        balls_bowled=("balls_bowled", "sum"),
+        wickets_taken=("wickets", "sum"),
+    )
+    if not wm.empty:
+        wm["overs_bowled"] = (wm["balls_bowled"] / 6)
+        wm["economy"] = (wm["runs_conceded"] / wm["overs_bowled"]).round(2)
+
+    mm = bm.merge(wm, on=["tournamentkey", trend_key], how="outer").sort_values(["tournamentkey", trend_key])
+
+    if all(c in mm.columns for c in ["runs_scored", "balls_faced", "runs_conceded", "overs_bowled"]):
+        mm["nrr_proxy"] = ((mm["runs_scored"] * 6 / mm["balls_faced"]) - (mm["runs_conceded"] / mm["overs_bowled"])).round(2)
+    else:
+        mm["nrr_proxy"] = pd.NA
+
+    # ---- SAFE plotting prep (no MultiIndex) ----
+    if len(mm) > 0:
+        mm = mm.copy()
+        mm["tournament"] = mm["tournamentkey"].map(lambda x: tournament_label(x))
+        mm["x"] = mm[trend_key].fillna("").astype(str).replace("", "(Unknown)")
+
+        for col in ["runs_scored", "wickets_lost", "run_rate", "runs_conceded", "wickets_taken", "economy"]:
+            if col not in mm.columns:
+                mm[col] = pd.NA
+
+    c1, c2 = st.columns(2)
+
+    with c1:
+        st.markdown("### Batting trend")
+        bat_cols = ["runs_scored", "wickets_lost", "run_rate"]
+        if len(mm) == 0:
+            st.info("No batting trend data found for this filter.")
         else:
-            bowl_summary = bowl_comp.groupby("bowlername", as_index=False).agg(
-                spells=("runsconceded", "count"),
-                runs=("runsconceded", "sum"),
-                balls=("balls_bowled", "sum"),
-                wickets=("wickets", "sum"),
-            )
-            # Calculate metrics
-            bowl_summary["overs"] = (bowl_summary["balls"] / 6).round(1)
-            bowl_summary["econ"] = (bowl_summary["runs"] / (bowl_summary["balls"] / 6)).round(2)
-            bowl_summary["avg"] = (bowl_summary["runs"] / bowl_summary["wickets"]).round(2)
-            bowl_summary["sr"] = (bowl_summary["balls"] / bowl_summary["wickets"]).round(1)
-            
-            bowl_summary = bowl_summary.sort_values("wickets", ascending=False)
-            display_cols = ["bowlername", "spells", "runs", "overs", "wickets", "avg", "econ", "sr"]
-            st.dataframe(bowl_summary[display_cols], use_container_width=True)
+            plot_df = mm[["tournament", "x"] + bat_cols].copy()
+            for c in bat_cols:
+                plot_df[c] = pd.to_numeric(plot_df[c], errors="coerce")
+            plot_df = plot_df.sort_values(["tournament", "x"]).set_index("x")
+            st.line_chart(plot_df[bat_cols])
+
+    with c2:
+        st.markdown("### Bowling trend")
+        bowl_cols = ["runs_conceded", "wickets_taken", "economy"]
+        if len(mm) == 0:
+            st.info("No bowling trend data found for this filter.")
+        else:
+            plot_df = mm[["tournament", "x"] + bowl_cols].copy()
+            for c in bowl_cols:
+                plot_df[c] = pd.to_numeric(plot_df[c], errors="coerce")
+            plot_df = plot_df.sort_values(["tournament", "x"]).set_index("x")
+            st.line_chart(plot_df[bowl_cols])
+
+    st.markdown("### Best vs worst (table)")
+    if len(mm) == 0:
+        st.info("No data found for this filter.")
+    else:
+        out = mm.copy()
+        key_col = "opponent" if trend_key == "opponent" else "matchid"
+
+        display_cols = [
+            "tournament",
+            key_col,
+            "runs_scored",
+            "wickets_lost",
+            "run_rate",
+            "runs_conceded",
+            "wickets_taken",
+            "economy",
+            "nrr_proxy",
+        ]
+        display_cols = [c for c in display_cols if c in out.columns]
+
+        st.dataframe(
+            out.sort_values(["nrr_proxy", "runs_scored"], ascending=[False, False])[display_cols],
+            use_container_width=True,
+        )
